@@ -7,3 +7,19 @@ header {
 body {
     font-family: 'Annie Use Your Telescope', cursive;
 }
+
+.moon {
+    position: absolute;
+}
+
+.moon1 {
+    z-index: 2;
+    top: 50px;
+    left: 100px;
+}
+
+.moon2 {
+    z-index: 1;
+    top: 100px;
+    left: 120px;
+}
