@@ -8,11 +8,13 @@
     </head>
     <body>
         <header>
-            <a href="/index.html">INSOMNEA art</a>
+            <header>
+                <!-- Dynamischer Link zur Startseite basierend auf der aktuellen Sprache -->
+                <a href="{% if lang == 'de' %}/index.html{% else %}/en/index.html{% endif %}">INSOMNEA art</a>
+            </header>
         </header>
         <main>
             {{ content | safe }}
         </main>
-
     </body>
 </html>
