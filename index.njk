@@ -1,9 +1,14 @@
+---
+title: "INSOMNEA art"
+permalink: "index.html"
+language: "de"
+---
 
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INSOMNEA art</title>
+    <title>{{ title }}</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
@@ -18,9 +23,9 @@
     </main>
     <footer>
         <nav class="language-selector">
-            <a href="/de//index" class="active">DE</a>
+            <a href="/de/{{ page.filePathStem | replace('/en/', '/de/') }}" class="{% if language == 'de' %}active{% endif %}">DE</a>
     /
-    <a href="/en//index" class="">EN</a>
+    <a href="/en/{{ page.filePathStem | replace('/de/', '/en/') }}" class="{% if language == 'en' %}active{% endif %}">EN</a>
         </nav>
 
     </footer>

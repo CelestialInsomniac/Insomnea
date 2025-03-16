@@ -1,7 +1,6 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("pagesDE");
-  eleventyConfig.addPassthroughCopy("pagesEN");
+  eleventyConfig.addPassthroughCopy("pages");
 
   return {
     dir: {
