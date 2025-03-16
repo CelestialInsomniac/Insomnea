@@ -22,15 +22,28 @@ lang: "de"
         <a href="/ueber/">Über mich</a>
     </main>
 
-    <footer>
-        <nav class="language-selector">
-            <!-- Wenn die aktuelle Seite Deutsch ist, wechsle zu Englisch -->
-            <a href="{% if lang == 'de' %}/en{{ page.url | replace('/de', '') }}{% else %}/index.html{% endif %}" class="{% if lang == 'de' %}active{% endif %}">DE</a>
+<footer>
+    <nav class="language-selector">
+        <!-- Wenn die aktuelle Seite Deutsch ist, zeige DE als Text (kein Link) -->
+        {% if lang == 'de' %}
+            <span>DE</span>
+        {% else %}
+            <!-- Link zur deutschen Seite, die im Root-Verzeichnis liegt (ohne /de/) -->
+            <a href="/" class="{% if lang == 'de' %}active{% endif %}">DE</a>
+        {% endif %}
+        
         /
-        <!-- Wenn die aktuelle Seite Englisch ist, wechsle zu Deutsch -->
-            <a href="{% if lang == 'en' %}/de{{ page.url | replace('/en', '') }}{% else %}/en/index.html{% endif %}" class="{% if lang == 'en' %}active{% endif %}">EN</a>
-        </nav>
-    </footer>
+        
+        <!-- Wenn die aktuelle Seite Englisch ist, zeige EN als Text (kein Link) -->
+        {% if lang == 'en' %}
+            <span>EN</span>
+        {% else %}
+            <!-- Link zur englischen Seite im /en/-Verzeichnis -->
+            <a href="/en" class="{% if lang == 'en' %}active{% endif %}">EN</a>
+        {% endif %}
+    </nav>
+</footer>
+
 
 </body>
 </html>
