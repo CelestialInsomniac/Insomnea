@@ -23,11 +23,13 @@ lang: "en"
     </main>
     <footer>
         <nav class="language-selector">
-            <a href="/de/{{ page.filePathStem | replace('/en/', '/de/') }}" class="{% if language == 'de' %}active{% endif %}">DE</a>
-    /
-    <a href="/en/{{ page.filePathStem | replace('/de/', '/en/') }}" class="{% if language == 'en' %}active{% endif %}">EN</a>
+            <!-- Wenn die aktuelle Seite Deutsch ist, wechsle zu Englisch -->
+            <a href="{% if lang == 'de' %}/en{{ page.url | replace('/de', '') }}{% else %}/index.html{% endif %}" class="{% if lang == 'de' %}active{% endif %}">DE</a>
+        /
+        <!-- Wenn die aktuelle Seite Englisch ist, wechsle zu Deutsch -->
+            <a href="{% if lang == 'en' %}/de{{ page.url | replace('/en', '') }}{% else %}/en/index.html{% endif %}" class="{% if lang == 'en' %}active{% endif %}">EN</a>
         </nav>
-
     </footer>
+
 </body>
 </html>
