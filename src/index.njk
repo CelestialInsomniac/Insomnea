@@ -1,7 +1,7 @@
 ---
 title: "INSOMNEA art"
-permalink: "en/index.html"
-lang: "en"
+permalink: "index.html"
+lang: "de"
 ---
 
 <!DOCTYPE html>
@@ -17,13 +17,25 @@ lang: "en"
               INSOMNEA art</a>
     </header>
     <main>
-        <img src="/assets/images/moon1.png" alt="Moon 1" class="moon moon1">
-        <img src="/assets/images/moon2.png" alt="Moon 2" class="moon moon2">
-        <a href="/en/projects/">Projects</a>
-        <a href="/en/fineart/">Fine Art</a>
-        <a href="/en/about/">About</a>
+        <img src="/assets/images/moon1.png" alt="Mond 1" class="moon moon1">
+        <img src="/assets/images/moon2.png" alt="Mond 2" class="moon moon2">
+        <a href="/projekte/">Projekte</a>
+        <a href="/kunst/">Kunst</a>
+        <a href="/ueber/">Über mich</a>
     </main>
+
     <footer>
+
+        <a href="https://www.instagram.com/insomneaart/" target="_blank">
+            <img src="/assets/icons/icon_instagram.svg" alt="Instagram" class="icon">
+        </a>
+        <a href="https://cara.app/celestialinsomniac" target="_blank">
+            <img src="/assets/icons/icon_cara.svg" alt="Cara" class="icon">
+        </a>
+        <a href="https://linktr.ee/celestial_insomniac" target="_blank">
+            <img src="/assets/icons/icon_linktree.svg" alt="Linktree" class="icon">
+        </a>
+        <p>Danke für deinen Besuch!</p>
         <nav class="language-selector">
             <!-- Wenn die aktuelle Seite Deutsch ist, zeige DE als Text (kein Link) -->
             {% if lang == 'de' %}
@@ -43,7 +55,9 @@ lang: "en"
                 <a href="/en" class="{% if lang == 'en' %}active{% endif %}">EN</a>
             {% endif %}
         </nav>
-    </footer>
 
+    </footer>
 </body>
 </html>
+
+<!-- npx @11ty/eleventy --serve -->
