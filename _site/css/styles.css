@@ -32,6 +32,16 @@ a:hover {
     left: 120px;
 }
 
+.decor {
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    rotate: -45deg;
+    position: absolute;
+    top: 50px;
+    left: 70px;
+}
+
 body.light-mode {
     background-color: #C0CBD8;
     color: #1A1A1A;
