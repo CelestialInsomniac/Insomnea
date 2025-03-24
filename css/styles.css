@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
 
-header {
-    font-family: 'Annie Use Your Telescope', cursive;
-}
-
 body {
     font-family: 'Annie Use Your Telescope', cursive;
+    background-color: #1A1A1A;
+    color: #C0CBD8;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #ffffff;
 }
 
 .moon {
@@ -22,4 +30,20 @@ body {
     z-index: 1;
     top: 100px;
     left: 120px;
+}
+
+body.light-mode {
+    background-color: #C0CBD8;
+    color: #1A1A1A;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#theme-icon {
+    width: 30px;
+    height: 30px;
 }
