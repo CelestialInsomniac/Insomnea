@@ -13,7 +13,7 @@ a {
 }
 
 a:hover {
-    color: #ffffff;
+    opacity: 70%;
 }
 
 .moon {
@@ -59,9 +59,13 @@ body.light-mode {
 }
 
 .icon-container {
-    align: left;
+    align-items: left;
     height: 20px;
     width: 20px;
-    margin-top: 80px;  
+    margin-top: 80px;
     margin-bottom: 80px;
+}
+
+.icon:hover {
+    opacity: 70%;
 }

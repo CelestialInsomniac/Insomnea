@@ -1,7 +1,42 @@
 <footer>
+    <a href="/en/projects/">Projects</a>
+    <a href="/en/fineart/">Fine Art</a>
+    <a href="/en/about/">About</a>
+
+    <div class="icon-container">
+        <a href="https://www.instagram.com/insomneaart/" target="_blank">
+            <img src="/assets/icons/icon_instagram_B.svg" alt="Instagram" class="icon theme-icon-switch" data-dark="/assets/icons/icon_instagram_B.svg" data-light="/assets/icons/icon_instagram_D.svg">
+        </a>
+        <a href="https://cara.app/celestialinsomniac" target="_blank">
+            <img src="/assets/icons/icon_cara_B.svg" alt="Cara" class="icon theme-icon-switch" data-dark="/assets/icons/icon_cara_B.svg" data-light="/assets/icons/icon_cara_D.svg">
+        </a>
+        <a href="https://linktr.ee/celestial_insomniac" target="_blank">
+            <img src="/assets/icons/icon_linktree_B.svg" alt="Linktree" class="icon theme-icon-switch" data-dark="/assets/icons/icon_linktree_B.svg" data-light="/assets/icons/icon_linktree_D.svg">
+        </a>
+    </div>
+
+    <p>Thank you for your visit!</p>
+
+    {% set pageKey = page.fileSlug %}
+    {% set langMap = languageMap[pageKey] or {} %}
+
     <nav class="language-selector">
-        <a href="/de/{{ page.fileSlug }}" class="{% if language == 'de' %}active{% endif %}">DE</a>
-  /
-  <a href="/en/{{ page.fileSlug }}" class="{% if language == 'en' %}active{% endif %}">EN</a>
+        {% if lang == 'de' %}
+            <span>DE</span>
+        {% else %}
+            <a href="{{ langMap.de or '/projekte/' }}" class="{% if lang == 'de' %}active{% endif %}">DE</a>
+        {% endif %}
+    /
+    {% if lang == 'en' %}
+            <span>EN</span>
+        {% else %}
+            <a href="{{ langMap.en or '/en/' }}" class="{% if lang == 'en' %}active{% endif %}">EN</a>
+        {% endif %}
     </nav>
+
+    <button id="theme-toggle">
+        <img id="theme-icon" src="/assets/icons/icon_sun_b.svg" alt="Theme Toggle">
+    </button>
+
+    <script src="/assets/js/theme-toggle.js"></script>
 </footer>

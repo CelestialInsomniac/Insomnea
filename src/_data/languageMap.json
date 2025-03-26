@@ -1,0 +1,18 @@
+{
+    "index": {
+        "de": "/",
+        "en": "/en/"
+    },
+    "projekte": {
+        "de": "/projekte/",
+        "en": "/en/projects/"
+    },
+    "kunst": {
+        "de": "/kunst/",
+        "en": "/en/fineart/"
+    },
+    "ueber": {
+        "de": "/ueber/",
+        "en": "/en/about/"
+    }
+}

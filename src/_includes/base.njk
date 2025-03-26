@@ -8,12 +8,17 @@
     </head>
     <body>
         <header>
-            <header>
-                <a href="{% if lang == 'de' %}/index.html{% else %}/en/index.html{% endif %}">INSOMNEA art</a>
-            </header>
+            <a href="{% if lang == 'de' %}/index.html{% else %}/en/index.html{% endif %}">INSOMNEA art</a>
         </header>
         <main>
             {{ content | safe }}
         </main>
     </body>
+    <footer>
+        {% if lang == "de" %}
+            {% include "DEfooter.njk" %}
+        {% else %}
+            {% include "ENfooter.njk" %}
+        {% endif %}
+    </footer>
 </html>
