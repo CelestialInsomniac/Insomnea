@@ -1,7 +1,9 @@
 <footer>
-    <a href="/en/projects/">Projects</a>
-    <a href="/en/fineart/">Fine Art</a>
-    <a href="/en/about/">About</a>
+    <nav>
+        <a href="/en/projects/" class="{% if page.url == '/en/projects/' %}active{% endif %}">Projects</a>
+        <a href="/en/fineart/" class="{% if page.url == '/en/fineart/' %}active{% endif %}">Fine Art</a>
+        <a href="/en/about/" class="{% if page.url == '/en/about/' %}active{% endif %}">About</a>
+    </nav>
 
     <div class="icon-container">
         <a href="https://www.instagram.com/insomneaart/" target="_blank">

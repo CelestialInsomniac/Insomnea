@@ -12,24 +12,35 @@ a {
     color: inherit;
 }
 
+a.active {
+    text-decoration: underline;
+}
+
 a:hover {
     opacity: 70%;
 }
 
+.home {
+    font-size: 64px;
+}
+
 .moon {
     position: absolute;
+    width: 200px;
+    height: 220px;
 }
 
 .moon1 {
     z-index: 2;
+
     top: 50px;
-    left: 100px;
+    left: 300px;
 }
 
 .moon2 {
     z-index: 1;
     top: 100px;
-    left: 120px;
+    left: 320px;
 }
 
 .decor {
@@ -38,7 +49,7 @@ a:hover {
     height: 100px;
     rotate: -45deg;
     position: absolute;
-    top: 50px;
+    top: 150px;
     left: 70px;
 }
 
@@ -62,7 +73,7 @@ body.light-mode {
     align-items: left;
     height: 20px;
     width: 20px;
-    margin-top: 80px;
+    margin-top: 180px;
     margin-bottom: 80px;
 }
 
