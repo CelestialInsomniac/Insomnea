@@ -1,0 +1,7 @@
+<div class="masonry">
+    {% for image in images %}
+        <div class="masonry-item">
+            <img src="{{ image.src }}" alt="{{ image.alt }}">
+        </div>
+    {% endfor %}
+</div>

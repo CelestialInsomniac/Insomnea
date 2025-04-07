@@ -5,4 +5,22 @@ lang: "de"
 layout: "base.njk"
 ---
 
-<h1>Deutsche Kunst</h1>
+{% set images = [
+    {
+        src: "/assets/fineart/Prohierodula.png",
+        alt: "Prohierodula Mantis"
+    }, {
+        src: "/assets/fineart/Red tabby cat.png",
+        alt: "Rote Tigerkatze"
+    }, {
+        src: "/assets/fineart/Gouldian finch.png",
+        alt: "Gouldamadine"
+    }, {
+        src: "/assets/fineart/Red fox.jpg",
+        alt: "Roter Fuchs"
+    }
+] %}
+
+{% include "partials/masonry-gallery.njk" %}
+
+<!-- Navigation separat für jede Seite (Klasse?) -->
