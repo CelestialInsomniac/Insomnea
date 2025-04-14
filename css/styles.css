@@ -87,7 +87,7 @@ body.light-mode {
 }
 
 /* MASONRY-STYLING */
-.masonry {
+/*.masonry {
     column-count: 2;
     column-gap: 1rem;
     padding: 1rem;
@@ -103,4 +103,40 @@ body.light-mode {
     height: auto;
     display: block;
     border-radius: 0.5rem;
-}
+}*/
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+  }
+  
+  .gallery-item {
+    display: block;
+    position: relative;
+    transition: opacity 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    opacity: 0.8;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  
+  .gallery-item::after {
+    content: "➜";
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.75rem;
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0.7;
+  }
+  

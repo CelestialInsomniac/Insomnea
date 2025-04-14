@@ -1,10 +1,17 @@
+<div class="gallery">
+  {% for image in images %}
+    <a href="{{ image.link }}" class="gallery-item">
+      <img src="{{ image.src }}" alt="{{ image.alt }}">
+    </a>
+  {% endfor %}
+</div>
 
 
-
-<div class="masonry">
+<!-- <div class="masonry">
   {% for image in images %}
     <a href="{{ image.link }}" class="masonry-item">
       <img src="{{ image.src }}" alt="{{ image.alt }}">
     </a>
   {% endfor %}
 </div>
+ -->
