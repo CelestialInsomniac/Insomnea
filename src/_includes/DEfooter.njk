@@ -1,8 +1,9 @@
 <footer>
     <nav>
-        <a href="/projekte/" class="{% if page.url == '/projekte/' %}active{% endif %}">Projekte</a>
-        <a href="/kunst/" class="{% if page.url == '/kunst/' %}active{% endif %}">Kunst</a>
-        <a href="/ueber/" class="{% if page.url == '/ueber/' %}active{% endif %}">Über mich</a>
+        <a href="/concept-art/" class="{% if page.url == '/concept-art/' %}active{% endif %}">concept art</a>
+        <a href="/games/" class="{% if page.url == '/games/' %}active{% endif %}">games</a>
+        <a href="/kunst/" class="{% if page.url == '/kunst/' %}active{% endif %}">kunst</a>
+        <a href="/ueber/" class="{% if page.url == '/ueber/' %}active{% endif %}">über mich</a>
     </nav>
 
     <div class="icon-container">
@@ -18,6 +19,7 @@
     </div>
 
     <p>Danke für deinen Besuch!</p>
+    <p>Alle Werke sind gegen Scraping-Diebstahl geschützt</p>
 
     {% set pageKey = page.fileSlug %}
     {% set langMap = languageMap[pageKey] or {} %}

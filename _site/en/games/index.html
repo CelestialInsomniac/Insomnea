@@ -1,9 +1,27 @@
-<footer>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>games</title>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <header>
+            <a href="/en/index.html" class="home">INSOMNEA art</a>
+        </header>
+        <main>
+            
+        </main>
+    </body>
+    <footer>
+        
+            <footer>
     <nav>
-        <a href="/en/concept-art/" class="{% if page.url == '/en/concept-art/' %}active{% endif %}">concept art</a>
-        <a href="/en/games/" class="{% if page.url == '/en/games/' %}active{% endif %}">games</a>
-        <a href="/en/fineart/" class="{% if page.url == '/en/fineart/' %}active{% endif %}">fine art</a>
-        <a href="/en/about/" class="{% if page.url == '/en/about/' %}active{% endif %}">about</a>
+        <a href="/en/concept-art/" class="">concept art</a>
+        <a href="/en/games/" class="active">games</a>
+        <a href="/en/fineart/" class="">fine art</a>
+        <a href="/en/about/" class="">about</a>
     </nav>
 
     <div class="icon-container">
@@ -21,21 +39,17 @@
     <p>Thank you for your visit!</p>
     <p>All works are protected against scraping theft</p>
 
-    {% set pageKey = page.fileSlug %}
-    {% set langMap = languageMap[pageKey] or {} %}
+    
+    
 
     <nav class="language-selector">
-        {% if lang == 'de' %}
-            <span>DE</span>
-        {% else %}
-            <a href="{{ langMap.de or '/projekte/' }}" class="{% if lang == 'de' %}active{% endif %}">DE</a>
-        {% endif %}
+        
+            <a href="/projekte/" class="">DE</a>
+        
     /
-    {% if lang == 'en' %}
+    
             <span>EN</span>
-        {% else %}
-            <a href="{{ langMap.en or '/en/' }}" class="{% if lang == 'en' %}active{% endif %}">EN</a>
-        {% endif %}
+        
     </nav>
 
     <button id="theme-toggle">
@@ -44,3 +58,6 @@
 
     <script src="/assets/js/theme-toggle.js"></script>
 </footer>
+        
+    </footer>
+</html>

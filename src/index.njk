@@ -15,13 +15,19 @@ lang: "de"
     <header>
         <a href="index.html" class="home">INSOMNEA art</a>
     </header>
-    <main>
-        <img src="/assets/crescent_moon_B.svg" alt="" class="decor theme-icon-switch" data-dark="/assets/crescent_moon_B.svg" data-light="/assets/crescent_moon_D.svg">
-        <img src="/assets/images/moon1.png" alt="Mond 1" class="moon moon1">
-        <img src="/assets/images/moon2.png" alt="Mond 2" class="moon moon2">
-        <a href="/projekte/">Projekte</a>
-        <a href="/kunst/">Kunst</a>
-        <a href="/ueber/">Über mich</a>
+    <main class="menu-buttons">
+        <a href="/concept-art/" class="menu-button" style="background-image: url('/assets/fineart/Tabbycat.jpg');">
+            <span>concept art</span>
+        </a>
+        <a href="/games/" class="menu-button" style="background-image: url('/assets/images/games.jpg');">
+            <span>games</span>
+        </a>
+        <a href="/kunst/" class="menu-button" style="background-image: url('/assets/images/kunst.jpg');">
+            <span>kunst</span>
+        </a>
+        <a href="/ueber/" class="menu-button" style="background-image: url('/assets/images/ueber-mich.jpg');">
+            <span>über mich</span>
+        </a>
     </main>
 
     <footer>
@@ -38,6 +44,7 @@ lang: "de"
         </div>
 
         <p>Danke für deinen Besuch!</p>
+        <p>Alle Werke sind gegen Scraping-Diebstahl geschützt</p>
 
         <nav class="language-selector">
             {% if lang == 'de' %}
