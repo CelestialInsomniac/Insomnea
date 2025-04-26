@@ -3,15 +3,19 @@
         "de": "/",
         "en": "/en/"
     },
-    "projekte": {
-        "de": "/projekte/",
-        "en": "/en/projects/"
+    "concept-art": {
+        "de": "/concept-art/",
+        "en": "/en/concept-art/"
     },
-    "kunst": {
+    "games": {
+        "de": "/games/",
+        "en": "/en/games/"
+    },
+    "fineart": {
         "de": "/kunst/",
         "en": "/en/fineart/"
     },
-    "ueber": {
+    "about": {
         "de": "/ueber/",
         "en": "/en/about/"
     }

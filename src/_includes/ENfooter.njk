@@ -21,20 +21,20 @@
     <p>Thank you for your visit!</p>
     <p>All works are protected against scraping theft</p>
 
-    {% set pageKey = page.fileSlug %}
+    {% set pageKey = page.fileSlug | replace("en/", "") | replace("ueber", "/en/about") | replace("kunst", "/en/fineart") %}
     {% set langMap = languageMap[pageKey] or {} %}
 
     <nav class="language-selector">
         {% if lang == 'de' %}
             <span>DE</span>
         {% else %}
-            <a href="{{ langMap.de or '/projekte/' }}" class="{% if lang == 'de' %}active{% endif %}">DE</a>
+            <a href="{{ langMap.de }}" class="{% if lang == 'de' %}active{% endif %}">DE</a>
         {% endif %}
     /
-    {% if lang == 'en' %}
+        {% if lang == 'en' %}
             <span>EN</span>
         {% else %}
-            <a href="{{ langMap.en or '/en/' }}" class="{% if lang == 'en' %}active{% endif %}">EN</a>
+            <a href="{{ langMap.en }}" class="{% if lang == 'en' %}active{% endif %}">EN</a>
         {% endif %}
     </nav>
 
