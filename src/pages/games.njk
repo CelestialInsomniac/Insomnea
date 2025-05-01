@@ -26,8 +26,8 @@ layout: "base.njk"
 ] %}
 
 <div class="project-gallery">
-    {% for project in projects %}
-        {% set project = project %}
-        {% include "partials/projects.njk" %}
-    {% endfor %}
+  {% for project in projects %}
+    {% set project = project %}
+    {% include "partials/projects_nav.njk" %}
+  {% endfor %}
 </div>
