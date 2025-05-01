@@ -21,33 +21,32 @@
     <p>Danke für deinen Besuch!</p>
     <p>Alle Werke sind gegen Scraping-Diebstahl geschützt</p>
 
-{% set rawPageKey = page.fileSlug %}
-{% set pageKey = rawPageKey %}
+    {% set rawPageKey = page.fileSlug %}
+    {% set pageKey = rawPageKey %}
 
-{# Spezialfälle manuell korrigieren #}
-{% if rawPageKey == 'kunst' %}
-  {% set pageKey = 'fineart' %}
-{% endif %}
-{% if rawPageKey == 'ueber' %}
-  {% set pageKey = 'about' %}
-{% endif %}
-
-{% set langMap = languageMap[pageKey] or {} %}
-
-<nav class="language-selector">
-    {% if lang == 'de' %}
-        <span>DE</span>
-    {% else %}
-        <a href="{{ langMap.de or '/' }}" class="{% if lang == 'de' %}active{% endif %}">DE</a>
+    {# Spezialfälle manuell korrigieren #}
+    {% if rawPageKey == 'kunst' %}
+        {% set pageKey = 'fineart' %}
     {% endif %}
+    {% if rawPageKey == 'ueber' %}
+        {% set pageKey = 'about' %}
+    {% endif %}
+
+    {% set langMap = languageMap[pageKey] or {} %}
+
+    <nav class="language-selector">
+        {% if lang == 'de' %}
+            <span>DE</span>
+        {% else %}
+            <a href="{{ langMap.de or '/' }}" class="{% if lang == 'de' %}active{% endif %}">DE</a>
+        {% endif %}
     /
     {% if lang == 'en' %}
-        <span>EN</span>
-    {% else %}
-        <a href="{{ langMap.en or '/en/' }}" class="{% if lang == 'en' %}active{% endif %}">EN</a>
-    {% endif %}
-</nav>
-
+            <span>EN</span>
+        {% else %}
+            <a href="{{ langMap.en or '/en/' }}" class="{% if lang == 'en' %}active{% endif %}">EN</a>
+        {% endif %}
+    </nav>
 
     <button id="theme-toggle">
         <img id="theme-icon" src="/assets/icons/icon_sun_b.svg" alt="Theme Toggle">
