@@ -4,3 +4,25 @@ permalink: "concept-art/index.html"
 lang: "de"
 layout: "base.njk"
 ---
+
+<link rel="stylesheet" href="/css/styles.css">
+
+{% set projects = [
+  {
+    title: "Abyss_03",
+    url: "/concept-art/abyss_03/",
+    image: "/assets/fineart/Gouldianfinch.png"
+  },
+  {
+    title: "Artya'il",
+    url: "/concept-art/artyail/",
+    image: "/assets/fineart/Gouldianfinch.png"
+  }
+] %}
+
+<div class="project-gallery">
+    {% for project in projects %}
+        {% set project = project %}
+        {% include "partials/projects.njk" %}
+    {% endfor %}
+</div>

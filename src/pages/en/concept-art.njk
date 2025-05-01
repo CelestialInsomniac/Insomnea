@@ -5,4 +5,24 @@ lang: "en"
 layout: "base.njk"
 ---
 
-<h1>English Projects</h1>
+<link rel="stylesheet" href="/css/styles.css">
+
+{% set projects = [
+  {
+    title: "Abyss_03",
+    url: "/en/concept-art/abyss_03/",
+    image: "/assets/fineart/Gouldianfinch.png"
+  },
+  {
+    title: "Artya'il",
+    url: "/en/concept-art/artyail/",
+    image: "/assets/fineart/Gouldianfinch.png"
+  }
+] %}
+
+<div class="project-gallery">
+    {% for project in projects %}
+        {% set project = project %}
+        {% include "partials/projects.njk" %}
+    {% endfor %}
+</div>

@@ -169,3 +169,80 @@ body.light-mode .adastra {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.project-button {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.project-title {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    font-family: inherit;
+    text-shadow: 0 0 5px black;
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-tile {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.project-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    transition: filter 0.3s ease;
+}
+
+.project-tile:hover img {
+    filter: brightness(0.9);
+}
+
+.project-title {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-family: 'Comic Neue', 'Segoe UI', cursive, sans-serif;
+    font-size: 1.8rem;
+    color: #e9e9e9;
+    text-shadow: 1px 1px 2px #000;
+}

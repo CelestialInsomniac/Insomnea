@@ -4,3 +4,30 @@ permalink: "games/index.html"
 lang: "de"
 layout: "base.njk"
 ---
+
+<link rel="stylesheet" href="/css/styles.css">
+
+{% set projects = [
+  {
+    title: "Abyss_03",
+    url: "/games/abyss_03game/",
+    image: "/assets/fineart/Gouldianfinch.png"
+  },
+  {
+    title: "Patched Up",
+    url: "/games/patched-up/",
+    image: "/assets/fineart/Gouldianfinch.png"
+  },
+    {
+    title: "Bedtime Story",
+    url: "/games/bedtime-story/",
+    image: "/assets/fineart/Gouldianfinch.png"
+  }
+] %}
+
+<div class="project-gallery">
+    {% for project in projects %}
+        {% set project = project %}
+        {% include "partials/projects.njk" %}
+    {% endfor %}
+</div>
