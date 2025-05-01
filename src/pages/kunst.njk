@@ -7,26 +7,47 @@ layout: "base.njk"
 
 <link rel="stylesheet" href="/css/styles.css">
 
-{% set images = [
+{% set artworks = [
   {
-      src: "/assets/fineart/Tabbycat.jpg",
-      alt: "Tigerkatze",
-      link: "/kunst/tigerkatze/"
-    }, {     
-      src: "/assets/fineart/Prohierodula.png",
-      alt: "Prohierodula Mantis",
-      link: "/kunst/prohierodula-mantis/"
-    }, {
-      src: "/assets/fineart/Redtabbycat.png",
-      alt: "Rote Tigerkatze",
-      link: "/kunst/rote-tigerkatze/index.html"
-    }, {
-      src: "/assets/fineart/Gouldianfinch.png",
-      alt: "Gouldamadine",
-      link: "/kunst/gouldamadine/index.html"
-    }, {
-      src: "/assets/fineart/Redfox.jpg",
-      alt: "Roter Fuchs",
-      link: "/kunst/roter-fuchs/index.html"
-    }
+    title: "Tigerkatze",
+    year: "2025",
+    medium: "Acryl auf Leinwand",
+    size: "??? cm",
+    image: "/assets/fineart/Tabbycat.jpg",
+    alt: "Tigerkatze"
+  }, {
+    title: "Prohierodula Mantis",
+    year: "2024",
+    medium: "Öl auf Leinwand",
+    size: "100 x 70 cm",
+    image: "/assets/fineart/Prohierodula.png",
+    alt: "Gottesanbeterin Prohierodula"
+  }, {
+    title: "Rote Tigerkatze",
+    year: "2024",
+    medium: "Acryl auf Leinwand",
+    size: "60 x 40 cm",
+    image: "/assets/fineart/Redtabbycat.png",
+    alt: "Rote Tigerkatze"
+  }, {
+    title: "Gouldamadine",
+    year: "2024",
+    medium: "Acryl auf Leinwand",
+    size: "30 x 40 cm",
+    image: "/assets/fineart/Gouldianfinch.png",
+    alt: "Gouldamadine"
+  }, {
+    title: "Roter Fuchs",
+    year: "2022",
+    medium: "Acryl auf Leinwand",
+    size: "30 x 40 cm",
+    image: "/assets/fineart/Redfox.jpg",
+    alt: "Roter Fuchs"
+  }
 ] %}
+
+<div class="artwork-gallery">
+  {% for work in artworks %}
+    {% include "partials/artwork.njk" %}
+  {% endfor %}
+</div>
