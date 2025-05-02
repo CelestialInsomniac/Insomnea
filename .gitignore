@@ -1,4 +1,4 @@
-eleventy/_site/index.html
+ps1eleventy/_site/index.html
 eleventy/node_modules/.package-lock.json
 eleventy/node_modules/.bin/acorn
 eleventy/node_modules/.bin/acorn.cmd
@@ -2580,3 +2580,6 @@ eleventy/node_modules/ws/lib/subprotocol.js
 eleventy/node_modules/ws/lib/validation.js
 eleventy/node_modules/ws/lib/websocket-server.js
 eleventy/node_modules/ws/lib/websocket.js
+.env
+.cloudinary/
+node_modules/
