@@ -1,7 +1,7 @@
 <footer>
     <nav>
-        <a href="/concept-art/" class="{% if page.url == '/concept-art/' %}active{% endif %}">concept art</a>
-        <a href="/games/" class="{% if page.url == '/games/' %}active{% endif %}">games</a>
+        <a href="/concept-art/" class="{% if page.url.startsWith('/concept-art/') %}active{% endif %}">concept art</a>
+        <a href="/games/" class="{% if page.url.startsWith('/games/') %}active{% endif %}">games</a>
         <a href="/kunst/" class="{% if page.url == '/kunst/' %}active{% endif %}">kunst</a>
         <a href="/ueber/" class="{% if page.url == '/ueber/' %}active{% endif %}">über mich</a>
     </nav>
@@ -18,7 +18,7 @@
         </a>
     </div>
 
-    <p>Danke für deinen Besuch!</p>
+    <p>Danke für Deinen Besuch!</p>
     <p>Alle Werke sind gegen Scraping-Diebstahl geschützt</p>
 
     {% set rawPageKey = page.fileSlug %}

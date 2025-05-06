@@ -1,7 +1,7 @@
 <footer>
     <nav>
-        <a href="/en/concept-art/" class="{% if page.url == '/en/concept-art/' %}active{% endif %}">concept art</a>
-        <a href="/en/games/" class="{% if page.url == '/en/games/' %}active{% endif %}">games</a>
+        <a href="/concept-art/" class="{% if page.url.startsWith('/en/concept-art/') %}active{% endif %}">concept art</a>
+        <a href="/games/" class="{% if page.url.startsWith('/en/games/') %}active{% endif %}">games</a>
         <a href="/en/fineart/" class="{% if page.url == '/en/fineart/' %}active{% endif %}">fine art</a>
         <a href="/en/about/" class="{% if page.url == '/en/about/' %}active{% endif %}">about</a>
     </nav>

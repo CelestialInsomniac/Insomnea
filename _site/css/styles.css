@@ -29,24 +29,6 @@ a:hover {
     font-size: 64px;
 }
 
-.moon {
-    position: absolute;
-    width: 200px;
-    height: 220px;
-}
-
-.moon1 {
-    z-index: 2;
-    top: 50px;
-    left: 300px;
-}
-
-.moon2 {
-    z-index: 1;
-    top: 100px;
-    left: 320px;
-}
-
 .decor {
     z-index: 1;
     width: 100px;
