@@ -1,9 +1,9 @@
 <footer>
     <nav>
-        <a href="/en/concept-art/" class="{% if page.url.startsWith('/en/concept-art/') %}active{% endif %}">concept art</a>
-        <a href="/en/games/" class="{% if page.url.startsWith('/en/games/') %}active{% endif %}">games</a>
-        <a href="/en/fineart/" class="{% if page.url == '/en/fineart/' %}active{% endif %}">fine art</a>
-        <a href="/en/about/" class="{% if page.url == '/en/about/' %}active{% endif %}">about me</a>
+        <a href="{{ languageMap['concept-art'].en }}" class="{% if (page.url or '').startsWith(languageMap['concept-art'].en) %}active{% endif %}">concept art</a>
+        <a href="{{ languageMap['games'].en }}" class="{% if (page.url or '').startsWith(languageMap['games'].en) %}active{% endif %}">games</a>
+        <a href="{{ languageMap['kunst'].en }}" class="{% if (page.url or '').startsWith(languageMap['kunst'].en) %}active{% endif %}">fine art</a>
+        <a href="{{ languageMap['ueber'].en }}" class="{% if (page.url or '').startsWith(languageMap['ueber'].en) %}active{% endif %}">about me</a>
     </nav>
 
     <div class="icon-container">
@@ -21,15 +21,14 @@
     <p>Thank you for your visit!</p>
     <p>All works are protected against scraping theft</p>
 
-        {% if languageMap and pageKey in languageMap and languageMap[pageKey].de %}
-            <a href="{{ languageMap[pageKey].de }}">EN/DE</a>
-        {% else %}
-            <a href="/">EN/DE</a>
-        {% endif %}
+    {% if languageMap and pageKey in languageMap and languageMap[pageKey] and languageMap[pageKey].de %}
+        <a href="{{ languageMap[pageKey].de }}">EN/DE</a>
+    {% else %}
+        <a href="/">EN/DE</a>
+    {% endif %}
 
-        <button id="theme-toggle">
-            <img id="theme-icon" src="/assets/icons/icon_sun_b.svg" alt="Theme Toggle">
-        </button>
-    </div>
+    <button id="theme-toggle">
+        <img id="theme-icon" src="/assets/icons/icon_sun_b.svg" alt="Theme Toggle">
+    </button>
     <script src="/assets/js/theme-toggle.js"></script>
 </footer>

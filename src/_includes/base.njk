@@ -1,3 +1,11 @@
+{% set rawPageKey = page.fileSlug %}
+{% set pageKey = rawPageKey %}
+
+{# Sonderfall: concept-art-Version von abyss_03 #}
+{% if page.url and 'concept-art' in page.url and pageKey == 'abyss_03' %}
+    {% set pageKey = 'abyss_03_concept' %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="{{ lang }}">
     <head>
@@ -13,10 +21,14 @@
         <main>
             {{ content | safe }}
         </main>
-        {% if lang == "de" %}
-            {% include "DEfooter.njk" %}
-        {% else %}
-            {% include "ENfooter.njk" %}
-        {% endif %}
+        <footer>
+            {% if lang == "de" %}
+                <div>DE wird geladen</div>
+                {% include "DEfooter.njk" %}
+            {% else %}
+                <div>EN wird geladen</div>
+                {% include "ENfooter.njk" %}
+            {% endif %}
+        </footer>
     </body>
 </html>

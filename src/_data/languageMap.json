@@ -1,9 +1,9 @@
 {
-    "about": {
+    "ueber": {
         "de": "/ueber/",
         "en": "/en/about/"
     },
-    "fineart": {
+    "kunst": {
         "de": "/kunst/",
         "en": "/en/fineart/"
     },
