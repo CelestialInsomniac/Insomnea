@@ -1,3 +1,4 @@
+{% set cloudinaryBaseUrl = "https://res.cloudinary.com/insomneaart/image/upload/" %}
 <h2>{{ work.title }}</h2>
 <p>{{ work.year }} · {{ work.medium }} · {{ work.size }}</p>
-<img src="{{ work.image }}" alt="{{ work.alt }}">
+<img src="{{ cloudinaryBaseUrl }}{{ work.image }}" alt="{{ work.alt }}">
