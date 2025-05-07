@@ -25,6 +25,13 @@ a:hover {
     opacity: 70%;
 }
 
+/* Theme Toggle Button */
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 .home {
     font-size: 64px;
 }

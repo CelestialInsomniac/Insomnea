@@ -1,9 +1,9 @@
 <footer>
     <nav>
-        <a href="/concept-art/" class="{% if page.url.startsWith('/en/concept-art/') %}active{% endif %}">concept art</a>
-        <a href="/games/" class="{% if page.url.startsWith('/en/games/') %}active{% endif %}">games</a>
+        <a href="/en/concept-art/" class="{% if page.url.startsWith('/en/concept-art/') %}active{% endif %}">concept art</a>
+        <a href="/en/games/" class="{% if page.url.startsWith('/en/games/') %}active{% endif %}">games</a>
         <a href="/en/fineart/" class="{% if page.url == '/en/fineart/' %}active{% endif %}">fine art</a>
-        <a href="/en/about/" class="{% if page.url == '/en/about/' %}active{% endif %}">about</a>
+        <a href="/en/about/" class="{% if page.url == '/en/about/' %}active{% endif %}">about me</a>
     </nav>
 
     <div class="icon-container">
@@ -21,20 +21,15 @@
     <p>Thank you for your visit!</p>
     <p>All works are protected against scraping theft</p>
 
-    {% set rawPageKey = page.fileSlug %}
-    {% set pageKey = rawPageKey %}
-    {% if page.url startsWith '/concept-art/' or page.url startsWith '/en/concept-art/' %}
-        {% set pageKey = pageKey + '_concept' %}
-    {% endif %}
-    {% if languageMap and pageKey in languageMap %}
-        {% set langMap = languageMap[pageKey] %}
-    {% else %}
-        {% set langMap = {} %}
-    {% endif %}
+        {% if languageMap and pageKey in languageMap and languageMap[pageKey].de %}
+            <a href="{{ languageMap[pageKey].de }}">EN/DE</a>
+        {% else %}
+            <a href="/">EN/DE</a>
+        {% endif %}
 
-    <button id="theme-toggle">
-        <img id="theme-icon" src="/assets/icons/icon_sun_b.svg" alt="Theme Toggle">
-    </button>
-
+        <button id="theme-toggle">
+            <img id="theme-icon" src="/assets/icons/icon_sun_b.svg" alt="Theme Toggle">
+        </button>
+    </div>
     <script src="/assets/js/theme-toggle.js"></script>
 </footer>

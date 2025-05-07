@@ -8,17 +8,15 @@
     </head>
     <body>
         <header>
-            <a href="{% if lang == 'de' %}/index.html{% else %}/en/index.html{% endif %}" class="home">INSOMNEA art</a>
+            <a href="{% if lang == 'de' %}/{% else %}/en/{% endif %}" class="home">INSOMNEA art</a>
         </header>
         <main>
             {{ content | safe }}
         </main>
-    </body>
-    <footer>
         {% if lang == "de" %}
             {% include "DEfooter.njk" %}
         {% else %}
             {% include "ENfooter.njk" %}
         {% endif %}
-    </footer>
+    </body>
 </html>
