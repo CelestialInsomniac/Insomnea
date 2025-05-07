@@ -21,9 +21,6 @@
 <p>Alle Werke sind gegen Scraping-Diebstahl geschützt</p>
 
 <nav class="language-selector">
-    <div>Debug: pageKey = {{ pageKey or 'undefined' }}</div>
-    <div>Debug: languageMap[pageKey] = {{ languageMap[pageKey] | dump }}</div>
-    <div>Debug: languageMap[pageKey].en = {{ languageMap[pageKey].en or 'undefined' }}</div>
     {% if lang == 'de' %}
         <span>DE</span>
     {% else %}

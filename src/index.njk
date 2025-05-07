@@ -16,15 +16,20 @@ lang: "de"
         <a href="index.html" class="home">INSOMNEA art</a>
     </header>
     <main class="menu-buttons">
-        <a href="/concept-art/" class="menu-button" style="background-image: url('/assets/fineart/Tabbycat.jpg');">
-            <span>concept art</span>
-        </a>
+        {% set path = "v1746177971/tabby_cat_lnm7kz.jpg" %}
+        {% set href = "/concept-art/" %}
+        {% set text = "concept art" %}
+        {% set class = "menu-button" %}
+        {% include "cloudinary-image.njk" %}
+
         <a href="/games/" class="menu-button" style="background-image: url('/assets/images/games.jpg');">
             <span>games</span>
         </a>
-        <a href="/kunst/" class="menu-button" style="background-image: url('/assets/images/kunst.jpg');">
-            <span>kunst</span>
-        </a>
+        {% set path = "v1746177971/tabby_cat_lnm7kz.jpg" %}
+        {% set href = "/kunst/" %}
+        {% set text = "kunst" %}
+        {% set class = "menu-button" %}
+        {% include "cloudinary-image.njk" %}
         <a href="/ueber/" class="menu-button" style="background-image: url('/assets/images/ueber-mich.jpg');">
             <span>über mich</span>
         </a>

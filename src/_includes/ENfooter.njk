@@ -22,9 +22,6 @@
     <p>All works are protected against scraping theft</p>
 
     <nav class="language-selector">
-        <div>Debug: pageKey = {{ pageKey or 'undefined' }}</div>
-        <div>Debug: languageMap[pageKey] = {{ languageMap[pageKey] | dump }}</div>
-        <div>Debug: languageMap[pageKey].de = {{ languageMap[pageKey].de or 'undefined' }}</div>
         {% if lang == 'en' %}
             <a href="{{ languageMap[pageKey].de or '/' }}">DE</a>
         {% else %}
