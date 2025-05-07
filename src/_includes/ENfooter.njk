@@ -21,11 +21,22 @@
     <p>Thank you for your visit!</p>
     <p>All works are protected against scraping theft</p>
 
-    {% if languageMap and pageKey in languageMap and languageMap[pageKey] and languageMap[pageKey].de %}
-        <a href="{{ languageMap[pageKey].de }}">EN/DE</a>
-    {% else %}
-        <a href="/">EN/DE</a>
-    {% endif %}
+    <nav class="language-selector">
+        <div>Debug: pageKey = {{ pageKey or 'undefined' }}</div>
+        <div>Debug: languageMap[pageKey] = {{ languageMap[pageKey] | dump }}</div>
+        <div>Debug: languageMap[pageKey].de = {{ languageMap[pageKey].de or 'undefined' }}</div>
+        {% if lang == 'en' %}
+            <a href="{{ languageMap[pageKey].de or '/' }}">DE</a>
+        {% else %}
+            <span>DE</span>
+        {% endif %}
+        /
+        {% if lang == 'en' %}
+            <span>EN</span>
+        {% else %}
+            <a href="{{ languageMap[pageKey].en or '/' }}">EN</a>
+        {% endif %}
+    </nav>
 
     <button id="theme-toggle">
         <img id="theme-icon" src="/assets/icons/icon_sun_b.svg" alt="Theme Toggle">
