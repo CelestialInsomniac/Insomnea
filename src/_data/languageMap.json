@@ -1,7 +1,11 @@
 {
-    "index": {
-        "de": "/",
-        "en": "/en/"
+    "about": {
+        "de": "/ueber/",
+        "en": "/en/about/"
+    },
+    "fineart": {
+        "de": "/kunst/",
+        "en": "/en/fineart/"
     },
     "concept-art": {
         "de": "/concept-art/",
@@ -11,12 +15,28 @@
         "de": "/games/",
         "en": "/en/games/"
     },
-    "fineart": {
-        "de": "/kunst/",
-        "en": "/en/fineart/"
+    "abyss_03": {
+        "en": "/en/games/abyss_03/",
+        "de": "/games/abyss_03/"
     },
-    "about": {
-        "de": "/ueber/",
-        "en": "/en/about/"
+    "patched-up": {
+        "en": "/en/games/patched-up/",
+        "de": "/games/patched-up/"
+    },
+    "bedtime-story": {
+        "en": "/en/games/bedtime-story/",
+        "de": "/games/bedtime-story/"
+    },
+    "abyss_03_concept": {
+        "en": "/en/concept-art/abyss_03_concept/",
+        "de": "/concept-art/abyss_03_concept/",
+        "title": {
+            "en": "Abyss_03 Concept",
+            "de": "Abyss_03 Konzept"
+        }
+    },
+    "artyail": {
+        "de": "/concept-art/artyail/",
+        "en": "/en/concept-art/artyail/"
     }
 }

@@ -21,22 +21,16 @@
     <p>Thank you for your visit!</p>
     <p>All works are protected against scraping theft</p>
 
-    {% set pageKey = page.fileSlug | replace("en/", "") | replace("ueber", "/en/about") | replace("kunst", "/en/fineart") %}
-    {% set langMap = languageMap[pageKey] or {} %}
-
-    <nav class="language-selector">
-        {% if lang == 'de' %}
-            <span>DE</span>
-        {% else %}
-            <a href="{{ langMap.de }}" class="{% if lang == 'de' %}active{% endif %}">DE</a>
-        {% endif %}
-    /
-        {% if lang == 'en' %}
-            <span>EN</span>
-        {% else %}
-            <a href="{{ langMap.en }}" class="{% if lang == 'en' %}active{% endif %}">EN</a>
-        {% endif %}
-    </nav>
+    {% set rawPageKey = page.fileSlug %}
+    {% set pageKey = rawPageKey %}
+    {% if page.url startsWith '/concept-art/' or page.url startsWith '/en/concept-art/' %}
+        {% set pageKey = pageKey + '_concept' %}
+    {% endif %}
+    {% if languageMap and pageKey in languageMap %}
+        {% set langMap = languageMap[pageKey] %}
+    {% else %}
+        {% set langMap = {} %}
+    {% endif %}
 
     <button id="theme-toggle">
         <img id="theme-icon" src="/assets/icons/icon_sun_b.svg" alt="Theme Toggle">
