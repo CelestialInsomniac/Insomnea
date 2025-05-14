@@ -80,5 +80,33 @@
 <script src="/assets/js/theme-toggle.js"></script>
             
         </footer>
+        <a href="#top" class="back-to-top" aria-label="Zurück nach oben">
+            <img src="/assets/icons/icon_arrow_B.svg"
+         alt="Pfeil nach oben"
+         class="arrow-icon theme-icon-switch"
+         data-dark="/assets/icons/icon_arrow_B.svg"
+         data-light="/assets/icons/icon_arrow_D.svg">
+        </a>
+
+        <script>
+            const backToTop = document.querySelector(".back-to-top");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > window.innerHeight) {
+                    backToTop.style.display = "block";
+                } else {
+                    backToTop.style.display = "none";
+                }
+            });
+
+            // Optional: Sanftes Scrollen
+            document
+                .querySelector(".back-to-top")
+                .addEventListener("click", function (e) {
+                    e.preventDefault();
+                    window.scrollTo({top: 0, behavior: "smooth"});
+                });
+        </script>
+
     </body>
 </html>
