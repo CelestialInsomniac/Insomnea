@@ -138,7 +138,16 @@ body.light-mode .about {
 }
 
 body.light-mode .adastra {
+    position: absolute;
+    right: 0;
+    top: 60%;
+    font-size: 25px;
+    letter-spacing: 22px;
     background: linear-gradient(270deg, #1A1A1A 33.34%, #C0CBD8 110.25%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: rotate(-90deg);
 }
 
 .project-button {
