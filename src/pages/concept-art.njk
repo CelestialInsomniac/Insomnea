@@ -7,22 +7,14 @@ layout: "base.njk"
 
 <link rel="stylesheet" href="/css/styles.css">
 
-{% set projects = [
-  {
-    title: "Abyss_03",
-    url: "/concept-art/abyss_03_concept/",
-    image: "/assets/fineart/Gouldianfinch.png"
-  },
-  {
-    title: "Artya'il",
-    url: "/concept-art/artyail/",
-    image: "/assets/fineart/Gouldianfinch.png"
-  }
-] %}
+{% set path = "v1746984530/Abyss_03_character_concept_b6mjmx.png" %}
+{% set href = "/concept-art/abyss_03_concept/" %}
+{% set text = "Abyss_03" %}
+{% set class = "menu-button" %}
+{% include "cloudinary-image.njk" %}
 
-<div class="project-gallery">
-    {% for project in projects %}
-        {% set project = project %}
-        {% include "partials/projects_menu.njk" %}
-    {% endfor %}
-</div>
+{% set path = "v1746985681/Artyail_character_blurb_pg4rok.png" %}
+{% set href = "/concept-art/artyail/" %}
+{% set text = "Artya'il" %}
+{% set class = "menu-button" %}
+{% include "cloudinary-image.njk" %}

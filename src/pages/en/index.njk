@@ -17,20 +17,29 @@ lang: "en"
     </header>
 
     <main class="menu-buttons">
-        <a href="/en/concept-art/" class="menu-button" style="background-image: url('/assets/images/games.jpg');">
-            <span>concept art</span>
-        </a>
-        <a href="/en/games/" class="menu-button" style="background-image: url('/assets/images/games.jpg');">
-            <span>games</span>
-        </a>
+        {% set path = "v1746983756/concept_ship_final_k5qyl8.png" %}
+        {% set href = "/en/concept-art/" %}
+        {% set text = "concept art" %}
+        {% set class = "menu-button" %}
+        {% include "cloudinary-image.njk" %}
+
+        {% set path = "v1747295324/Screenshot_1_Patched_Up_no7bfa.png" %}
+        {% set href = "/en/games/" %}
+        {% set text = "games" %}
+        {% set class = "menu-button" %}
+        {% include "cloudinary-image.njk" %}
+
         {% set path = "v1746177971/tabby_cat_lnm7kz.jpg" %}
         {% set href = "/en/fineart/" %}
         {% set text = "fine art" %}
         {% set class = "menu-button" %}
         {% include "cloudinary-image.njk" %}
-        <a href="/en/about/" class="menu-button" style="background-image: url('/assets/images/ueber-mich.jpg');">
-            <span>about me</span>
-        </a>
+
+        {% set path = "v1747295573/me_tqkpwt.jpg" %}
+        {% set href = "/en/about/" %}
+        {% set text = "about me" %}
+        {% set class = "menu-button" %}
+        {% include "cloudinary-image.njk" %}
     </main>
 
     <footer>
