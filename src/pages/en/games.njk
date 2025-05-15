@@ -7,27 +7,20 @@ layout: "base.njk"
 
 <link rel="stylesheet" href="/css/styles.css">
 
-{% set projects = [
-  {
-    title: "Abyss_03",
-    url: "/en/games/abyss_03game/",
-    image: "/assets/fineart/Gouldianfinch.png"
-  },
-  {
-    title: "Patched Up",
-    url: "/en/games/patched-up/",
-    image: "/assets/fineart/Gouldianfinch.png"
-  },
-    {
-    title: "Bedtime Story",
-    url: "/en/games/bedtime-story/",
-    image: "/assets/fineart/Gouldianfinch.png"
-  }
-] %}
+{% set path = "v1746985871/Abyss_03_ship-protected_t1e6v5.png" %}
+{% set href = "/en/games/abyss_03game/" %}
+{% set text = "Abyss_03" %}
+{% set class = "menu-button" %}
+{% include "cloudinary-image.njk" %}
 
-<div class="project-gallery">
-  {% for project in projects %}
-    {% set project = project %}
-    {% include "partials/projects_menu.njk" %}
-  {% endfor %}
-</div>
+{% set path = "v1747295328/Screenshot_4_Patched_Up_pzadvf.png" %}
+{% set href = "/en/games/patched-up/" %}
+{% set text = "Patched Up" %}
+{% set class = "menu-button" %}
+{% include "cloudinary-image.njk" %}
+
+{% set path = "v1746985930/BedtimeStory_game_over_screen_uaeif6.png" %}
+{% set href = "/en/games/bedtime-story/" %}
+{% set text = "Bedtime Story" %}
+{% set class = "menu-button" %}
+{% include "cloudinary-image.njk" %}
