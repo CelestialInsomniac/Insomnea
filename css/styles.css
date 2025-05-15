@@ -75,6 +75,10 @@ body.light-mode .about {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     padding: 1rem;
+    max-width: 80%;
+    /* Limit the width to 80% of the screen */
+    margin: 0 auto;
+    /* Center the container */
 }
 
 .menu-button {
@@ -105,6 +109,45 @@ body.light-mode .about {
 }
 
 .menu-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.submenu-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.submenu-button {
+    position: relative; /* <--- Das brauchst du wieder! */
+    width: 100%;
+    padding-top: 50%; /* oder 56.25% für 16:9 */
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.submenu-button span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.submenu-button:hover {
     transform: scale(1.05);
     opacity: 0.9;
 }
