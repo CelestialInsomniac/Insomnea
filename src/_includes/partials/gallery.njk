@@ -1,0 +1,8 @@
+{# components/gallery.njk #}
+<div class="gallery">
+    {% for image in images %}
+        <a href="{{ image.large }}" class="glightbox" data-gallery="{{ galleryName }}">
+            <img src="{{ image.thumb }}" alt="{{ image.alt | default('Gallery image') }}">
+        </a>
+    {% endfor %}
+</div>

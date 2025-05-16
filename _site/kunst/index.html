@@ -11,6 +11,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Kunst</title>
         <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
     </head>
     <body>
         <header>
@@ -124,6 +126,10 @@
                     window.scrollTo({top: 0, behavior: "smooth"});
                 });
         </script>
-
+        
+        <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+        <script>
+            const lightbox = GLightbox({selector: '.glightbox'});
+        </script>
     </body>
 </html>

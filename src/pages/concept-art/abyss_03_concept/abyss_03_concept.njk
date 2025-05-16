@@ -14,3 +14,39 @@ elches wir in diesem Modul entwickelten. Unter <a href='/games/abyss_03game/inde
 <p>Der Charakter gehört der Rasse der Assavi an. Die Assavi leben auf dem Wüstenplanet namens Urusvak und sie sind gewappnet für extreme Temperaturen und starke Windstürme.
 Der Suit ist für Agilität entwickelt und das Jetpack dient der Fortbewegung.</p>
 
+{# Galerie 1: Charakterkonzept #}
+{% set gallery1 = [
+    {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984178/Abyss_03_visdev_1_mejxyz.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984178/Abyss_03_visdev_1_mejxyz.png",
+        alt: "Thumbnails 1"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984180/Abyss_03_visdev_2_hnaeuv.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984180/Abyss_03_visdev_2_hnaeuv.png",
+        alt: "Thumbnails 2"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984535/Abyss_03_base_svgbwb.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984535/Abyss_03_base_svgbwb.png",
+        alt: "Base"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984532/Abyss_03_it1_hjsjwb.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984532/Abyss_03_it1_hjsjwb.png",
+        alt: "Erste Iteration"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984534/Abyss_03_it2_buanyk.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984534/Abyss_03_it2_buanyk.png",
+        alt: "Zweite Iteration"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984531/Abyss_03_concept_kx6fwm.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984531/Abyss_03_concept_kx6fwm.png",
+        alt: "Dritte Iteration"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984530/Abyss_03_character_concept_b6mjmx.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984530/Abyss_03_character_concept_b6mjmx.png",
+        alt: "Charakterkonzept"
+    }
+] %}
+
+{% set images = gallery1 %}
+{% set galleryName = "abyss03-charakter" %}
+{% include "partials/gallery.njk" %}
