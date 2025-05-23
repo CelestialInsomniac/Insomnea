@@ -119,10 +119,20 @@
                     window.scrollTo({top: 0, behavior: "smooth"});
                 });
         </script>
-        
+
         <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
         <script>
-            const lightbox = GLightbox({selector: '.glightbox'});
+            const lightbox = GLightbox({
+                selector: '.glightbox',
+                loop: true,
+                touchNavigation: true,
+                keyboardNavigation: true,
+                closeButton: true,
+                zoomable: true, // (funktioniert bei Bildern)
+                moreText: '', // optionaler Text
+            });
         </script>
+
     </body>
 </html>

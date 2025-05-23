@@ -50,3 +50,38 @@ Der Suit ist für Agilität entwickelt und das Jetpack dient der Fortbewegung.</
 {% set images = gallery1 %}
 {% set galleryName = "abyss03-charakter" %}
 {% include "partials/gallery.njk" %}
+
+<hr>
+
+<p>Inspiriert von Raubfliegen, mächtigen Wüstenfliegen, habe ich das Konzept für unser Raumschiff erstellt. Die kleinen Schiffe vorne und an den Seiten dienen als Schildprojektoren.
+ Die beiden Flügelpaare dienen dazu, die Richtung des Schiffes zu steuern. An der Unterseite befinden sich zwei Paare von einziehbaren Beinen.</p>
+
+{# Galerie 2: Raumschiff #}
+{% set spaceshipGallery = [
+    {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746983756/concept_ship_final_k5qyl8.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746983756/concept_ship_final_k5qyl8.png",
+        alt: "Raumschiff Konzept"
+    },    {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746984063/visdev_ship_qpzdlh.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984063/visdev_ship_qpzdlh.png",
+        alt: "Raumschiff Konzept"
+    },    {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746984065/concept_ship_hmnsif.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984065/concept_ship_hmnsif.png",
+        alt: "Raumschiff Konzept"
+    },    {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746983755/concept_ship_4_vewa8p.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746983755/concept_ship_4_vewa8p.png",
+        alt: "Raumschiff Konzept"
+    },    {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746983757/ship_shields_ezlj9p.jpg",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746983757/ship_shields_ezlj9p.jpg",
+        alt: "Raumschiff Konzept"
+    }
+] %}
+
+{% set images = spaceshipGallery %}
+{% set galleryName = "abyss03-spaceship" %}
+{% set highlightFirst = true %}
+{% include "partials/gallery.njk" %}

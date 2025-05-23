@@ -46,31 +46,59 @@ The suit is designed for agility and the jetpack is used for locomotion.</p>
 
 <div class="gallery">
     
-        <a href="https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984178/Abyss_03_visdev_1_mejxyz.png" class="glightbox" data-gallery="abyss03-character">
+        <a
+            href="https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984178/Abyss_03_visdev_1_mejxyz.png"
+            class="glightbox gallery__item"
+            data-gallery="abyss03-character"
+        >
             <img src="https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984178/Abyss_03_visdev_1_mejxyz.png" alt="Thumbnails 1">
         </a>
     
-        <a href="https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984180/Abyss_03_visdev_2_hnaeuv.png" class="glightbox" data-gallery="abyss03-character">
+        <a
+            href="https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984180/Abyss_03_visdev_2_hnaeuv.png"
+            class="glightbox gallery__item"
+            data-gallery="abyss03-character"
+        >
             <img src="https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984180/Abyss_03_visdev_2_hnaeuv.png" alt="Thumbnails 2">
         </a>
     
-        <a href="https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984535/Abyss_03_base_svgbwb.png" class="glightbox" data-gallery="abyss03-character">
+        <a
+            href="https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984535/Abyss_03_base_svgbwb.png"
+            class="glightbox gallery__item"
+            data-gallery="abyss03-character"
+        >
             <img src="https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984535/Abyss_03_base_svgbwb.png" alt="Base">
         </a>
     
-        <a href="https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984532/Abyss_03_it1_hjsjwb.png" class="glightbox" data-gallery="abyss03-character">
+        <a
+            href="https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984532/Abyss_03_it1_hjsjwb.png"
+            class="glightbox gallery__item"
+            data-gallery="abyss03-character"
+        >
             <img src="https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984532/Abyss_03_it1_hjsjwb.png" alt="First iteration">
         </a>
     
-        <a href="https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984534/Abyss_03_it2_buanyk.png" class="glightbox" data-gallery="abyss03-character">
+        <a
+            href="https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984534/Abyss_03_it2_buanyk.png"
+            class="glightbox gallery__item"
+            data-gallery="abyss03-character"
+        >
             <img src="https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984534/Abyss_03_it2_buanyk.png" alt="Second iteration">
         </a>
     
-        <a href="https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984531/Abyss_03_concept_kx6fwm.png" class="glightbox" data-gallery="abyss03-character">
+        <a
+            href="https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984531/Abyss_03_concept_kx6fwm.png"
+            class="glightbox gallery__item"
+            data-gallery="abyss03-character"
+        >
             <img src="https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984531/Abyss_03_concept_kx6fwm.png" alt="Third iteration">
         </a>
     
-        <a href="https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984530/Abyss_03_character_concept_b6mjmx.png" class="glightbox" data-gallery="abyss03-character">
+        <a
+            href="https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984530/Abyss_03_character_concept_b6mjmx.png"
+            class="glightbox gallery__item"
+            data-gallery="abyss03-character"
+        >
             <img src="https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984530/Abyss_03_character_concept_b6mjmx.png" alt="Charakter concept">
         </a>
     
@@ -143,10 +171,20 @@ The suit is designed for agility and the jetpack is used for locomotion.</p>
                     window.scrollTo({top: 0, behavior: "smooth"});
                 });
         </script>
-        
+
         <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
         <script>
-            const lightbox = GLightbox({selector: '.glightbox'});
+            const lightbox = GLightbox({
+                selector: '.glightbox',
+                loop: true,
+                touchNavigation: true,
+                keyboardNavigation: true,
+                closeButton: true,
+                zoomable: true, // (funktioniert bei Bildern)
+                moreText: '', // optionaler Text
+            });
         </script>
+
     </body>
 </html>
