@@ -9,7 +9,7 @@ heroText: "<p>Das Konzept für diesen Character sowie für das Raumschiff weiter
 elches wir in diesem Modul entwickelten. Unter <a href='/games/abyss_03game/index.html' style='text-decoration: underline;'> Games</a> findest Du mehr darüber. </p>"
 ---
 
-{% include "project_template.njk" %}
+{% include "partials/project_template.njk" %}
 
 <p>Der Charakter gehört der Rasse der Assavi an. Die Assavi leben auf dem Wüstenplanet namens Urusvak und sie sind gewappnet für extreme Temperaturen und starke Windstürme.
 Der Suit ist für Agilität entwickelt und das Jetpack dient der Fortbewegung.</p>
@@ -17,31 +17,31 @@ Der Suit ist für Agilität entwickelt und das Jetpack dient der Fortbewegung.</
 {# Galerie 1: Charakterkonzept #}
 {% set gallery1 = [
     {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984178/Abyss_03_visdev_1_mejxyz.png",
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746984178/Abyss_03_visdev_1_mejxyz.png",
         thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984178/Abyss_03_visdev_1_mejxyz.png",
         alt: "Thumbnails 1"
     }, {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984180/Abyss_03_visdev_2_hnaeuv.png",
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746984180/Abyss_03_visdev_2_hnaeuv.png",
         thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984180/Abyss_03_visdev_2_hnaeuv.png",
         alt: "Thumbnails 2"
     }, {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984535/Abyss_03_base_svgbwb.png",
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746984535/Abyss_03_base_svgbwb.png",
         thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984535/Abyss_03_base_svgbwb.png",
         alt: "Base"
     }, {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984532/Abyss_03_it1_hjsjwb.png",
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746984532/Abyss_03_it1_hjsjwb.png",
         thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984532/Abyss_03_it1_hjsjwb.png",
         alt: "Erste Iteration"
     }, {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984534/Abyss_03_it2_buanyk.png",
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746984534/Abyss_03_it2_buanyk.png",
         thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984534/Abyss_03_it2_buanyk.png",
         alt: "Zweite Iteration"
     }, {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984531/Abyss_03_concept_kx6fwm.png",
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746984531/Abyss_03_concept_kx6fwm.png",
         thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984531/Abyss_03_concept_kx6fwm.png",
         alt: "Dritte Iteration"
     }, {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/v1/v1746984530/Abyss_03_character_concept_b6mjmx.png",
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746984530/Abyss_03_character_concept_b6mjmx.png",
         thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984530/Abyss_03_character_concept_b6mjmx.png",
         alt: "Charakterkonzept"
     }
@@ -65,19 +65,39 @@ Der Suit ist für Agilität entwickelt und das Jetpack dient der Fortbewegung.</
     },    {
         large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746984063/visdev_ship_qpzdlh.png",
         thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984063/visdev_ship_qpzdlh.png",
-        alt: "Raumschiff Konzept"
+        alt: "Raumschiff Skizzen"
     },    {
         large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746984065/concept_ship_hmnsif.png",
         thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984065/concept_ship_hmnsif.png",
-        alt: "Raumschiff Konzept"
+        alt: "Raumschiff Iteration 1"
     },    {
         large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746983755/concept_ship_4_vewa8p.png",
         thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746983755/concept_ship_4_vewa8p.png",
-        alt: "Raumschiff Konzept"
+        alt: "Raumschiff Iteration 1A"
+    },    {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746983754/concept_ship_3_t3z6qx.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746983754/concept_ship_3_t3z6qx.png",
+        alt: "Raumschiff Iteration 1B"
+    },    {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746983754/concept_ship_2_t6obtu.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746983754/concept_ship_2_t6obtu.png",
+        alt: "Raumschiff Iteration 1C"
     },    {
         large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746983757/ship_shields_ezlj9p.jpg",
         thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746983757/ship_shields_ezlj9p.jpg",
-        alt: "Raumschiff Konzept"
+        alt: "Raumschiff Iteration 1D"
+    },    {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746984066/ship_backnfront_zrgl3s.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984066/ship_backnfront_zrgl3s.png",
+        alt: "Raumschiff Vorder- und Rückansicht"
+    },    {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746984063/ship_side_bzy7zj.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984063/ship_side_bzy7zj.png",
+        alt: "Raumschiff Seitenansicht"
+    },    {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746984065/ship_3.4_y6etxa.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746984065/ship_3.4_y6etxa.png",
+        alt: "Raumschiff Dreiviertelansicht"
     }
 ] %}
 
