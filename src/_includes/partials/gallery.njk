@@ -1,12 +1,15 @@
 {# components/gallery.njk #}
 <div class="gallery{% if highlightFirst %} gallery--highlight-first{% endif %}">
-    {% for image in images %}
-        <a
-            href="{{ image.large }}"
-            class="glightbox gallery__item{% if loop.first and highlightFirst %} gallery__item--highlight{% endif %}"
-            data-gallery="{{ galleryName }}"
-        >
-            <img src="{{ image.thumb }}" alt="{{ image.alt | default('Gallery image') }}">
-        </a>
-    {% endfor %}
+    <div class="gallery__wrapper lightgallery">
+        {% for image in images %}
+            <a
+        href="{{ image.large }}"
+        class="gallery__item{% if loop.first and highlightFirst %} gallery__item--highlight{% endif %}"
+        data-lg-size="1600-1060"
+        data-sub-html="{{ image.alt | default('') }}"
+      >
+                <img src="{{ image.thumb }}" alt="{{ image.alt | default('Gallery image') }}">
+            </a>
+        {% endfor %}
+    </div>
 </div>

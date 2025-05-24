@@ -123,9 +123,11 @@ body.light-mode .about {
 }
 
 .submenu-button {
-    position: relative; /* <--- Das brauchst du wieder! */
+    position: relative;
+    /* <--- Das brauchst du wieder! */
     width: 100%;
-    padding-top: 50%; /* oder 56.25% für 16:9 */
+    padding-top: 50%;
+    /* oder 56.25% für 16:9 */
     background-size: cover;
     background-position: center;
     border-radius: 0.5rem;
@@ -251,38 +253,34 @@ body.light-mode .adastra {
     }
 }
 
-.gallery {
-  display: grid;
-  gap: 1rem;
-  justify-content: center; /* Galerie-Inhalt zentrieren */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  max-width: 1200px; /* optional: begrenzt die Breite */
-  margin: 0 auto; /* zentriert die gesamte Galerie */
+.gallery__wrapper {
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Standard-Styling für Bilder */
 .gallery__item img {
-  width: 100%;
-  display: block;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .gallery__item:hover img {
-  opacity: 80%;
+    opacity: 80%;
 }
 
-/* Wenn das erste Bild hervorgehoben werden soll */
 .gallery--highlight-first .gallery__item--highlight {
-  grid-column: 1 / -1; /* nimmt gesamte Zeile ein */
+    grid-column: 1 / -1;
 }
 
-/* Optional: Definiere wie viele Bilder pro Zeile nach dem Highlight erscheinen sollen */
-.gallery--highlight-first {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.gallery--highlight-first .gallery__wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
-
 
 .back-to-top {
     position: fixed;

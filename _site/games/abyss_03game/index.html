@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Abyss_03</title>
         <link rel="stylesheet" href="/css/styles.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+        <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css"/>
 
     </head>
     <body>
@@ -90,18 +90,25 @@
                 });
         </script>
 
-        <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/lg-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
 
         <script>
-            const lightbox = GLightbox({
-                selector: '.glightbox',
-                loop: true,
-                touchNavigation: true,
-                keyboardNavigation: true,
-                closeButton: true,
-                zoomable: true, // (funktioniert bei Bildern)
-                moreText: '', // optionaler Text
-            });
+            document
+                .querySelectorAll(".lightgallery")
+                .forEach((gallery) => {
+                    lightGallery(gallery, {
+                        plugins: [
+                            lgZoom, lgThumbnail
+                        ],
+                        speed: 500,
+                        zoom: true,
+                        thumbnail: true,
+                        download: false,
+                        actualSize: true
+                    });
+                });
         </script>
 
     </body>
