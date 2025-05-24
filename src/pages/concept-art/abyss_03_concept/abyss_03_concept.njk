@@ -3,94 +3,13 @@ title: "Abyss_03"
 permalink: "concept-art/abyss_03_concept/index.html"
 lang: "de"
 layout: "base.njk"
-heroImage: "https://res.cloudinary.com/insomneaart/image/upload/v1748084290/Abyss_03_character_conceptcharacter_concept_e7n3wn.png"
+heroImage: "https://res.cloudinary.com/insomneaart/image/upload/v1746984530/Abyss_03_character_concept_b6mjmx.png"
 heroAlt: "Abyss_03 Concept Art"
-heroText: "<p>Das Konzept für diesen Character sowie für das Raumschiff weiter unten entwarf ich im Rahmen eines Game Moduls in meinem Studium. Abyss_03 ist der Titel des Games,
-elches wir in diesem Modul entwickelten. Unter <a href='/games/abyss_03game/index.html' style='text-decoration: underline;'> Games</a> findest Du mehr darüber. </p>"
+heroText: "<p>Das Konzept für diesen Character sowie für das Raumschiff weiter unten entwarf ich im Rahmen eines Game Moduls in meinem
+Studium. Abyss_03 ist der Titel des Games, welches wir in diesem Modul entwickelten. Unter Games findest Du mehr darüber.</p>"
 ---
 
-{% include "partials/project_template.njk" %}
+{% include "project_template.njk" %}
 
-<p>Der Charakter gehört der Rasse der Assavi an. Die Assavi leben auf dem Wüstenplanet namens Urusvak und sie sind gewappnet für extreme Temperaturen und starke Windstürme.
-Der Suit ist für Agilität entwickelt und das Jetpack dient der Fortbewegung.</p>
+<p>Inspiriert von Raubfliegen, mächtigen Wüstenfliegen, habe ich das Konzept für unser Raumschiff erstellt. Die kleinen Schiffe vorne und an den Seiten dienen als Schildprojektoren. Die beiden Flügelpaare dienen dazu, die Richtung des Schiffes zu steuern. An der Unterseite befinden sich zwei Paare von einziehbaren Beinen. Nachdem ich das Charakterkonzept an den 3D-Modellierer in unserer Gruppe weitergegeben hatte, setzte ich das Raumschiffkonzept in 3D um. Ich habe die Texturen direkt in Blender erstellt und Details in Krita hinzugefügt.Ich fügte ein paar kleine wehende Animationen zu den Flügeln hinzu und importierte das FBX in Unreal Engine 5. In der Unreal Engine 5 habe ich das Raumschiff in eine Szene gesetzt und die Beleuchtung getestet Für die Triebwerke testete ich eine Lösung mit einem Niagara-Partikel-System sowie eine Lösung mit einer auf einen organischen Zylinder gemappten Textur. Wir entschieden uns für die zweite Lösung, da sie unseren visuellen Vorstellungen näher kam.mIn Blender erstellte ich eine Animation einer Kugel, die auf eine Bézier-Kurve abgebildet wurde, und importierte sie in Unreal. In Unreal habe ich dann das leuchtende Material erstellt. Ursprünglich hatte ich einen Cel- oder Pixelshader im Sinn, die ich beide zum Testen erstellt habe. Aus Zeitgründen haben wir den Shader aber erst einmal verworfen.</p>
 
-{# Galerie 1: Charakterkonzept #}
-{% set Charakter_Abyss_03 = [
-    {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748084290/Abyss_03_character_conceptcharacter_concept_e7n3wn.png",
-        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748084290/Abyss_03_character_conceptcharacter_concept_e7n3wn.png",
-        alt: "Charakterkonzept"
-    }, {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748084291/Abyss_03_concept_oepdnz.png",
-        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748084291/Abyss_03_concept_oepdnz.png",
-        alt: "Zweite Iteration B"
-    }, {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748084304/Abyss_03_it2_lmblmj.png",
-        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748084304/Abyss_03_it2_lmblmj.png",
-        alt: "Zweite Iteration A"
-    }, {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748084292/Abyss_03_it1_mysdml.png",
-        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748084292/Abyss_03_it1_mysdml.png",
-        alt: "Erste Iteration"
-    }, {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748084288/Abyss_03_base_yvnbu1.png",
-        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748084288/Abyss_03_base_yvnbu1.png",
-        alt: "Charakter Base"
-    }, {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748084287/Abyss_03_visdev_2_seqaee.png",
-        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748084287/Abyss_03_visdev_2_seqaee.png",
-        alt: "Thumbnails 2"
-    }, {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748084306/Abyss_03_visdev_1_jeh293.png",
-        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748084306/Abyss_03_visdev_1_jeh293.png",
-        alt: "Thumbnails 1"
-    }
-] %}
-
-{% set images = Charakter_Abyss_03 %}
-{% set galleryName = "Charakter_Abyss_03" %}
-{% set highlightFirst = true %}
-{% include "partials/gallery.njk" %}
-
-<hr>
-
-<p>Inspiriert von Raubfliegen, mächtigen Wüstenfliegen, habe ich das Konzept für unser Raumschiff erstellt. Die kleinen Schiffe vorne und an den Seiten dienen als Schildprojektoren.
- Die beiden Flügelpaare dienen dazu, die Richtung des Schiffes zu steuern. An der Unterseite befinden sich zwei Paare von einziehbaren Beinen.</p>
-
-{# Galerie 2: Raumschiff_Abyss_03 #}
-{% set Raumschiff_Abyss_03 = [
-    {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748079551/concept_ship_final_ssmg9q.png",
-        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748079551/concept_ship_final_ssmg9q.png",
-        alt: "Raumschiff Konzept"
-    },    {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748079552/ship_side_liosto.png",
-        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748079552/ship_side_liosto.png",
-        alt: "Raumschiff Seitenansicht"
-    },    {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748079551/ship_backnfront_u0cszo.png",
-        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748079551/ship_backnfront_u0cszo.png",
-        alt: "Raumschiff Front- und Rückansicht"
-    },    {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748079549/spaceship_muyrqd.png",
-        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748079549/spaceship_muyrqd.png",
-        alt: "Raumschiff Dreiviertelansicht"
-    },    {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748079552/sketch_with_shields_nna6t4.png",
-        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748079552/sketch_with_shields_nna6t4.png",
-        alt: "Raumschiff Iteration 1A"
-    },    {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748079552/concept_ship_chyppt.png",
-        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748079552/concept_ship_chyppt.png",
-        alt: "Raumschiff Iteration"
-    },    {
-        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748079550/visdev_ship_euzfon.png",
-        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748079550/visdev_ship_euzfon.png",
-        alt: "Raumschiff Skizzen"
-    }
-] %}
-
-{% set images = Raumschiff_Abyss_03 %}
-{% set galleryName = "Raumschiff_Abyss_03" %}
-{% set highlightFirst = true %}
-{% include "partials/gallery.njk" %}
