@@ -3,4 +3,67 @@ title: "Bedtime Story"
 permalink: "games/bedtime-story/index.html"
 lang: "de"
 layout: "base.njk"
+heroImage: "https://res.cloudinary.com/insomneaart/image/upload/v1747297420/Bedtime_Story_Screenshot2_aoprqs.png"
+heroAlt: "Artya'il Concept Art"
+heroText: "<p>Bedtime Story ist ein kleiner Endless Runner, welchen wir in einem Team bestehend aus einer weiteren Designerin sowie zwei Programmiererinnen im ersten Semester im 
+Studium erstellt haben. Du steuerst einen Jungen welcher in einem Alptraum aufgewacht ist und nun vor seinen Dämonen wegrennen muss. Lass Dich nicht erwischen!</p>"
 ---
+
+{% include "partials/project_template.njk" %}
+
+<section class="contribution">
+    <h2>Mein Beitrag in diesem Projekt:</h2>
+    <ul>
+        <li>Pixel art 2D Assets</li>
+        <li>Animationen</li>
+        <li>Character Concept Art</li>
+        <li>Soundeffekte</li>
+        <li>Storyborading</li>
+        <li>UI</li>
+    </ul>
+</section>
+
+<p>Für das Projekt hatten wir die Vorgabe, dass das Spiel in 2D in Unity entwickelt werden muss und wir durften nicht mehr als zwei Tasten auf dem Keyboard für die ingame Steuerung 
+verwenen.</p>
+
+{# Galerie 1: Bedtime Story #}
+{% set Bedtime_Story = [
+    {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1747297425/Bedtime_Story_Screenshot1_rifgqc.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1747297425/Bedtime_Story_Screenshot1_rifgqc.png",
+        alt: "Introduction Screen"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1746985936/BedtimeStory_Startscreen_d9gq7j.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746985936/BedtimeStory_Startscreen_d9gq7j.png",
+        alt: "Startscreen"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600v/1747297420/Bedtime_Story_Screenshot2_aoprqs.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1747297420/Bedtime_Story_Screenshot2_aoprqs.png",
+        alt: "Gameplay Screenshot"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600v/1746985967/BedtimeStory_run_aq17po.gif",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746985967/BedtimeStory_run_aq17po.gif",
+        alt: "Rennen"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600v/1746985964/BedtimeStory_jump_ixwkis.gif",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746985964/BedtimeStory_jump_ixwkis.gif",
+        alt: "Springen"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600v/1746985961/BedtimeStory__ahfywf.gif",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746985961/BedtimeStory__ahfywf.gif",
+        alt: "Ducken"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600v/1746985959/BedtimeStory_tree_trunk_rjopad.gif",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746985959/BedtimeStory_tree_trunk_rjopad.gif",
+        alt: "Hindernis Baumstamm"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600v/1746985930/BedtimeStory_game_over_screen_uaeif6.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1746985930/BedtimeStory_game_over_screen_uaeif6.png",
+        alt: "Game Over Screen"
+    }
+] %}
+
+{% set images = Bedtime_Story %}
+{% set galleryName = "Bedtime_Story" %}
+{% set highlightFirst = true %}
+{% include "partials/gallery.njk" %}
