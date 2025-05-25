@@ -1,0 +1,135 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Me</title>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css"/>
+
+    </head>
+    <body>
+        <header>
+            <a href="/en/" class="home">INSOMNEA art</a>
+        </header>
+        <main>
+            
+<div class="about">
+    <p>Hi, nice to meet you! I'm Annie<br><br>
+
+I've been drawing for as long as I can remember (and hold a pencil). I started drawing digitally when I was 16 and painting only a few years later. Being creative is my outlet for my energy and whatever is on my mind.<br><br>
+
+For a long time I wanted to become a painter or a concept artist for video games. Now I do both! I love creating character concepts but I also still enjoy analogue work.<br><br>
+
+Whether your beloved furry friend has passed away or you would just like to show them how much you love them, I would love to be the artist of your artwork. Bringing joy to others through my work makes me happier than anything else. I'm an animal lover myself and have had many different pets throughout my life. From cats and dogs to guinea pigs and geckos to mantises and even a tarantula.<br><br>
+
+I work digitally with Krita or Rebelle and Blender. Analogously, I mainly work with acrylic paints but occasionally also with oil.<br><br>
+
+Thank you for visiting my corner of the internet.<br><br>
+
+For business inquiries, please send me an e-mail to insomnea@outlook.com.</p>
+</div>
+
+<img src="/assets/me.jpg" alt="Annie" class="about-image"/>
+
+<div class="adastra">
+    <p>Non est ad astra mollis e terris via</p>
+</div>
+        </main>
+        <footer>
+            
+                    <nav>
+        <a href="/en/concept-art/" class="">concept art</a>
+        <a href="/en/games/" class="">games</a>
+        <a href="/en/fineart/" class="">fine art</a>
+        <a href="/en/about/" class="active">about me</a>
+    </nav>
+
+    <div class="icon-container">
+        <a href="https://www.instagram.com/insomneaart/" target="_blank">
+            <img src="/assets/icons/icon_instagram_B.svg" alt="Instagram" class="icon theme-icon-switch" data-dark="/assets/icons/icon_instagram_B.svg" data-light="/assets/icons/icon_instagram_D.svg">
+        </a>
+        <a href="https://cara.app/celestialinsomniac" target="_blank">
+            <img src="/assets/icons/icon_cara_B.svg" alt="Cara" class="icon theme-icon-switch" data-dark="/assets/icons/icon_cara_B.svg" data-light="/assets/icons/icon_cara_D.svg">
+        </a>
+        <a href="https://linktr.ee/celestial_insomniac" target="_blank">
+            <img src="/assets/icons/icon_linktree_B.svg" alt="Linktree" class="icon theme-icon-switch" data-dark="/assets/icons/icon_linktree_B.svg" data-light="/assets/icons/icon_linktree_D.svg">
+        </a>
+    </div>
+
+    <p>Thank you for your visit!</p>
+    <p>All works are protected against scraping theft</p>
+
+    <nav class="language-selector">
+        
+            <a href="/ueber/">DE</a>
+        
+        /
+        
+            <span>EN</span>
+        
+    </nav>
+
+    <button id="theme-toggle">
+        <img id="theme-icon" src="/assets/icons/icon_sun_b.svg" alt="Theme Toggle">
+    </button>
+    <script src="/assets/js/theme-toggle.js"></script>
+            
+        </footer>
+        <a href="#top" class="back-to-top" aria-label="Zurück nach oben">
+            <img src="/assets/icons/icon_arrow_B.svg"
+         alt="Pfeil nach oben"
+         class="arrow-icon theme-icon-switch"
+         data-dark="/assets/icons/icon_arrow_B.svg"
+         data-light="/assets/icons/icon_arrow_D.svg">
+        </a>
+
+        <script>
+            const backToTop = document.querySelector(".back-to-top");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > window.innerHeight) {
+                    backToTop.style.display = "block";
+                } else {
+                    backToTop.style.display = "none";
+                }
+            });
+
+            // Optional: Sanftes Scrollen
+            document
+                .querySelector(".back-to-top")
+                .addEventListener("click", function (e) {
+                    e.preventDefault();
+                    window.scrollTo({top: 0, behavior: "smooth"});
+                });
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/lg-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
+
+        <script>
+            document
+                .querySelectorAll(".lightgallery")
+                .forEach((gallery) => {
+                    lightGallery(gallery, {
+                        plugins: [
+                            lgZoom, lgThumbnail
+                        ],
+                        speed: 500,
+                        zoom: true,
+                        thumbnail: true,
+                        download: false,
+                        actualSize: true
+                    });
+                });
+        </script>
+
+    </body>
+</html>
