@@ -1,15 +1,27 @@
 {# components/gallery.njk #}
 <div class="gallery{% if highlightFirst %} gallery--highlight-first{% endif %}">
     <div class="gallery__wrapper lightgallery">
-        {% for image in images %}
-            <a
-        href="{{ image.large }}"
-        class="gallery__item{% if loop.first and highlightFirst %} gallery__item--highlight{% endif %}"
-        data-lg-size="1600-1060"
-        data-sub-html="{{ image.alt | default('') }}"
-      >
-                <img src="{{ image.thumb }}" alt="{{ image.alt | default('Gallery image') }}">
-            </a>
+        {% for item in images %}
+            {% if item.iframe %}
+                <a
+          href="{{ item.iframe }}"
+          class="gallery__item"
+          data-lg-size="1280-720"
+          data-sub-html="{{ item.alt | default('') }}"
+          data-video='{"source": [{"src":"{{ item.iframe }}","type":"iframe"}], "attributes": {"preload": false, "controls": true}}'
+        >
+                    <img src="{{ item.thumb }}" alt="{{ item.alt | default('Video thumbnail') }}">
+                </a>
+            {% else %}
+                <a
+          href="{{ item.large }}"
+          class="gallery__item{% if loop.first and highlightFirst %} gallery__item--highlight{% endif %}"
+          data-lg-size="1600-1060"
+          data-sub-html="{{ item.alt | default('') }}"
+        >
+                    <img src="{{ item.thumb }}" alt="{{ item.alt | default('Gallery image') }}">
+                </a>
+            {% endif %}
         {% endfor %}
     </div>
 </div>

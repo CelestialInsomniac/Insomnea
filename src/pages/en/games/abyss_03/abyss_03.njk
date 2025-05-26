@@ -1,6 +1,195 @@
 ---
-title: "Abyss_03"
+title: "Abyss_03 WIP"
 permalink: "en/games/abyss_03game/index.html"
 lang: "en"
 layout: "base.njk"
+heroImage: "https://res.cloudinary.com/insomneaart/image/upload/v1748094449/Abyss_03_portfolio_title_freedg.png"
+heroAlt: "Abyss_03 WIP"
+heroText: "<p>Abyss_03 is a roguelike escort mission game where you protect your spaceship from asteroids and gather biomass in order to fly home again.<br><br>
+
+The game is being developed in Unreal Engine 5 by a student team of one programmer, me and one other designer. We started developing the game in our fourth semester with the mission, not to 
+create a complete, playable game but to experiment and try out new things as much as we could. And we did just that. The game is in a very early stage and the development will be continued
+at a later point in time.</p>"
 ---
+
+{% include "partials/project_template.njk" %}
+
+<section class="contribution">
+    <h2>My contributions to this project:</h2>
+    <ul>
+        <li>Game design lead</li>
+        <li>Character and spaceship concept art</li>
+        <li>Creating 3D assets</li>
+        <li>VFX</li>
+    </ul>
+</section>
+
+{# Gallery 1: Abyss_03 Screenshots #}
+{% set Abyss_03_Screenshots = [
+    {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748204230//Abyss_03_Screenshot4_wrgjhw.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748204230/Abyss_03_Screenshot4_wrgjhw.png",
+        alt: "Screenshot 1"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748204230/Abyss_03_Screenshot3_pioywj.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748204230/Abyss_03_Screenshot3_pioywj.png",
+        alt: "Screenshot 2"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748204230/Abyss_03_Screenshot2_cgfjbz.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748204230/Abyss_03_Screenshot2_cgfjbz.png",
+        alt: "Screenshot 3"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748204230/Abyss_03_Screenshot1_qneqg7.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748204230/Abyss_03_Screenshot1_qneqg7.png",
+        alt: "Screenshot 4"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748269236/Abyss_03_ship_screenshot_shields_au8pnc.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748269236/Abyss_03_ship_screenshot_shields_au8pnc.png",
+        alt: "Screenshot 5"
+    }
+] %}
+
+{% set images = Abyss_03_Screenshots %}
+{% set galleryName = "Abyss_03_Screenshots" %}
+{% set highlightFirst = true %}
+{% include "partials/gallery.njk" %}
+
+<p>I created the concept art for our character as well as the spaceship. After that, I handed over the character concept art to our 3D artist and created the spaceship in 3D using 
+Blender. The details like the label "03" were added in Krita. Finally, I placed the asset in Unreal Engine 5 into the scene.</p>
+
+{# Gallery 2: Abyss_03 3D #}
+{% set Abyss_03_3D = [
+    {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748094449/Abyss_03_portfolio_title_freedg.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748094449/Abyss_03_portfolio_title_freedg.png",
+        alt: "From concept to 3D model"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748094583/Abyss_03_ship1_smntof.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748094583/Abyss_03_ship1_smntof.png",
+        alt: "Mesh front"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748094590/Abyss_03_ship2_z3yi1f.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748094590/Abyss_03_ship2_z3yi1f.png",
+        alt: "Mesh three quarters"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748094543/Abyss_03_ship_3Dwireframe_no_mats_ho7xal.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748094543/Abyss_03_ship_3Dwireframe_no_mats_ho7xal.png",
+        alt: "Mesh side"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748094536/Abyss_03_ship_3Dwireframe_clean_dxv8uf.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748094536/Abyss_03_ship_3Dwireframe_clean_dxv8uf.png",
+        alt: "Mesh wireframe"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748094570/Abyss_03_ship_render_mats1_eivhdg.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748094570/Abyss_03_ship_render_mats1_eivhdg.png",
+        alt: "Textured model"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748094597/Abyss_03_shipshaded_qri5tl.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748094597/Abyss_03_shipshaded_qri5tl.png",
+        alt: "Textured model with shields"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748094550/Abyss_03_ship_ingame_screenshot_gocfqv.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748094550/Abyss_03_ship_ingame_screenshot_gocfqv.png",
+        alt: "Model in Unreal Engine"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748267510/Abyss_03_ship_pmvjy1.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748267510/Abyss_03_ship_pmvjy1.png",
+        alt: "Model in Unreal Engine with shields"
+    }
+] %}
+
+{% set images = Abyss_03_3D %}
+{% set galleryName = "Abyss_03_3D" %}
+{% set highlightFirst = true %}
+{% include "partials/gallery.njk" %}
+
+<p>For the thruster of the spaceship, I experimented with different methods. On the one hand, I tested the Niagara particle systems, and on the other hand, I created a simple
+cylinder with a blue fire texture mapped around it. In the end, we decided to go with the latter method, as it better matched our vision for the game.</p>
+
+{# Gallery 3: Abyss_03 thruster #}
+{% set Abyss_03_thruster = [
+    {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748094611/Abyss_03_thruster_1_j9vezo.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748094611/Abyss_03_thruster_1_j9vezo.png",
+        alt: "Niagara system"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748094627/Abyss_03_thruster_niagara_system_b1adf4.gif",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748094627/Abyss_03_thruster_niagara_system_b1adf4.gif",
+        alt: "Niagara system in scene"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748094618/Abyss_03_thruster_2_spi5ww.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748094618/Abyss_03_thruster_2_spi5ww.png",
+        alt: "Material with cylinder"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748094634/Abyss_03_thruster_yr4wbl.gif",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748094634/Abyss_03_thruster_yr4wbl.gif",
+        alt: "Material with cylinder in scene"
+    }
+] %}
+
+{% set images = Abyss_03_thruster %}
+{% set galleryName = "Abyss_03_thruster" %}
+{% set highlightFirst = false %}
+{% include "partials/gallery.njk" %}
+
+<p>After that I experimented with different variations of biomass shaders and wormholes. I had to learn that shaders and materials cannot be directly exported from Blender to 
+Unreal Engine, so I looked for a solution directly in Unreal.</p>
+
+{# Gallery 4: Abyss_03 biomass and wormholes #}
+{% set Abyss_03_biomass_and_wormholes = [
+    {
+        iframe: "https://player.cloudinary.com/embed/?cloud_name=insomneaart&public_id=Abyss_03_biomass1_dyh3ki&profile=cld-default",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748271602/Abyss_03_biomass1_thumb_iberg7.png",
+        alt: "Biomass shader in Blender"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748094653/Abyss_03_biomass_mat_f4yz2m.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748094653/Abyss_03_biomass_mat_f4yz2m.png",
+        alt: "Biomass material in Unreal Engine"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748094649/Abyss_03_biomass_dhi8ed.gif",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748094649/Abyss_03_biomass_dhi8ed.gif",
+        alt: "Biomass in Unreal Engine"
+    }, {
+        iframe: "https://player.cloudinary.com/embed/?cloud_name=insomneaart&public_id=Abyss_03_wormhole_occxyg&profile=cld-default",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748271604/Abyss_03_wormhole_thumb_jpvuqt.png",
+        alt: "Wormhole shader in Blender"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748271054/Abyss_03_wormhole_ver2_rit8rn.gif",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748271054/Abyss_03_wormhole_ver2_rit8rn.gif",
+        alt: "Wormhole version 2"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748271057/Abyss_03_wormholev_er3_lxx8nv.gif",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748271057/Abyss_03_wormholev_er3_lxx8nv.gif",
+        alt: "Wormhole version 3"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748271056/Abyss_03_wormholes_f88h3h.gif",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748271056/Abyss_03_wormholes_f88h3h.gif",
+        alt: "Wormhole variations in scene"
+    }
+] %}
+
+{% set images = Abyss_03_biomass_and_wormholes %}
+{% set galleryName = "Abyss_03_biomass_and_wormholes" %}
+{% set highlightFirst = false %}
+{% include "partials/gallery.njk" %}
+
+<p>I also played around with shaders a bit, as we had originally agreed to use a PS1/pixel shader for our game. I also tried out a cel shader, but due to time constraints, none 
+of the shaders made it into the current version of the game.</p>
+
+{# Galerie 5: Abyss_03 shader #}
+{% set Abyss_03_shader = [
+    {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748094505/Abyss_03_pixelshader_j1cb9m.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748094505/Abyss_03_pixelshader_j1cb9m.png",
+        alt: "Pixel shader"
+    }, {
+        large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748094670/Abyss_03_celshader_mqkzzl.png",
+        thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748094670/Abyss_03_celshader_mqkzzl.png",
+        alt: "Cel shader"
+    }
+] %}
+
+{% set images = Abyss_03_shader %}
+{% set galleryName = "Abyss_03_shader" %}
+{% set highlightFirst = false %}
+{% include "partials/gallery.njk" %}
