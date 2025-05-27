@@ -14,7 +14,13 @@
         <title>{{ title }}</title>
         <link rel="stylesheet" href="/css/styles.css">
         <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css"/>
-
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+                }
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -63,7 +69,6 @@
         <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/video/lg-video.min.js"></script>
 
-
         <script>
             document
                 .querySelectorAll(".lightgallery")
@@ -80,6 +85,6 @@
                     });
                 });
         </script>
-
+        <script type="module" src="/assets/js/my-three-scene.js"></script>
     </body>
 </html>
