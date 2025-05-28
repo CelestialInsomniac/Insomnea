@@ -4,36 +4,52 @@
         {% for item in images %}
             {% if item.iframe %}
                 <a
-          href="{{ item.iframe }}"
-          class="gallery__item"
-          data-lg-size="1280-720"
-          data-sub-html="{{ item.alt | default('') }}"
-          data-video='{"source": [{"src":"{{ item.iframe }}","type":"iframe"}], "attributes": {"preload": false, "controls": true}}'
-        >
+      href="{{ item.iframe }}"
+      class="gallery__item"
+      data-lg-size="1280-720"
+      data-sub-html="{{ item.alt | default('') }}"
+      data-iframe='{"source": [{"src":"{{ item.iframe }}","type":"iframe"}], "attributes": {"preload": false, "controls": true}'
+    >
                     <img src="{{ item.thumb }}" alt="{{ item.alt | default('Video thumbnail') }}">
                 </a>
+
             {% elif item.threejs %}
                 <a
-          href="#{{ item.id }}"
-          class="gallery__item"
-          data-lg-size="1280-720"
-          data-sub-html="{{ item.alt | default('') }}"
-        >
+      href=""
+      class="gallery__item"
+      data-lg-size="1280-720"
+      data-sub-html="{{ item.alt | default('') }}"
+      data-html="#{{ item.id }}"
+    >
                     <img src="{{ item.thumb }}" alt="{{ item.alt | default('3D thumbnail') }}">
                 </a>
-                <div id="{{ item.id }}" style="display: none;">
-                    <div class="threejs-container" data-model-url="{{ item.model }}"></div>
+                <div style="display: none;">
+                    <div id="{{ item.id }}">
+                        <div class="threejs-container" data-model-url="{{ item.model }}"></div>
+                    </div>
                 </div>
+
+            {% elif item.gif %}
+                <a
+        href="{{ item.large }}"
+        class="gallery__item"
+        data-sub-html="{{ item.alt | default('GIF') }}"
+        data-type="image"
+    >
+                    <img src="{{ item.thumb }}" alt="{{ item.alt | default('GIF') }}">
+                </a>
+
             {% else %}
                 <a
-          href="{{ item.large }}"
-          class="gallery__item{% if loop.first and highlightFirst %} gallery__item--highlight{% endif %}"
-          data-lg-size="1600-1060"
-          data-sub-html="{{ item.alt | default('') }}"
-        >
+      data-src="{{ item.large }}"
+      class="gallery__item{% if loop.first and highlightFirst %} gallery__item--highlight{% endif %}"
+      data-lg-size="1600-1060"
+      data-sub-html="{{ item.alt | default('') }}"
+    >
                     <img src="{{ item.thumb }}" alt="{{ item.alt | default('Gallery image') }}">
                 </a>
             {% endif %}
         {% endfor %}
+
     </div>
 </div>

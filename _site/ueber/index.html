@@ -131,12 +131,14 @@
                         ],
                         speed: 500,
                         zoom: true,
+                        preload: 0, 
                         thumbnail: true,
                         download: false,
                         swipeToClose: true,
                         actualSize: false,
                         infiniteZoom: true,
-                        showZoomInOutIcons: true
+                        showZoomInOutIcons: true,
+                        videojs: true
                     });
                 });
         </script>
@@ -148,30 +150,34 @@
             function initThree(container, modelUrl) {
                 const scene = new THREE.Scene();
                 const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
-                const renderer = new THREE.WebGLRenderer({antialias: true});
+                const renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
                 renderer.setSize(container.clientWidth, container.clientHeight);
-                container.innerHTML = ''; // clean
+                container.innerHTML = ''; // Clean container
                 container.appendChild(renderer.domElement);
-
-                const loader = new GLTFLoader();
-                loader.load(modelUrl, (gltf) => {
-                    scene.add(gltf.scene);
-                });
 
                 const light = new THREE.HemisphereLight(0xffffff, 0x444444, 1);
                 scene.add(light);
                 camera.position.z = 2;
 
-                function animate() {
-                    requestAnimationFrame(animate);
-                    model.rotation.y += 0.005;
-                    renderer.render(scene, camera);
-                }
+                const loader = new GLTFLoader();
+                loader.load(modelUrl, (gltf) => {
+                    const model = gltf.scene;
+                    scene.add(model);
 
-                // Init on gallery open
-                document.addEventListener('lgAfterOpen', () => {
+                    function animate() {
+                        requestAnimationFrame(animate);
+                        model.rotation.y += 0.005;
+                        renderer.render(scene, camera);
+                    }
+
+                    animate();
+                });
+            }
+
+            document.addEventListener('lgAfterSlide', () => {
+                setTimeout(() => {
                     document
-                        .querySelectorAll('.threejs-container')
+                        .querySelectorAll('.lg-current .threejs-container')
                         .forEach((container) => {
                             if (!container.dataset.loaded) {
                                 const modelUrl = container.dataset.modelUrl;
@@ -179,7 +185,9 @@
                                 container.dataset.loaded = 'true';
                             }
                         });
-                });
+                }, 200);
+            });
         </script>
+
     </body>
 </html>
