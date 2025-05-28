@@ -66,57 +66,57 @@ wir dann auch an Julia Kenny vom Publisher Headup Games pitchten.</p>"
 
 <p>Für unseren Vertical Slice erstellte ich diverse 3D Assets in Blender sowie Substance Painter und importierte sie in Unity.<p>
 
-        {# Galerie 2: 3D Assets Patched Up #}
-        {% set 3DAssets_Patched_Up = [
+        {# Galerie 2: Assets Patched Up #}
+        {% set Assets_Patched_Up = [
             {
                 large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748176250/_screenshot2_vatueu.png",
                 thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748176250/_screenshot2_vatueu.png",
                 alt: "Screenshot Chatter Telephone"
             }, {
-                large: "https://res.cloudinary.com/insomneaart/image/upload/v1748176264/chatty1_iog7as.png",
-                thumb: "https://res.cloudinary.com/insomneaart/image/upload/v1748176264/chatty1_iog7as.png",
-                alt: "Close up Chatter Telephone"
+                threejs: true,
+                id: "model-patched-up-chatter-telephone",
+                model: "https://raw.githubusercontent.com/CelestialInsomniac/Insomnea/main/src/assets/3D/patched-up/chatter_telephone.glb",
+                thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748418140/chatty_withIndicator_nhzkjd.png",
+                alt: "Drehbares 3D Modell Chatter Telephone(GLB)"
             }, {
-                large: "https://res.cloudinary.com/insomneaart/image/upload/v1748176271/chatty2_q5bsqx.png",
-                thumb: "https://res.cloudinary.com/insomneaart/image/upload/v1748176271/chatty2_q5bsqx.png",
-                alt: "Close up Rückseite Chatter Telephone"
-            }, {
-                large: "https://res.cloudinary.com/insomneaart/image/upload/v1748176257/chatty_uv_evg0ms.png",
-                thumb: "https://res.cloudinary.com/insomneaart/image/upload/v1748176257/chatty_uv_evg0ms.png",
+                large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748176257/chatty_uv_evg0ms.png",
+                thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748176257/chatty_uv_evg0ms.png",
                 alt: "UV Chatter Telephone"
             }, {
-                large: "https://res.cloudinary.com/insomneaart/image/upload/v1748176243/_screenshot1_dnga16.png",
-                thumb: "https://res.cloudinary.com/insomneaart/image/upload/v1748176243/_screenshot1_dnga16.png",
+                large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748176243/_screenshot1_dnga16.png",
+                thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748176243/_screenshot1_dnga16.png",
                 alt: "Screenshot Kuckuksuhr"
             }, {
-                large: "https://res.cloudinary.com/insomneaart/image/upload/v1748176285/clock_bvxbfi.png",
-                thumb: "https://res.cloudinary.com/insomneaart/image/upload/v1748176285/clock_bvxbfi.png",
-                alt: "Close up Kuckuksuhr"
+                threejs: true,
+                id: "model-patched-up-cuckoo-clock",
+                model: "https://raw.githubusercontent.com/CelestialInsomniac/Insomnea/main/src/assets/3D/patched-up/cuckoo_clock.glb",
+                thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748418140/clock_withIndicator_peunxb.png",
+                alt: "Drehbares 3D Modell Kuckuksuhr(GLB)"
             }, {
-                large: "https://res.cloudinary.com/insomneaart/image/upload/v1748176278/clock_uv_er9c8q.png",
-                thumb: "https://res.cloudinary.com/insomneaart/image/upload/v1748176278/clock_uv_er9c8q.png",
+                large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748176278/clock_uv_er9c8q.png",
+                thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748176278/clock_uv_er9c8q.png",
                 alt: "UV Kuckuksuhr"
             }, {
-                large: "https://res.cloudinary.com/insomneaart/image/upload/v1748176314/wooden_bird_jlzqsb.png",
-                thumb: "https://res.cloudinary.com/insomneaart/image/upload/v1748176314/wooden_bird_jlzqsb.png",
+                large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748176314/wooden_bird_jlzqsb.png",
+                thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748176314/wooden_bird_jlzqsb.png",
                 alt: "Close up Holzvogel"
             }, {
-                large: "https://res.cloudinary.com/insomneaart/image/upload/v1748176306/wooden_bird_uv_hzsw8z.png",
-                thumb: "https://res.cloudinary.com/insomneaart/image/upload/v1748176306/wooden_bird_uv_hzsw8z.png",
+                large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748176306/wooden_bird_uv_hzsw8z.png",
+                thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748176306/wooden_bird_uv_hzsw8z.png",
                 alt: "UV Holzvogel"
             }, {
-                large: "https://res.cloudinary.com/insomneaart/image/upload/v1748176300/winding_screw_kjxabj.png",
-                thumb: "https://res.cloudinary.com/insomneaart/image/upload/v1748176300/winding_screw_kjxabj.png",
+                large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748176300/winding_screw_kjxabj.png",
+                thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748176300/winding_screw_kjxabj.png",
                 alt: "Close up Aufziehschraube"
             }, {
-                large: "https://res.cloudinary.com/insomneaart/image/upload/v1748176292/winding_screw_uv_rhxm14.png",
-                thumb: "https://res.cloudinary.com/insomneaart/image/upload/v1748176292/winding_screw_uv_rhxm14.png",
+                large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748176292/winding_screw_uv_rhxm14.png",
+                thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748176292/winding_screw_uv_rhxm14.png",
                 alt: "UV Aufziehschraube"
             }
         ] %}
 
-        {% set images = 3DAssets_Patched_Up %}
-        {% set galleryName = "3DAssets_Patched_Up" %}
+        {% set images = Assets_Patched_Up %}
+        {% set galleryName = "Assets_Patched_Up" %}
         {% set highlightFirst = false %}
         {% include "partials/gallery.njk" %}
 

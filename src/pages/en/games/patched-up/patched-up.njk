@@ -66,20 +66,18 @@ pitched to Julia Kenny from the publisher Headup Games.</p></p>"
 
 <p>For our vertical slice I created various 3D assets in Blender and Substance Painter and imported them in Unity.<p>
 
-        {# Gallery 2: 3D Assets Patched Up #}
-        {% set 3DAssets_Patched_Up = [
+        {# Gallery 2: Assets Patched Up #}
+        {% set Assets_Patched_Up = [
             {
                 large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748176250/_screenshot2_vatueu.png",
                 thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748176250/_screenshot2_vatueu.png",
                 alt: "Screenshot Chatter Telephone"
             }, {
-                large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748176264/chatty1_iog7as.png",
-                thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748176264/chatty1_iog7as.png",
-                alt: "Close up Chatter Telephone"
-            }, {
-                large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748176271/chatty2_q5bsqx.png",
-                thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748176271/chatty2_q5bsqx.png",
-                alt: "Close up back Chatter Telephone"
+                threejs: true,
+                id: "model-patched-up-chatter-telephone",
+                model: "https://raw.githubusercontent.com/CelestialInsomniac/Insomnea/main/src/assets/3D/patched-up/chatter_telephone.glb",
+                thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748418140/chatty_withIndicator_nhzkjd.png",
+                alt: "Turnable 3D model chatter telephone (GLB)"
             }, {
                 large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748176257/chatty_uv_evg0ms.png",
                 thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748176257/chatty_uv_evg0ms.png",
@@ -89,9 +87,11 @@ pitched to Julia Kenny from the publisher Headup Games.</p></p>"
                 thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748176243/_screenshot1_dnga16.png",
                 alt: "Screenshot cuckoo clock"
             }, {
-                large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748176285/clock_bvxbfi.png",
-                thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748176285/clock_bvxbfi.png",
-                alt: "Close up cuckoo clock"
+                threejs: true,
+                id: "model-patched-up-cuckoo-clock",
+                model: "https://raw.githubusercontent.com/CelestialInsomniac/Insomnea/main/src/assets/3D/patched-up/cuckoo_clock.glb",
+                thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748418140/clock_withIndicator_peunxb.png",
+                alt: "Turnable 3D model cuckoo clock (GLB)"
             }, {
                 large: "https://res.cloudinary.com/insomneaart/image/upload/w_1600/v1748176278/clock_uv_er9c8q.png",
                 thumb: "https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748176278/clock_uv_er9c8q.png",
@@ -115,8 +115,8 @@ pitched to Julia Kenny from the publisher Headup Games.</p></p>"
             }
         ] %}
 
-        {% set images = 3DAssets_Patched_Up %}
-        {% set galleryName = "3D_Assets_Patched_Up" %}
+        {% set images = Assets_Patched_Up %}
+        {% set galleryName = "Assets_Patched_Up" %}
         {% set highlightFirst = false %}
         {% include "partials/gallery.njk" %}
 
@@ -149,7 +149,7 @@ pitched to Julia Kenny from the publisher Headup Games.</p></p>"
         {% include "partials/gallery.njk" %}
 
         <p>The story board I made in Rebelle Painter Pro consists of the beginning of the game where Anne falls into the toy world as the part in the dollhouse. This is the section we implemented.</p>
-        
+
         {# Gallery 4: Storyboard Patched Up #}
         {% set Storyboard_Patched_Up = [
             {
