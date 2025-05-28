@@ -12,7 +12,13 @@
         <title>Abyss_03 WIP</title>
         <link rel="stylesheet" href="/css/styles.css">
         <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css"/>
-
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+                }
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -135,6 +141,20 @@ Raumschiff in 3D in Blender. Die Details wie beispielsweise die Aufschrift 03 f�
         >
                     <img src="https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748094449/Abyss_03_portfolio_title_freedg.png" alt="Vom Konzept zum Modell">
                 </a>
+            
+        
+            
+                <a
+          href="#model-abyss_03-spaceship"
+          class="gallery__item"
+          data-lg-size="1280-720"
+          data-sub-html="Drehbares 3D Modell (GLB)"
+        >
+                    <img src="https://res.cloudinary.com/insomneaart/image/upload/w_600/v1748417288/Abyss_03_ship_3Dshaded_bright_withIndicator_m07gvc.png" alt="Drehbares 3D Modell (GLB)">
+                </a>
+                <div id="model-abyss_03-spaceship" style="display: none;">
+                    <div class="threejs-container" data-model-url="https://raw.githubusercontent.com/CelestialInsomniac/Insomnea/main/src/assets/3D/abyss_03/spaceship.glb"></div>
+                </div>
             
         
             
@@ -495,7 +515,6 @@ einen Cel-Shader aus, allerdings hat es aus Zeitgründen bisher keiner der Shade
         <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/video/lg-video.min.js"></script>
 
-
         <script>
             document
                 .querySelectorAll(".lightgallery")
@@ -512,6 +531,45 @@ einen Cel-Shader aus, allerdings hat es aus Zeitgründen bisher keiner der Shade
                     });
                 });
         </script>
+        <script type="module">
+            import * as THREE from 'https://unpkg.com/three@0.160.1/build/three.module.js';
+            import {GLTFLoader} from 'https://unpkg.com/three@0.160.1/examples/jsm/loaders/GLTFLoader.js';
 
+            function initThree(container, modelUrl) {
+                const scene = new THREE.Scene();
+                const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+                const renderer = new THREE.WebGLRenderer({antialias: true});
+                renderer.setSize(container.clientWidth, container.clientHeight);
+                container.innerHTML = ''; // clean
+                container.appendChild(renderer.domElement);
+
+                const loader = new GLTFLoader();
+                loader.load(modelUrl, (gltf) => {
+                    scene.add(gltf.scene);
+                });
+
+                const light = new THREE.HemisphereLight(0xffffff, 0x444444, 1);
+                scene.add(light);
+                camera.position.z = 2;
+
+                function animate() {
+                    requestAnimationFrame(animate);
+                    model.rotation.y += 0.005;
+                    renderer.render(scene, camera);
+                }
+
+                // Init on gallery open
+                document.addEventListener('lgAfterOpen', () => {
+                    document
+                        .querySelectorAll('.threejs-container')
+                        .forEach((container) => {
+                            if (!container.dataset.loaded) {
+                                const modelUrl = container.dataset.modelUrl;
+                                initThree(container, modelUrl);
+                                container.dataset.loaded = 'true';
+                            }
+                        });
+                });
+        </script>
     </body>
 </html>

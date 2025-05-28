@@ -12,6 +12,18 @@
         >
                     <img src="{{ item.thumb }}" alt="{{ item.alt | default('Video thumbnail') }}">
                 </a>
+            {% elif item.threejs %}
+                <a
+          href="#{{ item.id }}"
+          class="gallery__item"
+          data-lg-size="1280-720"
+          data-sub-html="{{ item.alt | default('') }}"
+        >
+                    <img src="{{ item.thumb }}" alt="{{ item.alt | default('3D thumbnail') }}">
+                </a>
+                <div id="{{ item.id }}" style="display: none;">
+                    <div class="threejs-container" data-model-url="{{ item.model }}"></div>
+                </div>
             {% else %}
                 <a
           href="{{ item.large }}"

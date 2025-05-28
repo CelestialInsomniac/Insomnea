@@ -12,7 +12,13 @@
         <title>Kunst</title>
         <link rel="stylesheet" href="/css/styles.css">
         <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css"/>
-
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+                }
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -132,7 +138,6 @@
         <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/video/lg-video.min.js"></script>
 
-
         <script>
             document
                 .querySelectorAll(".lightgallery")
@@ -149,6 +154,45 @@
                     });
                 });
         </script>
+        <script type="module">
+            import * as THREE from 'https://unpkg.com/three@0.160.1/build/three.module.js';
+            import {GLTFLoader} from 'https://unpkg.com/three@0.160.1/examples/jsm/loaders/GLTFLoader.js';
 
+            function initThree(container, modelUrl) {
+                const scene = new THREE.Scene();
+                const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+                const renderer = new THREE.WebGLRenderer({antialias: true});
+                renderer.setSize(container.clientWidth, container.clientHeight);
+                container.innerHTML = ''; // clean
+                container.appendChild(renderer.domElement);
+
+                const loader = new GLTFLoader();
+                loader.load(modelUrl, (gltf) => {
+                    scene.add(gltf.scene);
+                });
+
+                const light = new THREE.HemisphereLight(0xffffff, 0x444444, 1);
+                scene.add(light);
+                camera.position.z = 2;
+
+                function animate() {
+                    requestAnimationFrame(animate);
+                    model.rotation.y += 0.005;
+                    renderer.render(scene, camera);
+                }
+
+                // Init on gallery open
+                document.addEventListener('lgAfterOpen', () => {
+                    document
+                        .querySelectorAll('.threejs-container')
+                        .forEach((container) => {
+                            if (!container.dataset.loaded) {
+                                const modelUrl = container.dataset.modelUrl;
+                                initThree(container, modelUrl);
+                                container.dataset.loaded = 'true';
+                            }
+                        });
+                });
+        </script>
     </body>
 </html>
