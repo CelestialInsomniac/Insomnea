@@ -134,11 +134,14 @@
                         zoom: true,
                         thumbnail: true,
                         download: false,
-                        actualSize: true
+                        swipeToClose: true,
+                        actualSize: false,
+                        infiniteZoom: true,
+                        showZoomInOutIcons: true
                     });
                 });
         </script>
-        
+
         <script type="module">
             import * as THREE from 'https://unpkg.com/three@0.160.1/build/three.module.js';
             import {GLTFLoader} from 'https://unpkg.com/three@0.160.1/examples/jsm/loaders/GLTFLoader.js';
