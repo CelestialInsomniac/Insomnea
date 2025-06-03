@@ -180,13 +180,6 @@ body.light-mode .adastra {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.artwork-gallery {
-    width: 800px;
-    height: 600px;
-    margin: 100px auto;
-    margin-right: 100px auto;
-}
-
 /* NAVIGATION STYLES */
 #theme-toggle {
     background: none;
