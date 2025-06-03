@@ -7,8 +7,8 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-main {
-    margin-top: 4rem;
+.home {
+    font-size: 64px;
 }
 
 a {
@@ -24,61 +24,13 @@ a:hover {
     opacity: 70%;
 }
 
-/* Theme Toggle Button */
-#theme-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.home {
-    font-size: 64px;
-}
-
-.decor {
-    z-index: 1;
-    width: 100px;
-    height: 100px;
-    rotate: -45deg;
-    position: absolute;
-    top: 150px;
-    left: 70px;
-}
-
-body.light-mode {
-    background-color: #C0CBD8;
-    color: #1A1A1A;
-}
-
-body.light-mode .about {
-    filter: invert(1);
-}
-
-#theme-icon {
-    width: 30px;
-    height: 30px;
-}
-
-.icon-container {
-    height: 20px;
-    width: 20px;
-    margin-top: 180px;
-    margin-bottom: 80px;
-}
-
-.icon:hover {
-    opacity: 70%;
-}
-
 .menu-buttons {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     padding: 1rem;
     max-width: 80%;
-    /* Limit the width to 80% of the screen */
     margin: 0 auto;
-    /* Center the container */
 }
 
 .menu-button {
@@ -86,7 +38,6 @@ body.light-mode .about {
     display: block;
     width: 100%;
     padding-top: 56.25%;
-    /* Aspect ratio 16:9 */
     background-size: cover;
     background-position: center;
     border-radius: 0.5rem;
@@ -124,10 +75,8 @@ body.light-mode .about {
 
 .submenu-button {
     position: relative;
-    /* <--- Das brauchst du wieder! */
     width: 100%;
     padding-top: 50%;
-    /* oder 56.25% für 16:9 */
     background-size: cover;
     background-position: center;
     border-radius: 0.5rem;
@@ -154,6 +103,7 @@ body.light-mode .about {
     opacity: 0.9;
 }
 
+/* ABOUT PAGE STYLES */
 .about {
     width: 1220px;
     height: 992px;
@@ -195,62 +145,10 @@ body.light-mode .adastra {
     transform: rotate(-90deg);
 }
 
-.project-button {
-    display: block;
-    text-decoration: none;
-    margin-bottom: 2rem;
-}
-
-.project-image {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.project-title {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    color: white;
-    font-size: 1.5rem;
-    text-shadow: 0 0 5px black;
-}
-
-.project-gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    padding: 2rem 1rem;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.project-tile {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        filter: brightness(0.7);
-        transition: filter 0.3s ease;
-    }
-
-    &:hover img {
-        filter: brightness(0.9);
-    }
+/* PROJECT PAGE STYLES */
+.contribution ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
 }
 
 .gallery__wrapper {
@@ -282,9 +180,36 @@ body.light-mode .adastra {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.contribution ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
+/* NAVIGATION STYLES */
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#theme-icon {
+    width: 30px;
+    height: 30px;
+}
+
+body.light-mode {
+    background-color: #C0CBD8;
+    color: #1A1A1A;
+}
+
+body.light-mode .about {
+    filter: invert(1);
+}
+
+.icon-container {
+    height: 20px;
+    width: 20px;
+    margin-top: 180px;
+    margin-bottom: 80px;
+}
+
+.icon:hover {
+    opacity: 70%;
 }
 
 .back-to-top {
@@ -292,7 +217,6 @@ body.light-mode .adastra {
     bottom: 2rem;
     right: 2rem;
     display: none;
-    /* Initial versteckt */
     cursor: pointer;
     z-index: 999;
     width: 40px;
