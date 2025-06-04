@@ -184,6 +184,28 @@ body.light-mode .adastra {
     background-color: rgba(15, 15, 15, 0.85) !important;
 }
 
+.threejs-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.threejs-container {
+    width: 100%;
+    height: 500p;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    background-color: #f5f5f5;
+    border-radius: 1rem;
+    margin: 2rem 0;
+    overflow: hidden;
+}
+
 /* NAVIGATION STYLES */
 #theme-toggle {
     background: none;
