@@ -1,7 +1,3 @@
-{% set cloudinaryBaseUrl = "https://res.cloudinary.com/insomneaart/image/upload/" %}
-{% set largeTransform = "f_auto,q_auto,w_1600" %}
-{% set thumbTransform = "f_auto,q_auto,w_600" %}
-
 {# components/gallery.njk #}
 <div class="gallery{% if highlightFirst %} gallery--highlight-first{% endif %}">
     <div class="gallery__wrapper lightgallery">
@@ -35,22 +31,22 @@
 
             {% elif item.gif %}
                 <a
-    href="{{ cloudinaryBaseUrl }}{{ item.large }}"
-    class="gallery__item"
-    data-sub-html="{{ item.alt | default('GIF') }}"
-    data-type="image"
-  >
-                    <img src="{{ cloudinaryBaseUrl }}{{ item.thumb }}" alt="{{ item.alt | default('GIF') }}">
+        href="{{ item.large }}"
+        class="gallery__item"
+        data-sub-html="{{ item.alt | default('GIF') }}"
+        data-type="image"
+    >
+                    <img src="{{ item.thumb }}" alt="{{ item.alt | default('GIF') }}">
                 </a>
 
             {% else %}
                 <a
-    data-src="{{ cloudinaryBaseUrl }}{{ largeTransform }}/{{ item.large }}"
-    class="gallery__item{% if loop.first and highlightFirst %} gallery__item--highlight{% endif %}"
-    data-lg-size="1600-1060"
-    data-sub-html="{{ item.alt | default('') }}"
-  >
-                    <img src="{{ cloudinaryBaseUrl }}{{ thumbTransform }}/{{ item.thumb }}" alt="{{ item.alt | default('Gallery image') }}">
+      data-src="{{ item.large }}"
+      class="gallery__item{% if loop.first and highlightFirst %} gallery__item--highlight{% endif %}"
+      data-lg-size="1600-1060"
+      data-sub-html="{{ item.alt | default('') }}"
+    >
+                    <img src="{{ item.thumb }}" alt="{{ item.alt | default('Gallery image') }}">
                 </a>
             {% endif %}
         {% endfor %}
