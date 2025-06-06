@@ -65,7 +65,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
             model.scale.setScalar(scale);
         }
 
-        model.position.sub(center);
+        rotationGroup.position.sub(center); 
         rotationGroup.add(model);
 
         // camera
