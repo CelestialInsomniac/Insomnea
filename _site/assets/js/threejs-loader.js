@@ -8,14 +8,14 @@ document.querySelectorAll(".threejs-container").forEach(container => {
     const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.setClearColor(0xf5f5f5); // off-white Hintergrund
+    renderer.setClearColor(0xf5f5f5); // off-white
     container.appendChild(renderer.domElement);
 
     // lights
-    const hemiLight = new THREE.HemisphereLight(0xfff4e5, 0xaaaaff, 1.2);
+    const hemiLight = new THREE.HemisphereLight(0xfff7dd, 0xaaaaff, 1.5);
     scene.add(hemiLight);
 
-    const dirLight = new THREE.DirectionalLight(0xffffff, 0.5);
+    const dirLight = new THREE.DirectionalLight(0xffffff, 1.0);
     dirLight.position.set(5, 10, 7.5);
     scene.add(dirLight);
 
@@ -24,38 +24,61 @@ document.querySelectorAll(".threejs-container").forEach(container => {
 
     const loader = new GLTFLoader();
 
+    let rotationGroup = new THREE.Group();
+    scene.add(rotationGroup);
+
+    let autoRotate = true;
+    let rotateTimeout;
+
+    // stop rotation
+    function stopAutoRotateTemporarily() {
+        autoRotate = false;
+        clearTimeout(rotateTimeout);
+        rotateTimeout = setTimeout(() => {
+            autoRotate = true;
+        }, 3000);
+    }
+
+    controls.addEventListener('start', stopAutoRotateTemporarily);
+
     loader.load(modelUrl, (gltf) => {
         const model = gltf.scene;
 
         // bounding box
         const box = new THREE.Box3().setFromObject(model);
         const center = box.getCenter(new THREE.Vector3());
-        model.position.sub(center); // zentrieren
+        const sizeVec = box.getSize(new THREE.Vector3());
+        const size = sizeVec.length();
 
-        const size = box.getSize(new THREE.Vector3()).length();
-        const scale = 2 / size;
-        model.scale.setScalar(scale);
-
-        // rotation
-        const rotationGroup = new THREE.Group();
-        rotationGroup.add(model);
-        scene.add(rotationGroup);
-
-        // camera position
-        const adjustedZ = size * 1.5;
-        camera.position.set(0, 0, adjustedZ);
-        camera.lookAt(new THREE.Vector3(0, 0, 0));
-
-        // animation
-        function animate() {
-            requestAnimationFrame(animate);
-            controls.update();
-            rotationGroup.rotation.y += 0.005;
-            renderer.render(scene, camera);
+        // scaling
+        if (!isFinite(size) || size === 0) {
+            console.warn("Modellgröße ungültig – wird nicht skaliert.");
+        } else {
+            const scale = 2 / size;
+            model.scale.setScalar(scale);
         }
+
+        model.position.sub(center); // zentrieren
+        rotationGroup.add(model);
+
+        // camera
+        const adjustedZ = size * 1.2;
+        camera.position.set(0, 0, adjustedZ || 5);
+        camera.lookAt(new THREE.Vector3(0, 0, 0));
 
         animate();
     }, undefined, (error) => {
         console.error("Fehler beim Laden des Modells:", error);
     });
+
+    function animate() {
+        requestAnimationFrame(animate);
+        controls.update();
+
+        if (autoRotate) {
+            rotationGroup.rotation.y += 0.005;
+        }
+
+        renderer.render(scene, camera);
+    }
 });
