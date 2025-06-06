@@ -41,8 +41,15 @@ document.querySelectorAll(".threejs-container").forEach(container => {
 
     controls.addEventListener('start', stopAutoRotateTemporarily);
 
+    let mixer;
+
     loader.load(modelUrl, (gltf) => {
         const model = gltf.scene;
+        mixer = new THREE.AnimationMixer(model);
+
+        gltf.animations.forEach(clip => {
+            mixer.clipAction(clip).play();
+        });
 
         // bounding box
         const box = new THREE.Box3().setFromObject(model);
@@ -58,7 +65,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
             model.scale.setScalar(scale);
         }
 
-        model.position.sub(center); // zentrieren
+        rotationGroup.position.sub(center); 
         rotationGroup.add(model);
 
         // camera
@@ -71,14 +78,17 @@ document.querySelectorAll(".threejs-container").forEach(container => {
         console.error("Fehler beim Laden des Modells:", error);
     });
 
+    let clock = new THREE.Clock(); // global oder oben in der Funktion definieren
+
     function animate() {
         requestAnimationFrame(animate);
-        controls.update();
+        const delta = clock.getDelta();
 
+        controls.update();
         if (autoRotate) {
             rotationGroup.rotation.y += 0.005;
         }
 
+        if (mixer) mixer.update(delta); // Animationen updaten
         renderer.render(scene, camera);
-    }
-});
+    }})
