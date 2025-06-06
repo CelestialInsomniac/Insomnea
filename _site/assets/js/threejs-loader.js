@@ -12,7 +12,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
     container.appendChild(renderer.domElement);
 
     // lights
-    const hemiLight = new THREE.HemisphereLight(0xfff7dd, 0xaaaaff, 1.5);
+    const hemiLight = new THREE.HemisphereLight(0xfff7dd, 0xaaaaff, 1.8);
     scene.add(hemiLight);
 
     const dirLight = new THREE.DirectionalLight(0xffffff, 1.0);
