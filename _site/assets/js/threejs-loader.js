@@ -7,70 +7,55 @@ document.querySelectorAll(".threejs-container").forEach(container => {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-
     renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.setClearColor(0xf5f5f5); // hellgrau-weiß
+    renderer.setClearColor(0xf5f5f5); // off-white Hintergrund
     container.appendChild(renderer.domElement);
 
-    const light = new THREE.HemisphereLight(0xffffff, 0x444444, 1);
-    scene.add(light);
+    // lights
+    const hemiLight = new THREE.HemisphereLight(0xfff4e5, 0xaaaaff, 1.2);
+    scene.add(hemiLight);
+
+    const dirLight = new THREE.DirectionalLight(0xffffff, 0.5);
+    dirLight.position.set(5, 10, 7.5);
+    scene.add(dirLight);
 
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
 
     const loader = new GLTFLoader();
-    loader.load(modelUrl, (gltf) => {
-        const model = gltf.scene;
-
-        // Modell zentrieren anhand Bounding Box
-        const box = new THREE.Box3().setFromObject(model);
-        const center = box.getCenter(new THREE.Vector3());
-        model.position.sub(center); // verschiebt das Modell zum Ursprung
-
-        // Optional: Modell skalieren, wenn es zu groß/klein wirkt
-        const size = box.getSize(new THREE.Vector3()).length();
-        const scale = 2 / size; // skaliere auf etwa 2 Einheiten Länge
-        model.scale.setScalar(scale);
-
-        scene.add(model);
-        animate();
-    }, undefined, (error) => {
-        console.error("Fehler", error);
-    });
-
-    camera.position.z = 5;
-
-    let rotationGroup = null;
 
     loader.load(modelUrl, (gltf) => {
         const model = gltf.scene;
 
+        // bounding box
         const box = new THREE.Box3().setFromObject(model);
         const center = box.getCenter(new THREE.Vector3());
-        model.position.sub(center);
+        model.position.sub(center); // zentrieren
 
         const size = box.getSize(new THREE.Vector3()).length();
         const scale = 2 / size;
         model.scale.setScalar(scale);
 
-        // Modell in Gruppe, um Rotation zu steuern
-        rotationGroup = new THREE.Group();
+        // rotation
+        const rotationGroup = new THREE.Group();
         rotationGroup.add(model);
         scene.add(rotationGroup);
 
-        animate();
-    }, undefined, (error) => {
-        console.error("Fehler", error);
-    });
+        // camera position
+        const adjustedZ = size * 1.5;
+        camera.position.set(0, 0, adjustedZ);
+        camera.lookAt(new THREE.Vector3(0, 0, 0));
 
-    function animate() {
-        requestAnimationFrame(animate);
-        controls.update();
-
-        if (rotationGroup) {
-            rotationGroup.rotation.y += 0.005; // langsame Rotation
+        // animation
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            rotationGroup.rotation.y += 0.005;
+            renderer.render(scene, camera);
         }
 
-        renderer.render(scene, camera);
-    }
+        animate();
+    }, undefined, (error) => {
+        console.error("Fehler beim Laden des Modells:", error);
+    });
 });
