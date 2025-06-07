@@ -40,7 +40,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
     controls.addEventListener('start', stopAutoRotateTemporarily);
 
     loader.load(modelUrl, (gltf) => {
-        const model = gltf.scene;
+        model = gltf.scene;
 
         // bounding box
         const box = new THREE.Box3().setFromObject(model);
@@ -61,8 +61,11 @@ document.querySelectorAll(".threejs-container").forEach(container => {
         scene.add(model);
 
         // camera
-        const cameraZ = 3.5;
+        const maxDim = Math.max(sizeVec.x, sizeVec.y, sizeVec.z);
+        const fov = camera.fov * (Math.PI / 180);
+        const cameraZ = maxDim / (2 * Math.tan(fov / 2)) * 1.5;
         camera.position.set(0, 0, cameraZ);
+
         controls.target.set(0, 0, 0);
         controls.update();
 
