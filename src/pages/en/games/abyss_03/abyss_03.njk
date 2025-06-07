@@ -15,7 +15,7 @@ at a later point in time.</p>"
 {% include "partials/project_template.njk" %}
 
 <section class="contribution">
-    <h2>My contributions to this project:</h2>
+    <h2 class="contribution-text">My contributions to this project:</h2>
     <ul>
         <li>Game design lead</li>
         <li>Character and spaceship concept art</li>
@@ -54,7 +54,7 @@ at a later point in time.</p>"
 {% set highlightFirst = true %}
 {% include "partials/gallery.njk" %}
 
-<p>I created the concept art for our character as well as the spaceship. After that, I handed over the character concept art to our 3D artist and created the spaceship in 3D using 
+<p class="page-text">I created the concept art for our character as well as the spaceship. After that, I handed over the character concept art to our 3D artist and created the spaceship in 3D using 
 Blender. The details like the label "03" were added in Krita. Finally, I placed the asset in Unreal Engine 5 into the scene.</p>
 
 {# Gallery 2: Abyss_03 3D #}
@@ -107,7 +107,7 @@ Blender. The details like the label "03" were added in Krita. Finally, I placed 
     <div class="threejs-container" data-model="https://insomnea.art/assets/3D/abyss_03/spaceship.glb"></div>
 </div>
 
-<p>For the thruster of the spaceship, I experimented with different methods. On the one hand, I tested the Niagara particle systems, and on the other hand, I created a simple
+<p class="page-text">For the thruster of the spaceship, I experimented with different methods. On the one hand, I tested the Niagara particle systems, and on the other hand, I created a simple
 cylinder with a blue fire texture mapped around it. In the end, we decided to go with the latter method, as it better matched our vision for the game.</p>
 
 {# Gallery 3: Abyss_03 thruster #}
@@ -136,7 +136,7 @@ cylinder with a blue fire texture mapped around it. In the end, we decided to go
 {% set highlightFirst = false %}
 {% include "partials/gallery.njk" %}
 
-<p>After that I experimented with different variations of biomass shaders and wormholes. I had to learn that shaders and materials cannot be directly exported from Blender to 
+<p class="page-text">After that I experimented with different variations of biomass shaders and wormholes. I had to learn that shaders and materials cannot be directly exported from Blender to 
 Unreal Engine, so I looked for a solution directly in Unreal.</p>
 
 {# Gallery 4: Abyss_03 biomass and wormholes #}
@@ -177,7 +177,7 @@ Unreal Engine, so I looked for a solution directly in Unreal.</p>
 {% set highlightFirst = false %}
 {% include "partials/gallery.njk" %}
 
-<p>I also played around with shaders a bit, as we had originally agreed to use a PS1/pixel shader for our game. I also tried out a cel shader, but due to time constraints, none 
+<p class="page-text">I also played around with shaders a bit, as we had originally agreed to use a PS1/pixel shader for our game. I also tried out a cel shader, but due to time constraints, none 
 of the shaders made it into the current version of the game.</p>
 
 {# Galerie 5: Abyss_03 shader #}

@@ -121,11 +121,56 @@ a:hover {
 }
 
 /* PROJECT PAGE STYLES */
-.contribution ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
+.project-title {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
 }
 
+.hero {
+    width: 100vw;
+    max-width: 1400px;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    display: block;
+}
+
+.hero-text {
+    max-width: 70vw;
+    margin: 2rem auto 3rem auto;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.contribution-text {
+    font-size: 1.4rem;
+    margin: 0 2rem 1rem;
+}
+
+.contribution ul {
+    font-size: 1.4rem;
+    list-style-type: disc;
+    margin: 0 1rem 3rem;
+}
+
+.page-text {
+    max-width: 70vw;
+    margin: 8rem auto 3rem auto;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+/*GALLERY STYLES */
 .gallery__wrapper {
     display: grid;
     gap: 1rem;

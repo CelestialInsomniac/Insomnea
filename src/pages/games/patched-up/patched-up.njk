@@ -5,17 +5,18 @@ lang: "de"
 layout: "base.njk"
 heroImage: "https://res.cloudinary.com/insomneaart/image/upload/v1748175880/Screenshot_1_Patched_Up_qr2hjn.png"
 heroAlt: "Patched Up Demo"
-heroText: "<p>Patched Up ist ein storybasiertes horror adventure Game mit düsteren Themen aber einem Happy End. Du verfolgst die Geschichte eines Hasenmädchens namens Anne Gora, welche 
-in eine Spielzeugwelt gefallen ist und nun ihren Stoffhasen sucht. Das spielt führt durch verschiedene Kapitel mit Puzzles, die für den Spielfortschritt gelöst werden müssen.<br><br>
-
-Dieses Projekt entstand in einem Modul im Studium. Wir arbeiteten in einer Gruppe von einem Programmierer und drei Designern und kreirten in einem Semester einen Vertical Slice, welcher 
-wir dann auch an Julia Kenny vom Publisher Headup Games pitchten.</p>"
+heroText: |
+  <p>Patched Up ist ein storybasiertes horror adventure Game mit düsteren Themen aber einem Happy End. Du verfolgst die Geschichte eines Hasenmädchens namens Anne Gora, welche 
+  in eine Spielzeugwelt gefallen ist und nun ihren Stoffhasen sucht. Das spielt führt durch verschiedene Kapitel mit Puzzles, die für den Spielfortschritt gelöst werden müssen.<br><br>
+  Dieses Projekt entstand in einem Modul im Studium. Wir arbeiteten in einer Gruppe von einem Programmierer und drei Designern und kreirten in einem Semester einen Vertical Slice, welcher 
+  wir dann auch an Julia Kenny vom Publisher Headup Games pitchten.<br><br>
+  Unser Vertical Slice respektive die Demo wurde sogar beim PAX Talent Award 2025 nominiert und steht aktuell auf <a href="https://celestial-insomniac.itch.io/patched-up" target="_blank" rel="noopener">itch.io</a> zum Download zur Verfügung.</p>
 ---
 
 {% include "partials/project_template.njk" %}
 
 <section class="contribution">
-    <h2>Mein Beitrag in diesem Projekt:</h2>
+    <h2 class="contribution-text">Mein Beitrag in diesem Projekt:</h2>
     <ul>
         <li>Game design lead & creative direction</li>
         <li>Level design</li>
@@ -27,8 +28,6 @@ wir dann auch an Julia Kenny vom Publisher Headup Games pitchten.</p>"
         <li>Vorbereitung des Pitchdecks</li>
     </ul>
 </section>
-
-<p>Unser Vertical Slice resp. die Demo wurde sogar beim PAX Talent Award 2025 nominiert und steht aktuell auf <a href="https://celestial-insomniac.itch.io/patched-up" target="_blank" rel="noopener">itch.io</a> zum Download zur Verfügung.</p>
 
 {# Galerie 1: Screenshots Patched Up #}
 {% set Screenshots_Patched_Up = [
@@ -64,7 +63,7 @@ wir dann auch an Julia Kenny vom Publisher Headup Games pitchten.</p>"
 {% set highlightFirst = true %}
 {% include "partials/gallery.njk" %}
 
-<p>Für unseren Vertical Slice erstellte ich diverse 3D Assets in Blender sowie Substance Painter und importierte sie in Unity.<p>
+<p class="page-text">Für unseren Vertical Slice erstellte ich diverse 3D Assets in Blender sowie Substance Painter und importierte sie in Unity.<p>
 
         {# Galerie 2: Assets Patched Up #}
         {% set Assets_Patched_Up = [
@@ -125,7 +124,7 @@ wir dann auch an Julia Kenny vom Publisher Headup Games pitchten.</p>"
             <div class="threejs-container" data-model="https://insomnea.art/assets/3D/patched-up/cuckoo_clock.glb"></div>
         </div>
 
-        <p>Das Level des Vertical Slices bestand aus einem Puppenhaus, wofür ich in Miro eine grobe Blockout-Map erstellt habe.</p>
+        <p class="page-text">Das Level des Vertical Slices bestand aus einem Puppenhaus, wofür ich in Miro eine grobe Blockout-Map erstellt habe.</p>
 
         {# Galerie 3: Level Design Patched Up #}
         {% set Level_Design_Patched_Up = [
@@ -153,7 +152,7 @@ wir dann auch an Julia Kenny vom Publisher Headup Games pitchten.</p>"
         {% set highlightFirst = false %}
         {% include "partials/gallery.njk" %}
 
-        <p>Das von mir in Rebelle Painter Pro erstellte Storyboard besteht aus dem Anfang des Spiels, wo Anne in die Spielzeugwelt fällt und dem Abschnitt im Puppenhaus. Also dem Abschnitt, welchen wir umgesetzt haben.</p>
+        <p class="page-text">Das von mir in Rebelle Painter Pro erstellte Storyboard besteht aus dem Anfang des Spiels, wo Anne in die Spielzeugwelt fällt und dem Abschnitt im Puppenhaus. Also dem Abschnitt, welchen wir umgesetzt haben.</p>
 
         {# Galerie 4: Storyboard Patched Up #}
         {% set Storyboard_Patched_Up = [
@@ -201,7 +200,7 @@ wir dann auch an Julia Kenny vom Publisher Headup Games pitchten.</p>"
         {% set highlightFirst = false %}
         {% include "partials/gallery.njk" %}
 
-        <p>Ich erstellte ebenfalls Teile des UIs in Photoshop. Damit ein Menüscreen (hier ein Mockshot) sowie daraus eine Spielanleitung für eine allfällige Ausstellung des Studentenprojekts an der Fantasy Basel.</p>
+        <p class="page-text">Ich erstellte ebenfalls Teile des UIs in Photoshop. Damit ein Menüscreen (hier ein Mockshot) sowie daraus eine Spielanleitung für eine allfällige Ausstellung des Studentenprojekts an der Fantasy Basel.</p>
 
         {# Galerie 5: UI Patched Up #}
         {% set UI_Patched_Up = [
