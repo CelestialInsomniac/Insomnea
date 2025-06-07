@@ -24,9 +24,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
 
     const loader = new GLTFLoader();
 
-    let rotationGroup = new THREE.Group();
-    scene.add(rotationGroup);
-
+    let model; // global für animate()
     let autoRotate = true;
     let rotateTimeout;
 
@@ -50,21 +48,24 @@ document.querySelectorAll(".threejs-container").forEach(container => {
         const sizeVec = box.getSize(new THREE.Vector3());
         const size = sizeVec.length();
 
+        model.position.sub(center); // zentrieren
+
         // scaling
         if (!isFinite(size) || size === 0) {
             console.warn("Modellgröße ungültig – wird nicht skaliert.");
         } else {
-            const scale = 2 / size;
+            const scale = 2.0 / size;
             model.scale.setScalar(scale);
         }
 
-        model.position.sub(center); // zentrieren
-        rotationGroup.add(model);
+        scene.add(model);
 
         // camera
-        const adjustedZ = size * 1.2;
-        camera.position.set(0, 0, adjustedZ || 5);
-        camera.lookAt(new THREE.Vector3(0, 0, 0));
+        const cameraZ = 3.5;
+        camera.position.set(0, 0, cameraZ);
+        controls.target.set(0, 0, 0);
+        controls.update();
+
 
         animate();
     }, undefined, (error) => {
@@ -76,7 +77,9 @@ document.querySelectorAll(".threejs-container").forEach(container => {
         controls.update();
 
         if (autoRotate) {
-            rotationGroup.rotation.y += 0.005;
+            if (model) {
+                model.rotation.y += 0.005;
+            }
         }
 
         renderer.render(scene, camera);
