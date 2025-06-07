@@ -119,48 +119,6 @@ a:hover {
     opacity: 0.9;
 }
 
-/* ABOUT PAGE STYLES */
-.about {
-    width: 1220px;
-    height: 992px;
-    flex-shrink: 0;
-    color: #C0CBD8;
-    font-size: 32px;
-    line-height: normal;
-}
-
-.about-image {
-    width: 20%;
-    height: auto;
-    border-radius: 0.5rem;
-}
-
-.adastra {
-    position: absolute;
-    right: 0;
-    top: 60%;
-    font-size: 25px;
-    letter-spacing: 22px;
-    background: linear-gradient(270deg, #C0CBD8 33.34%, #1A1A1A 110.25%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transform: rotate(-90deg);
-}
-
-body.light-mode .adastra {
-    position: absolute;
-    right: 0;
-    top: 60%;
-    font-size: 25px;
-    letter-spacing: 22px;
-    background: linear-gradient(270deg, #1A1A1A 33.34%, #C0CBD8 110.25%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transform: rotate(-90deg);
-}
-
 /* PROJECT PAGE STYLES */
 .contribution ul {
     list-style-type: disc;
@@ -222,6 +180,63 @@ body.light-mode .adastra {
     overflow: hidden;
 }
 
+/* ABOUT PAGE STYLES */
+.about {
+    width: 90vw;
+    max-width: 1220px;
+    min-height: 40vh;
+    max-height: 992px;
+    flex-shrink: 0;
+    color: #C0CBD8;
+    font-size: 32px;
+    line-height: normal;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+}
+
+.about-image {
+    width: 20%;
+    height: auto;
+    border-radius: 0.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.adastra {
+    position: absolute;
+    top: 20%;
+    right: 2rem;
+    font-size: 2rem;
+    letter-spacing: 22px;
+    background: linear-gradient(270deg, #C0CBD8 33.34%, #1A1A1A 110.25%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform-origin: right top;
+    transform: rotate(-90deg) translateY(-100%);
+    white-space: nowrap;
+}
+
+
+body.light-mode .adastra {
+    position: absolute;
+    top: 20%;
+    right: 2rem;
+    font-size: 2rem;
+    letter-spacing: 22px;
+    background: linear-gradient(270deg, #1A1A1A 33.34%, #C0CBD8 110.25%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform-origin: right top;
+    transform: rotate(-90deg) translateY(-100%);
+    white-space: nowrap;
+}
+
 /* NAVIGATION STYLES */
 #theme-toggle {
     background: none;
@@ -253,7 +268,7 @@ body.light-mode .menu-button span {
 
 .back-to-top {
     position: fixed;
-    bottom: 6rem;
+    bottom: 8rem;
     right: 2rem;
     display: none;
     cursor: pointer;
