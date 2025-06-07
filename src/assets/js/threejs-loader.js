@@ -3,10 +3,6 @@ import { OrbitControls } from "https://unpkg.com/three@0.160.0/examples/jsm/cont
 import { GLTFLoader } from "https://unpkg.com/three@0.160.0/examples/jsm/loaders/GLTFLoader.js";
 import { DRACOLoader } from 'https://unpkg.com/three@0.160.0/examples/jsm/loaders/DRACOLoader.js';
 
-const dracoLoader = new DRACOLoader();
-dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
-loader.setDRACOLoader(dracoLoader);
-
 document.querySelectorAll(".threejs-container").forEach(container => {
     const modelUrl = container.dataset.model;
     const scene = new THREE.Scene();
@@ -27,13 +23,17 @@ document.querySelectorAll(".threejs-container").forEach(container => {
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
 
-    const loader = new GLTFLoader();
+    // loader
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
 
-    let model; // global für animate()
+    const loader = new GLTFLoader();
+    loader.setDRACOLoader(dracoLoader);
+
+    let model; // global animate()
     let autoRotate = true;
     let rotateTimeout;
 
-    // stop rotation
     function stopAutoRotateTemporarily() {
         autoRotate = false;
         clearTimeout(rotateTimeout);
@@ -53,9 +53,8 @@ document.querySelectorAll(".threejs-container").forEach(container => {
         const sizeVec = box.getSize(new THREE.Vector3());
         const size = sizeVec.length();
 
-        model.position.sub(center); // zentrieren
+        model.position.sub(center);
 
-        // scaling
         if (!isFinite(size) || size === 0) {
             console.warn("Modellgröße ungültig – wird nicht skaliert.");
         } else {
@@ -74,7 +73,6 @@ document.querySelectorAll(".threejs-container").forEach(container => {
         controls.target.set(0, 0, 0);
         controls.update();
 
-
         animate();
     }, undefined, (error) => {
         console.error("Fehler beim Laden des Modells:", error);
@@ -84,10 +82,8 @@ document.querySelectorAll(".threejs-container").forEach(container => {
         requestAnimationFrame(animate);
         controls.update();
 
-        if (autoRotate) {
-            if (model) {
-                model.rotation.y += 0.005;
-            }
+        if (autoRotate && model) {
+            model.rotation.y += 0.005;
         }
 
         renderer.render(scene, camera);
