@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { OrbitControls } from "https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "https://unpkg.com/three@0.160.0/examples/jsm/loaders/GLTFLoader.js";
+import { DRACOLoader } from 'https://unpkg.com/three@0.160.0/examples/jsm/loaders/DRACOLoader.js';
 
 document.querySelectorAll(".threejs-container").forEach(container => {
     const modelUrl = container.dataset.model;
@@ -20,15 +21,24 @@ document.querySelectorAll(".threejs-container").forEach(container => {
     scene.add(dirLight);
 
     const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
+    controls.enableZoom = true;
+    controls.dampingFactor = 0.1;
+    controls.zoomDampingFactor = 0.1;
+    controls.minDistance = 1;
+    controls.maxDistance = 6;
+    controls.zoomSpeed = 0.5;
+
+    // loader
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
 
     const loader = new GLTFLoader();
+    loader.setDRACOLoader(dracoLoader);
 
-    let model; // global für animate()
+    let model; // global animate()
     let autoRotate = true;
     let rotateTimeout;
 
-    // stop rotation
     function stopAutoRotateTemporarily() {
         autoRotate = false;
         clearTimeout(rotateTimeout);
@@ -48,9 +58,8 @@ document.querySelectorAll(".threejs-container").forEach(container => {
         const sizeVec = box.getSize(new THREE.Vector3());
         const size = sizeVec.length();
 
-        model.position.sub(center); // zentrieren
+        model.position.sub(center);
 
-        // scaling
         if (!isFinite(size) || size === 0) {
             console.warn("Modellgröße ungültig – wird nicht skaliert.");
         } else {
@@ -60,15 +69,11 @@ document.querySelectorAll(".threejs-container").forEach(container => {
 
         scene.add(model);
 
-        // camera
-        const maxDim = Math.max(sizeVec.x, sizeVec.y, sizeVec.z);
-        const fov = camera.fov * (Math.PI / 180);
-        const cameraZ = maxDim / (2 * Math.tan(fov / 2)) * 1.5;
-        camera.position.set(0, 0, cameraZ);
+        // camera position
+        camera.position.set(0, 0, 3);
 
         controls.target.set(0, 0, 0);
         controls.update();
-
 
         animate();
     }, undefined, (error) => {
@@ -79,10 +84,8 @@ document.querySelectorAll(".threejs-container").forEach(container => {
         requestAnimationFrame(animate);
         controls.update();
 
-        if (autoRotate) {
-            if (model) {
-                model.rotation.y += 0.005;
-            }
+        if (autoRotate && model) {
+            model.rotation.y += 0.005;
         }
 
         renderer.render(scene, camera);

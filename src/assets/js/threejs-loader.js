@@ -21,10 +21,12 @@ document.querySelectorAll(".threejs-container").forEach(container => {
     scene.add(dirLight);
 
     const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
+    controls.enableZoom = true;
+    controls.dampingFactor = 0.1;
+    controls.zoomDampingFactor = 0.1;
     controls.minDistance = 1;
     controls.maxDistance = 6;
-    controls.zoomSpeed = 0.8;
+    controls.zoomSpeed = 0.5;
 
     // loader
     const dracoLoader = new DRACOLoader();
