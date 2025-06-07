@@ -1,40 +1,51 @@
+<div class="footer-navigation">
     <nav>
         <a href="{{ languageMap['concept-art'].en }}" class="{% if (page.url or '').startsWith(languageMap['concept-art'].en) %}active{% endif %}">concept art</a>
         <a href="{{ languageMap['games'].en }}" class="{% if (page.url or '').startsWith(languageMap['games'].en) %}active{% endif %}">games</a>
         <a href="{{ languageMap['kunst'].en }}" class="{% if (page.url or '').startsWith(languageMap['kunst'].en) %}active{% endif %}">fine art</a>
         <a href="{{ languageMap['ueber'].en }}" class="{% if (page.url or '').startsWith(languageMap['ueber'].en) %}active{% endif %}">about me</a>
     </nav>
+</div>
 
-    <div class="icon-container">
-        <a href="https://www.instagram.com/insomneaart/" target="_blank">
-            <img src="/assets/icons/icon_instagram_B.svg" alt="Instagram" class="icon theme-icon-switch" data-dark="/assets/icons/icon_instagram_B.svg" data-light="/assets/icons/icon_instagram_D.svg">
-        </a>
-        <a href="https://cara.app/celestialinsomniac" target="_blank">
-            <img src="/assets/icons/icon_cara_B.svg" alt="Cara" class="icon theme-icon-switch" data-dark="/assets/icons/icon_cara_B.svg" data-light="/assets/icons/icon_cara_D.svg">
-        </a>
-        <a href="https://linktr.ee/celestial_insomniac" target="_blank">
-            <img src="/assets/icons/icon_linktree_B.svg" alt="Linktree" class="icon theme-icon-switch" data-dark="/assets/icons/icon_linktree_B.svg" data-light="/assets/icons/icon_linktree_D.svg">
-        </a>
+<div class="footer-inner">
+    <div class="footer-left">
+        <div class="icon-container">
+            <a href="https://www.instagram.com/insomneaart/" target="_blank">
+                <img src="/assets/icons/icon_instagram_B.svg" alt="Instagram" class="icon theme-icon-switch" data-dark="/assets/icons/icon_instagram_B.svg" data-light="/assets/icons/icon_instagram_D.svg">
+            </a>
+            <a href="https://cara.app/celestialinsomniac" target="_blank">
+                <img src="/assets/icons/icon_cara_B.svg" alt="Cara" class="icon theme-icon-switch" data-dark="/assets/icons/icon_cara_B.svg" data-light="/assets/icons/icon_cara_D.svg">
+            </a>
+            <a href="https://linktr.ee/celestial_insomniac" target="_blank">
+                <img src="/assets/icons/icon_linktree_B.svg" alt="Linktree" class="icon theme-icon-switch" data-dark="/assets/icons/icon_linktree_B.svg" data-light="/assets/icons/icon_linktree_D.svg">
+            </a>
+        </div>
     </div>
 
-    <p>Thank you for your visit!</p>
-    <p>All works are protected against scraping theft</p>
+    <div class="footer-center">
+        <p>Thank you for your visit!</p>
+        <p>All works are protected against scraping theft</p>
+    </div>
 
-    <nav class="language-selector">
-        {% if lang == 'en' %}
-            <a href="{{ languageMap[pageKey].de or '/' }}">DE</a>
-        {% else %}
-            <span>DE</span>
-        {% endif %}
+    <div class="footer-right">
+        <nav class="language-selector">
+            {% if lang == 'en' %}
+                <a href="{{ languageMap[pageKey].de or '/' }}">DE</a>
+            {% else %}
+                <span>DE</span>
+            {% endif %}
         /
         {% if lang == 'en' %}
-            <span>EN</span>
-        {% else %}
-            <a href="{{ languageMap[pageKey].en or '/' }}">EN</a>
-        {% endif %}
-    </nav>
+                <span>EN</span>
+            {% else %}
+                <a href="{{ languageMap[pageKey].en or '/' }}">EN</a>
+            {% endif %}
+        </nav>
 
-    <button id="theme-toggle">
-        <img id="theme-icon" src="/assets/icons/icon_sun_b.svg" alt="Theme Toggle">
-    </button>
+        <button id="theme-toggle">
+            <img id="theme-icon" src="/assets/icons/icon_sun_b.svg" alt="Theme Toggle">
+        </button>
+    </div>
+
     <script src="/assets/js/theme-toggle.js"></script>
+</div>

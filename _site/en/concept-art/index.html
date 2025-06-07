@@ -48,46 +48,59 @@
 </a>
 </div>
         </main>
+
         <footer>
             
-                    <nav>
+                <div class="footer-navigation">
+    <nav>
         <a href="/en/concept-art/" class="active">concept art</a>
         <a href="/en/games/" class="">games</a>
         <a href="/en/fineart/" class="">fine art</a>
         <a href="/en/about/" class="">about me</a>
     </nav>
+</div>
 
-    <div class="icon-container">
-        <a href="https://www.instagram.com/insomneaart/" target="_blank">
-            <img src="/assets/icons/icon_instagram_B.svg" alt="Instagram" class="icon theme-icon-switch" data-dark="/assets/icons/icon_instagram_B.svg" data-light="/assets/icons/icon_instagram_D.svg">
-        </a>
-        <a href="https://cara.app/celestialinsomniac" target="_blank">
-            <img src="/assets/icons/icon_cara_B.svg" alt="Cara" class="icon theme-icon-switch" data-dark="/assets/icons/icon_cara_B.svg" data-light="/assets/icons/icon_cara_D.svg">
-        </a>
-        <a href="https://linktr.ee/celestial_insomniac" target="_blank">
-            <img src="/assets/icons/icon_linktree_B.svg" alt="Linktree" class="icon theme-icon-switch" data-dark="/assets/icons/icon_linktree_B.svg" data-light="/assets/icons/icon_linktree_D.svg">
-        </a>
+<div class="footer-inner">
+    <div class="footer-left">
+        <div class="icon-container">
+            <a href="https://www.instagram.com/insomneaart/" target="_blank">
+                <img src="/assets/icons/icon_instagram_B.svg" alt="Instagram" class="icon theme-icon-switch" data-dark="/assets/icons/icon_instagram_B.svg" data-light="/assets/icons/icon_instagram_D.svg">
+            </a>
+            <a href="https://cara.app/celestialinsomniac" target="_blank">
+                <img src="/assets/icons/icon_cara_B.svg" alt="Cara" class="icon theme-icon-switch" data-dark="/assets/icons/icon_cara_B.svg" data-light="/assets/icons/icon_cara_D.svg">
+            </a>
+            <a href="https://linktr.ee/celestial_insomniac" target="_blank">
+                <img src="/assets/icons/icon_linktree_B.svg" alt="Linktree" class="icon theme-icon-switch" data-dark="/assets/icons/icon_linktree_B.svg" data-light="/assets/icons/icon_linktree_D.svg">
+            </a>
+        </div>
     </div>
 
-    <p>Thank you for your visit!</p>
-    <p>All works are protected against scraping theft</p>
+    <div class="footer-center">
+        <p>Thank you for your visit!</p>
+        <p>All works are protected against scraping theft</p>
+    </div>
 
-    <nav class="language-selector">
-        
-            <a href="/concept-art/">DE</a>
-        
+    <div class="footer-right">
+        <nav class="language-selector">
+            
+                <a href="/concept-art/">DE</a>
+            
         /
         
-            <span>EN</span>
-        
-    </nav>
+                <span>EN</span>
+            
+        </nav>
 
-    <button id="theme-toggle">
-        <img id="theme-icon" src="/assets/icons/icon_sun_b.svg" alt="Theme Toggle">
-    </button>
+        <button id="theme-toggle">
+            <img id="theme-icon" src="/assets/icons/icon_sun_b.svg" alt="Theme Toggle">
+        </button>
+    </div>
+
     <script src="/assets/js/theme-toggle.js"></script>
+</div>
             
         </footer>
+
         <a href="#top" class="back-to-top" aria-label="Zurück nach oben">
             <img src="/assets/icons/icon_arrow_B.svg"
          alt="Pfeil nach oben"
@@ -107,7 +120,6 @@
                 }
             });
 
-            // Optional: Sanftes Scrollen
             document
                 .querySelector(".back-to-top")
                 .addEventListener("click", function (e) {

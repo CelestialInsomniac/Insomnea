@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -252,38 +253,47 @@ body.light-mode .menu-button span {
 
 .back-to-top {
     position: fixed;
-    bottom: 2rem;
+    bottom: 6rem;
     right: 2rem;
     display: none;
     cursor: pointer;
     z-index: 999;
-    width: 40px;
-    height: 40px;
+    width: 50px;
 }
 
 .arrow-icon {
     width: 100%;
-    height: auto;
 }
 
 main {
     flex: 1 0 auto;
-    padding-bottom: 10rem !important 
+    padding-bottom: 5rem;
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 1rem;
-    right: 1rem;
-    padding: 1rem;
     background-color: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
     z-index: 999;
-    font-size: 0.9rem;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.footer-navigation nav {
+    display: flex;
+    gap: 6rem;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    min-height: 5rem;
+    margin-bottom: 2rem;
 }
 
 .footer-left {
@@ -292,33 +302,24 @@ footer {
 }
 
 .icon-container {
-    height: 20px;
-    width: 20px;
-    margin-top: 180px;
-    margin-bottom: 80px;
+    height: 4rem;
+    width: 1.5rem;
 }
-
 
 .footer-center {
     display: flex;
-    gap: 20rem;
-    justify-content: center;
-    align-items: flex-end;
-    flex: 1;
-    text-align: center;
-    font-size: 1.2rem;
-    flex-wrap: wrap;
+    color: #626675;
+    font-size: 1.4rem;
+    gap: 6rem;
 }
 
 .footer-right {
     display: flex;
-    align-items: flex-end;
-    gap: 3rem;
+    gap: 1.5rem;
 }
 
 .language-selector {
     display: flex;
     gap: 0.3rem;
     font-size: 1.5rem;
-    padding-bottom: 0.2rem;
 }
