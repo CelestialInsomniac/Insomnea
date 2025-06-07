@@ -81,12 +81,12 @@ a:hover {
 }
 
 .submenu-container {
-    max-width: 900px;
+    max-width: 50vw;
     margin: 0 auto;
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .submenu-button {
@@ -98,20 +98,21 @@ a:hover {
     border-radius: 0.5rem;
     overflow: hidden;
     text-decoration: none;
-    color: white;
     transition: transform 0.3s, opacity 0.3s;
 }
 
 .submenu-button span {
     position: absolute;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.5);
-    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 2.5rem;
 }
 
 .submenu-button:hover {
