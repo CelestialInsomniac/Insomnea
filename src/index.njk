@@ -42,37 +42,44 @@ lang: "de"
     </main>
 
     <footer>
-        <div class="icon-container">
-            <a href="https://www.instagram.com/insomneaart/" target="_blank">
-                <img src="/assets/icons/icon_instagram_B.svg" alt="Instagram" class="icon theme-icon-switch" data-dark="/assets/icons/icon_instagram_B.svg" data-light="/assets/icons/icon_instagram_D.svg">
-            </a>
-            <a href="https://cara.app/celestialinsomniac" target="_blank">
-                <img src="/assets/icons/icon_cara_B.svg" alt="Cara" class="icon theme-icon-switch" data-dark="/assets/icons/icon_cara_B.svg" data-light="/assets/icons/icon_cara_D.svg">
-            </a>
-            <a href="https://linktr.ee/celestial_insomniac" target="_blank">
-                <img src="/assets/icons/icon_linktree_B.svg" alt="Linktree" class="icon theme-icon-switch" data-dark="/assets/icons/icon_linktree_B.svg" data-light="/assets/icons/icon_linktree_D.svg">
-            </a>
+        <div class="footer-left">
+            <div class="icon-container">
+                <a href="https://www.instagram.com/insomneaart/" target="_blank">
+                    <img src="/assets/icons/icon_instagram_B.svg" alt="Instagram" class="icon theme-icon-switch" data-dark="/assets/icons/icon_instagram_B.svg" data-light="/assets/icons/icon_instagram_D.svg">
+                </a>
+                <a href="https://cara.app/celestialinsomniac" target="_blank">
+                    <img src="/assets/icons/icon_cara_B.svg" alt="Cara" class="icon theme-icon-switch" data-dark="/assets/icons/icon_cara_B.svg" data-light="/assets/icons/icon_cara_D.svg">
+                </a>
+                <a href="https://linktr.ee/celestial_insomniac" target="_blank">
+                    <img src="/assets/icons/icon_linktree_B.svg" alt="Linktree" class="icon theme-icon-switch" data-dark="/assets/icons/icon_linktree_B.svg" data-light="/assets/icons/icon_linktree_D.svg">
+                </a>
+            </div>
         </div>
 
-        <p>Danke für Deinen Besuch!</p>
-        <p>Alle Werke sind gegen Scraping-Diebstahl geschützt</p>
+        <div class="footer-center">
+            <p>Danke für Deinen Besuch!</p>
+            <p>Alle Werke sind gegen Scraping-Diebstahl geschützt</p>
+        </div>
 
-        <nav class="language-selector">
-            {% if lang == 'de' %}
-                <span>DE</span>
-            {% else %}
-                <a href="/de/" class="{% if lang == 'de' %}active{% endif %}">DE</a>
-            {% endif %}
+        <div class="footer-right">
+            <nav class="language-selector">
+                {% if lang == 'de' %}
+                    <span>DE</span>
+                {% else %}
+                    <a href="/de/" class="{% if lang == 'de' %}active{% endif %}">DE</a>
+                {% endif %}
         /
             {% if lang == 'en' %}
-                <span>EN</span>
-            {% else %}
-                <a href="/en/" class="{% if lang == 'en' %}active{% endif %}">EN</a>
-            {% endif %}
-        </nav>
-        <button id="theme-toggle">
-            <img id="theme-icon" src="/assets/icons/icon_sun_b.svg" alt="Theme Toggle">
-        </button>
+                    <span>EN</span>
+                {% else %}
+                    <a href="/en/" class="{% if lang == 'en' %}active{% endif %}">EN</a>
+                {% endif %}
+            </nav>
+
+            <button id="theme-toggle">
+                <img id="theme-icon" src="/assets/icons/icon_sun_b.svg" alt="Theme Toggle">
+            </button>
+        </div>
 
         <script src="/assets/js/theme-toggle.js"></script>
     </footer>
