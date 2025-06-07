@@ -1,4 +1,20 @@
-{% set cloudinaryBaseUrl = "https://res.cloudinary.com/insomneaart/image/upload/" %}
-<h2>{{ work.title }}</h2>
-<p>{{ work.year }} · {{ work.medium }} · {{ work.size }}</p>
-<img src="{{ cloudinaryBaseUrl }}{{ work.image }}" alt="{{ work.alt }}">
+<div class="artwork-item">
+    <h2 class="artwork-title">{{ work.title }}</h2>
+    <div class="artwork-meta">
+        <span>{{ work.year }}</span>
+        <span>{{ work.size }}</span>
+        <span>{{ work.medium }}</span>
+    </div>
+    <div class="artwork-image-container">
+        <a
+      href="https://res.cloudinary.com/insomneaart/image/upload/{{ work.image }}"
+      data-lg-size="1406-1390"
+      data-sub-html="<h4>{{ work.title }}</h4><p>{{ work.year }} – {{ work.size }} – {{ work.medium }}</p>"
+    >
+            <img
+        src="https://res.cloudinary.com/insomneaart/image/upload/{{ work.image }}"
+        alt="{{ work.alt }}"
+      >
+        </a>
+    </div>
+</div>
