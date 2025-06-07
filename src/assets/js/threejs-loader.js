@@ -22,6 +22,9 @@ document.querySelectorAll(".threejs-container").forEach(container => {
 
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
+    controls.minDistance = 1;
+    controls.maxDistance = 6;
+    controls.zoomSpeed = 0.8;
 
     // loader
     const dracoLoader = new DRACOLoader();
@@ -64,11 +67,8 @@ document.querySelectorAll(".threejs-container").forEach(container => {
 
         scene.add(model);
 
-        // camera
-        const maxDim = Math.max(sizeVec.x, sizeVec.y, sizeVec.z);
-        const fov = camera.fov * (Math.PI / 180);
-        const cameraZ = maxDim / (2 * Math.tan(fov / 2)) * 1.5;
-        camera.position.set(0, 0, cameraZ);
+        // camera position
+        camera.position.set(0, 0, 3);
 
         controls.target.set(0, 0, 0);
         controls.update();
