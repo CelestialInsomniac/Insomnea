@@ -9,7 +9,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
     const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.setClearColor(0xf5f5f5); // off-white
+    renderer.setClearColor(0xb6afa3); // viewport color
     container.appendChild(renderer.domElement);
 
     // lights
@@ -24,9 +24,12 @@ document.querySelectorAll(".threejs-container").forEach(container => {
     controls.enableZoom = true;
     controls.dampingFactor = 0.1;
     controls.zoomDampingFactor = 0.1;
-    controls.minDistance = 1;
-    controls.maxDistance = 6;
-    controls.zoomSpeed = 0.5;
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.1;
+    controls.zoomSpeed = 0.8;
+    controls.minDistance = 0.5;
+    controls.maxDistance = 10;
+
 
     // loader
     const dracoLoader = new DRACOLoader();
@@ -59,6 +62,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
         const size = sizeVec.length();
 
         model.position.sub(center);
+        model.position.setY(0);
 
         if (!isFinite(size) || size === 0) {
             console.warn("Modellgröße ungültig – wird nicht skaliert.");
@@ -70,7 +74,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
         scene.add(model);
 
         // camera position
-        camera.position.set(0, 0, 3);
+        camera.position.set(0, 0, 2);
 
         controls.target.set(0, 0, 0);
         controls.update();
