@@ -1,8 +1,0 @@
-{% set cloudinaryBaseUrl = "https://res.cloudinary.com/insomneaart/image/upload/" %}
-{% set transformation = transformation or "f_auto,q_auto,w_800,h_400,c_limit" %}
-<img
-  src="https://res.cloudinary.com/insomneaart/image/upload/{{ transformation }}/{{ path }}"
-  alt="{{ alt | default('Bild') }}"
-  class="{{ class }}"
-  loading="lazy"
-/>
