@@ -190,6 +190,7 @@ a:hover {
 
 .gallery__item:hover img {
     opacity: 80%;
+    cursor: pointer;
 }
 
 .gallery--highlight-first .gallery__item--highlight {
