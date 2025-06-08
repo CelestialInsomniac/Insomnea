@@ -318,15 +318,16 @@ wings are used to control the direction of the ship. There are two pairs of retr
         <script>
             document
                 .querySelectorAll(".lightgallery")
-                .forEach((gallery) => {
+                .forEach(gallery => {
                     lightGallery(gallery, {
+                        selector: 'a',
                         plugins: [
                             lgZoom, lgThumbnail, lgVideo
                         ],
                         speed: 500,
                         zoom: true,
-                        preload: 0,
                         thumbnail: true,
+                        preload: 0,
                         download: false,
                         swipeToClose: true,
                         actualSize: false,

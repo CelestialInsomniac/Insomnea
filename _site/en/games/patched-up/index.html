@@ -583,15 +583,16 @@ Our vertical slice/demo was even nominated for the PAX Talent Award 2025 and is 
         <script>
             document
                 .querySelectorAll(".lightgallery")
-                .forEach((gallery) => {
+                .forEach(gallery => {
                     lightGallery(gallery, {
+                        selector: 'a',
                         plugins: [
                             lgZoom, lgThumbnail, lgVideo
                         ],
                         speed: 500,
                         zoom: true,
-                        preload: 0,
                         thumbnail: true,
+                        preload: 0,
                         download: false,
                         swipeToClose: true,
                         actualSize: false,

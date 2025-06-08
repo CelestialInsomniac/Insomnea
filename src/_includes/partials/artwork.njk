@@ -7,15 +7,17 @@
   </div>
   <div class="artwork-image-container">
     <a
-      data-src="https://res.cloudinary.com/insomneaart/image/upload/w_1600,q_auto,f_auto/{{ work.large }}"
-      class="gallery__item"
-      data-lg-size="1600-1200"
-      data-sub-html="<h4>{{ work.title }}</h4><p>{{ work.year }} – {{ work.size }} – {{ work.medium }}</p>"
-    >
+    class="gallery__item"
+    data-src="https://res.cloudinary.com/insomneaart/image/upload/w_1600,q_auto,f_auto/{{ work.large }}"
+    data-lg-size="1600-1200"
+    data-type="image"
+    data-sub-html="<h4>{{ work.title }}</h4><p>{{ work.year }} – {{ work.size }} – {{ work.medium }}</p>"
+  >
       <img
-        src="https://res.cloudinary.com/insomneaart/image/upload/w_600,q_auto,f_auto/{{ work.thumb }}"
-        alt="{{ work.alt }}"
-      >
+      src="https://res.cloudinary.com/insomneaart/image/upload/w_600,q_auto,f_auto/{{ work.thumb }}"
+      alt="{{ work.alt }}"
+    >
     </a>
   </div>
+
 </div>

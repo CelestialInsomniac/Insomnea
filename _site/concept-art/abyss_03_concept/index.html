@@ -318,15 +318,16 @@ Der Suit ist für Agilität entwickelt und das Jetpack dient der Fortbewegung.</
         <script>
             document
                 .querySelectorAll(".lightgallery")
-                .forEach((gallery) => {
+                .forEach(gallery => {
                     lightGallery(gallery, {
+                        selector: 'a',
                         plugins: [
                             lgZoom, lgThumbnail, lgVideo
                         ],
                         speed: 500,
                         zoom: true,
-                        preload: 0,
                         thumbnail: true,
+                        preload: 0,
                         download: false,
                         swipeToClose: true,
                         actualSize: false,
