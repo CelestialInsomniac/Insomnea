@@ -182,7 +182,10 @@ a:hover {
 
 .gallery__item img {
     width: 100%;
+    aspect-ratio: 4 / 3;
     display: block;
+    object-fit: cover;
+    object-position: center;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -195,6 +198,12 @@ a:hover {
 
 .gallery--highlight-first .gallery__item--highlight {
     grid-column: 1 / -1;
+}
+
+.gallery--highlight-first .gallery__item--highlight img {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 .gallery--highlight-first .gallery__wrapper {
