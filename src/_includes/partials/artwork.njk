@@ -1,20 +1,21 @@
 <div class="artwork-item">
-    <h2 class="artwork-title">{{ work.title }}</h2>
-    <div class="artwork-meta">
-        <span>{{ work.year }}</span>
-        <span>{{ work.size }}</span>
-        <span>{{ work.medium }}</span>
-    </div>
-    <div class="artwork-image-container">
-        <a
-      href="https://res.cloudinary.com/insomneaart/image/upload/{{ work.image }}"
-      data-lg-size="1406-1390"
+  <h2 class="artwork-title">{{ work.title }}</h2>
+  <div class="artwork-meta">
+    <span>{{ work.year }}</span>
+    <span>{{ work.size }}</span>
+    <span>{{ work.medium }}</span>
+  </div>
+  <div class="artwork-image-container">
+    <a
+      data-src="https://res.cloudinary.com/insomneaart/image/upload/w_1600,q_auto,f_auto/{{ work.large }}"
+      class="gallery__item"
+      data-lg-size="1600-1200"
       data-sub-html="<h4>{{ work.title }}</h4><p>{{ work.year }} – {{ work.size }} – {{ work.medium }}</p>"
     >
-            <img
-        src="https://res.cloudinary.com/insomneaart/image/upload/{{ work.image }}"
+      <img
+        src="https://res.cloudinary.com/insomneaart/image/upload/w_600,q_auto,f_auto/{{ work.thumb }}"
         alt="{{ work.alt }}"
       >
-        </a>
-    </div>
+    </a>
+  </div>
 </div>
