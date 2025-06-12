@@ -40,16 +40,25 @@
                 </a>
 
             {% else %}
-                <a
-      data-src="{{ item.large }}"
-      class="gallery__item{% if loop.first and highlightFirst %} gallery__item--highlight{% endif %}"
-      data-lg-size="1600-1060"
-      data-sub-html="{{ item.alt | default('') }}"
+                {% if item.large %}
+                    {% set transformedThumb = item.thumb %}
+                    {% if item.thumb | slice(-4) != '.gif' %}
+                        {% set transformedThumb = item.thumb | replace('/upload/', '/upload/w_900,h_700,c_fit,f_auto,q_auto/') %}
+                    {% endif %}
+                    <a
+        data-src="{{ item.large }}"
+        class="gallery__item{% if loop.first and highlightFirst %} gallery__item--highlight{% endif %}"
+        data-lg-size="1600-1060"
+        data-sub-html="{{ item.alt | default('') }}"
     >
-                    <img src="{{ item.thumb }}" alt="{{ item.alt | default('Gallery image') }}">
-                </a>
+                        <img
+            src="{{ transformedThumb }}"
+            alt="{{ item.alt | default('Gallery image') }}"
+        >
+                    </a>
+                {% endif %}
             {% endif %}
         {% endfor %}
-
     </div>
+</div>
 </div>
