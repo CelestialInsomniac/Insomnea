@@ -284,8 +284,12 @@ a:hover {
 
 .artwork-image-container img {
     max-width: 100%;
+    width: auto;
     height: auto;
     border-radius: 4px;
+    object-fit: contain;
+    display: block;
+    background: #222;
 }
 
 /* ABOUT PAGE STYLES */
