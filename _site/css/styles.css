@@ -10,7 +10,7 @@ body {
 body {
     font-family: 'Annie Use Your Telescope', cursive;
     background-color: #1A1A1A;
-    color: #C0CBD8;
+    color: #c0cbd8;
     transition: background-color 0.3s, color 0.3s;
     min-height: 100vh;
     display: flex;
@@ -235,6 +235,14 @@ a:hover {
     overflow: hidden;
     margin: 1rem 0;
     height: auto;
+}
+
+.threejs-instructions {
+    color: #6c7480;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: -2rem;
+    font-style: bold;
 }
 
 /* FINE ART PAGE STYLES */

@@ -38,6 +38,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
     loader.setDRACOLoader(dracoLoader);
 
     let model; // global animate()
+    let mixer;
     let autoRotate = true;
     let rotateTimeout;
 
@@ -72,8 +73,14 @@ document.querySelectorAll(".threejs-container").forEach(container => {
 
         scene.add(model);
 
+        // animation
+        const mixer = new THREE.AnimationMixer(model);
+        gltf.animations.forEach((clip) => {
+            mixer.clipAction(clip).play();
+        });
+
         // camera position
-        camera.position.set(0, 0, 1.5);
+        camera.position.set(0, 0, 1.6);
 
         controls.target.set(0, 0, 0);
         controls.update();
@@ -90,6 +97,8 @@ document.querySelectorAll(".threejs-container").forEach(container => {
         if (autoRotate && model) {
             model.rotation.y += 0.005;
         }
+
+        if (mixer) mixer.update(0.016); // ca. 60fps
 
         renderer.render(scene, camera);
     }
