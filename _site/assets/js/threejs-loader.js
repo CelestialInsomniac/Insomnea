@@ -62,7 +62,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
         const size = sizeVec.length();
 
         model.position.sub(center);
-        model.position.setY(0.3);
+        model.position.setY(-0.3);
 
         if (!isFinite(size) || size === 0) {
             console.warn("Modellgröße ungültig – wird nicht skaliert.");
