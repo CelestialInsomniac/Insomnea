@@ -228,7 +228,7 @@ a:hover {
 
 .threejs-container {
     flex: 1 1 45%;
-    max-width: 480px;
+    max-width: 720px;
     aspect-ratio: 4 / 3;
     background-color: #b6afa3;
     border-radius: 1rem;

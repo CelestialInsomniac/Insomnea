@@ -30,7 +30,6 @@ document.querySelectorAll(".threejs-container").forEach(container => {
     controls.minDistance = 0.5;
     controls.maxDistance = 10;
 
-
     // loader
     const dracoLoader = new DRACOLoader();
     dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
@@ -67,14 +66,14 @@ document.querySelectorAll(".threejs-container").forEach(container => {
         if (!isFinite(size) || size === 0) {
             console.warn("Modellgröße ungültig – wird nicht skaliert.");
         } else {
-            const scale = 2.0 / size;
+            const scale = 2.5 / size;
             model.scale.setScalar(scale);
         }
 
         scene.add(model);
 
         // camera position
-        camera.position.set(0, 0, 2);
+        camera.position.set(0, 0, 1.5);
 
         controls.target.set(0, 0, 0);
         controls.update();
