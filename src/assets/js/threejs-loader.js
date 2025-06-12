@@ -62,7 +62,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
         const size = sizeVec.length();
 
         model.position.sub(center);
-        model.position.setY(0);
+        model.position.setY(0.3);
 
         if (!isFinite(size) || size === 0) {
             console.warn("Modellgröße ungültig – wird nicht skaliert.");
@@ -74,7 +74,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
         scene.add(model);
 
         // animation
-        const mixer = new THREE.AnimationMixer(model);
+        mixer = new THREE.AnimationMixer(model);
         gltf.animations.forEach((clip) => {
             mixer.clipAction(clip).play();
         });
