@@ -19,8 +19,28 @@
 
     .menu-button {
         min-height: 20vh;
-        min-width: 38vh;
+        min-width: 40vw;
         aspect-ratio: 2 / 1;
+    }
+
+    .submenu-container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 3rem;
+        max-width: 80%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .submenu-button {
+        position: relative;
+        display: block;
+        width: 100%;
+        aspect-ratio: 2 / 1;
+        max-height: 3vh;
+        min-width: 40vw;
     }
 
     img,
@@ -29,7 +49,9 @@
         height: auto;
     }
 
+    /*FOOTER*/
     .footer-inner {
+        margin-top: -4.236rem;
         display: flex;
         flex-direction: column;
         align-items: center;

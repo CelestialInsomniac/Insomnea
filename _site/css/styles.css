@@ -352,6 +352,10 @@ body.light-mode .menu-button span {
     color: #C0CBD8;
 }
 
+body.light-mode .submenu-button span {
+    color: #C0CBD8;
+}
+
 .icon:hover {
     opacity: 70%;
 }
