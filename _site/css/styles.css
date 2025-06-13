@@ -154,6 +154,15 @@ a:hover {
     line-height: 1.6;
 }
 
+.divider {
+    width: 95%;
+    color: #C0CBD8;
+}
+
+body.light-mode .divider {
+    color: #1A1A1A;
+}
+
 .contribution-text {
     font-size: 1.4rem;
     margin: 0 18rem 1rem;
@@ -277,9 +286,7 @@ a:hover {
 }
 
 .artwork-image-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
+    width: 100%;
 }
 
 /* ABOUT PAGE STYLES */
@@ -442,4 +449,8 @@ footer {
     display: flex;
     gap: 0.3rem;
     font-size: 1.5rem;
+}
+
+.language-selector a {
+    color: #626675;
 }
