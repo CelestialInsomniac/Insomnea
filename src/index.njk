@@ -11,11 +11,19 @@ lang: "de"
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/media-queries.css">
+    <link rel="stylesheet" href="/css/menu.css">
 </head>
 <body>
     <header>
+        {% if lang == "de" %}
+            {% include "DEmenu.njk" %}
+        {% else %}
+            {% include "ENmenu.njk" %}
+        {% endif %}
+
         <a href="index.html" class="home">INSOMNEA art</a>
     </header>
+
     <main class="menu-buttons">
         {% set path = "v1748079551/concept_ship_final_ssmg9q.png" %}
         {% set href = "/concept-art/" %}
@@ -86,6 +94,8 @@ lang: "de"
             <script src="/assets/js/theme-toggle.js"></script>
         </div>
     </footer>
+    
+    <script src="/assets/js/burgermenu.js"></script>
 
 </body>
 </html>

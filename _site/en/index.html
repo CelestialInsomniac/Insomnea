@@ -6,9 +6,29 @@
     <title>INSOMNEA art</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/media-queries.css">
+    <link rel="stylesheet" href="/css/menu.css">
 </head>
 <body>
     <header>
+        
+            <div id="burger-menu-wrapper">
+    <button id="burger-toggle" aria-label="Menü öffnen">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+    </button>
+
+    <nav id="burger-menu">
+        <a href="/en/concept-art/" class="">concept art</a>
+        <a href="/en/games/" class="">games</a>
+        <a href="/en/fineart/" class="">fine art</a>
+        <a href="/en/about/" class="">about me</a>
+    </nav>
+
+    <div id="burger-overlay"></div>
+</div>
+        
+
         <a href="index.html" class="home">INSOMNEA art</a>
     </header>
 
@@ -95,6 +115,8 @@
             <script src="/assets/js/theme-toggle.js"></script>
         </div>
     </footer>
+    
+    <script src="/assets/js/burgermenu.js"></script>
 
 </body>
 </html>

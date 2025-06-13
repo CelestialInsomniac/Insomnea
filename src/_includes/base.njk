@@ -25,14 +25,13 @@
         </script>
     </head>
     <body>
-
-        {% if lang == "de" %}
-            {% include "DEmenu.njk" %}
-        {% else %}
-            {% include "ENmenu.njk" %}
-        {% endif %}
-
         <header>
+            {% if lang == "de" %}
+                {% include "DEmenu.njk" %}
+            {% else %}
+                {% include "ENmenu.njk" %}
+            {% endif %}
+
             <a href="{% if lang == 'de' %}/{% else %}/en/{% endif %}" class="home">INSOMNEA art</a>
         </header>
         <main>

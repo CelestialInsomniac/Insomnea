@@ -11,9 +11,16 @@ lang: "en"
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/media-queries.css">
+    <link rel="stylesheet" href="/css/menu.css">
 </head>
 <body>
     <header>
+        {% if lang == "de" %}
+            {% include "DEmenu.njk" %}
+        {% else %}
+            {% include "ENmenu.njk" %}
+        {% endif %}
+
         <a href="index.html" class="home">INSOMNEA art</a>
     </header>
 
@@ -93,6 +100,8 @@ lang: "en"
             <script src="/assets/js/theme-toggle.js"></script>
         </div>
     </footer>
+    
+    <script src="/assets/js/burgermenu.js"></script>
 
 </body>
 </html>
