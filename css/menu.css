@@ -103,7 +103,7 @@ body.light-mode .burger-line {
     background-color: #1A1A1A;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
     #burger-toggle {
         display: flex;
     }
