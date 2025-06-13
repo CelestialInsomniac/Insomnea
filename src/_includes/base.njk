@@ -25,22 +25,12 @@
         </script>
     </head>
     <body>
-        <div id="burger-menu-wrapper">
-            <button id="burger-toggle" aria-label="Menü öffnen">
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-            </button>
 
-            <nav id="burger-menu">
-                <a href="{{ languageMap['concept-art'][lang] }}">concept art</a>
-                <a href="{{ languageMap['games'][lang] }}">games</a>
-                <a href="{{ languageMap['kunst'][lang] }}">kunst</a>
-                <a href="{{ languageMap['ueber'][lang] }}">über mich</a>
-            </nav>
-
-            <div id="burger-overlay"></div>
-        </div>
+        {% if lang == "de" %}
+            {% include "DEmenu.njk" %}
+        {% else %}
+            {% include "ENmenu.njk" %}
+        {% endif %}
 
         <header>
             <a href="{% if lang == 'de' %}/{% else %}/en/{% endif %}" class="home">INSOMNEA art</a>

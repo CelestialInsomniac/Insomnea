@@ -1,0 +1,16 @@
+<div id="burger-menu-wrapper">
+    <button id="burger-toggle" aria-label="Menü öffnen">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+    </button>
+
+    <nav id="burger-menu">
+        <a href="{{ languageMap['concept-art'].en }}" class="{% if (page.url or '').startsWith(languageMap['concept-art'].en) %}active{% endif %}">concept art</a>
+        <a href="{{ languageMap['games'].en }}" class="{% if (page.url or '').startsWith(languageMap['games'].en) %}active{% endif %}">games</a>
+        <a href="{{ languageMap['kunst'].en }}" class="{% if (page.url or '').startsWith(languageMap['kunst'].en) %}active{% endif %}">fine art</a>
+        <a href="{{ languageMap['ueber'].en }}" class="{% if (page.url or '').startsWith(languageMap['ueber'].en) %}active{% endif %}">about me</a>
+    </nav>
+
+    <div id="burger-overlay"></div>
+</div>
