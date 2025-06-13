@@ -111,6 +111,43 @@
         line-height: 1.2;
     }
 
+    /* FINE ART PAGE STYLES */
+    .artwork-gallery {
+        margin-top: 3rem;
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+
+    .artwork-title {
+        font-size: 1rem;
+    }
+
+    .artwork-meta {
+        gap: 1rem;
+        font-size: 1rem;
+    }
+
+    /* ABOUT PAGE STYLES */
+    .about {
+        width: 80vw;
+        font-size: 1rem;
+    }
+
+    .about-image {
+        width: 45%;
+    }
+
+    .adastra {
+        right: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+
+    body.light-mode .adastra {
+        right: 0.8rem;
+        font-size: 0.8rem;
+    }
+
     /*FOOTER*/
     .footer-inner {
         display: flex;

@@ -290,12 +290,12 @@ a:hover {
     max-height: 992px;
     flex-shrink: 0;
     color: #C0CBD8;
-    font-size: 32px;
+    font-size: 1.618rem;
     line-height: normal;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 8rem;
+    margin-top: 4rem;
     margin-bottom: 5rem;
 }
 
@@ -304,8 +304,7 @@ a:hover {
     height: auto;
     border-radius: 0.5rem;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto auto 4rem auto;
 }
 
 .adastra {
