@@ -442,7 +442,7 @@ Der Suit ist für Agilität entwickelt und das Jetpack dient der Fortbewegung.</
             const backToTop = document.querySelector(".back-to-top");
 
             window.addEventListener("scroll", () => {
-                if (window.scrollY > window.innerHeight) {
+                if (window.scrollY > window.innerHeight / 2) {
                     backToTop.style.display = "block";
                 } else {
                     backToTop.style.display = "none";
