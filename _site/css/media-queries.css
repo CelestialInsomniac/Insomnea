@@ -6,7 +6,7 @@
     }
 
     .home {
-        font-size: 2.618rem;
+        font-size: 3.2rem;
         padding-left: 2rem;
     }
 
@@ -43,15 +43,76 @@
         min-width: 40vw;
     }
 
+    /* PROJECT PAGE STYLES */
+    .project-title {
+        font-size: 1.618rem;
+        font-weight: normal;
+        margin-top: 3rem;
+        margin-left: 2rem;
+    }
+
+    .hero-image {
+        width: 90%;
+    }
+
+    .hero-text {
+        max-width: 80vw;
+        margin: 2rem auto 2rem auto;
+        font-size: 1rem;
+    }
+
+    .contribution-text {
+        max-width: 80vw;
+        font-size: 1rem;
+        margin: 0 auto 1rem;
+    }
+
+    .contribution ul {
+        max-width: 80vw;
+        font-size: 1rem;
+        margin: 0 auto 1rem;
+    }
+
+    .page-text {
+        max-width: 80vw;
+        margin: 2rem auto 3rem auto;
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
     img,
     video {
         max-width: 100%;
         height: auto;
     }
 
+    /*GALLERY STYLES */
+    .gallery__wrapper {
+        grid-template-columns: 1fr;
+        max-width: 80vw;
+        margin-bottom: 0;
+    }
+
+    .threejs-wrapper {
+        width: 70%;
+        margin-bottom: 0;
+    }
+
+    .threejs-container {
+        height: 35vh;
+    }
+
+    .threejs-instructions {
+        max-width: 80vw;
+        margin: -1rem auto 3rem;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
     /*FOOTER*/
     .footer-inner {
-        margin-top: -4.236rem;
         display: flex;
         flex-direction: column;
         align-items: center;

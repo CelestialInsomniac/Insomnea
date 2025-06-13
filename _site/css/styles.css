@@ -181,6 +181,7 @@ a:hover {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     max-width: 1200px;
     margin: 0 auto;
+    margin-bottom: 6rem;
 }
 
 .gallery__item img {
@@ -379,7 +380,6 @@ body.light-mode .submenu-button span {
 
 main {
     flex: 1 0 auto;
-    padding-bottom: 5rem;
 }
 
 footer {
