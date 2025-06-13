@@ -10,7 +10,7 @@ body {
 body {
     font-family: 'Annie Use Your Telescope', cursive;
     background-color: #1A1A1A;
-    color: #c0cbd8;
+    color: #C0CBD8;
     transition: background-color 0.3s, color 0.3s;
     min-height: 100vh;
     display: flex;
@@ -182,10 +182,7 @@ a:hover {
 
 .gallery__item img {
     width: 100%;
-    aspect-ratio: 4 / 3;
     display: block;
-    object-fit: cover;
-    object-position: center;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -200,12 +197,6 @@ a:hover {
     grid-column: 1 / -1;
 }
 
-.gallery--highlight-first .gallery__item--highlight img {
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-}
-
 .gallery--highlight-first .gallery__wrapper {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
@@ -214,35 +205,26 @@ a:hover {
     background-color: rgba(15, 15, 15, 0.95) !important;
 }
 
-/* THREEJS SETTINGS */
 .threejs-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    aspect-ratio: 16 / 9;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-    width: 100%;
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
 }
 
 .threejs-container {
-    flex: 1 1 45%;
-    max-width: 720px;
-    aspect-ratio: 4 / 3;
-    background-color: #fffaea;
+    width: 100%;
+    height: 500px;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    background-color: #b6afa3;
     border-radius: 1rem;
+    margin: 2rem 0;
     overflow: hidden;
-    margin: 1rem 0;
-    height: auto;
-}
-
-.threejs-instructions {
-    color: #6c7480;
-    font-size: 1.4rem;
-    text-align: center;
-    margin-top: -2rem;
-    font-style: bold;
 }
 
 /* FINE ART PAGE STYLES */
@@ -284,12 +266,8 @@ a:hover {
 
 .artwork-image-container img {
     max-width: 100%;
-    width: auto;
     height: auto;
     border-radius: 4px;
-    object-fit: contain;
-    display: block;
-    background: #222;
 }
 
 /* ABOUT PAGE STYLES */
@@ -333,6 +311,7 @@ a:hover {
     white-space: nowrap;
 }
 
+
 body.light-mode .adastra {
     position: absolute;
     top: 20%;
@@ -370,10 +349,6 @@ body.light-mode .about {
 }
 
 body.light-mode .menu-button span {
-    color: #C0CBD8;
-}
-
-body.light-mode .submenu-button span {
     color: #C0CBD8;
 }
 

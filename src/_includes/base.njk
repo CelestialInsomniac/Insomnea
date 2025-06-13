@@ -13,6 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ title }}</title>
         <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/menu.css">
         <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css"/>
         <script type="importmap">
             {
@@ -23,6 +24,23 @@
         </script>
     </head>
     <body>
+        <div id="burger-menu-wrapper">
+            <button id="burger-toggle" aria-label="Menü öffnen">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+
+            <nav id="burger-menu">
+                <a href="{{ languageMap['concept-art'][lang] }}">concept art</a>
+                <a href="{{ languageMap['games'][lang] }}">games</a>
+                <a href="{{ languageMap['kunst'][lang] }}">kunst</a>
+                <a href="{{ languageMap['ueber'][lang] }}">über mich</a>
+            </nav>
+
+            <div id="burger-overlay"></div>
+        </div>
+
         <header>
             <a href="{% if lang == 'de' %}/{% else %}/en/{% endif %}" class="home">INSOMNEA art</a>
         </header>
@@ -94,6 +112,6 @@
         </script>
 
         <script src="/assets/js/threejs-loader.js" type="module"></script>
-
+        <script src="/assets/js/burgermenu.js"></script>
     </body>
 </html>
