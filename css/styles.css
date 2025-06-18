@@ -128,6 +128,7 @@ a:hover {
     font-size: 2.5rem;
     margin-top: 2rem;
     margin-left: 2rem;
+    text-align: center;
 }
 
 .hero {
@@ -147,7 +148,7 @@ a:hover {
 }
 
 .hero-text {
-    max-width: 70vw;
+    max-width: 60ch;
     margin: 2rem auto 3rem auto;
     text-align: left;
     font-size: 1.4rem;
@@ -165,21 +166,33 @@ body.light-mode .divider {
 
 .contribution-text {
     font-size: 1.4rem;
-    margin: 0 18rem 1rem;
+    margin: 4rem 32rem 1rem;
 }
 
 .contribution ul {
     font-size: 1.4rem;
     list-style-type: disc;
-    margin: 0 17rem 1rem;
+    margin: 0 31rem 4rem;
 }
 
 .page-text {
-    max-width: 70vw;
+    max-width: 60ch;
     margin: 8rem auto 3rem auto;
     text-align: left;
     font-size: 1.4rem;
     line-height: 1.6;
+}
+
+.background-story {
+    max-width: 60ch;
+    margin: 8rem auto 3rem auto;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    background-color: #2e2e30;
+    padding: 2rem 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 }
 
 /*GALLERY STYLES */
@@ -188,7 +201,7 @@ body.light-mode .divider {
     gap: 1rem;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    max-width: 1200px;
+    max-width: 80%;
     margin: 0 auto;
     margin-bottom: 6rem;
 }
@@ -240,12 +253,16 @@ body.light-mode .divider {
     overflow: hidden;
 }
 
-.threejs-instructions {
+.threejs-instructions-desktop {
     max-width: 80vw;
     margin: -1rem auto 3rem;
     text-align: center;
     font-size: 1rem;
     line-height: 1.2;
+}
+
+.threejs-instructions-touch {
+    display: none;
 }
 
 /* FINE ART PAGE STYLES */
@@ -275,7 +292,7 @@ body.light-mode .divider {
     display: flex;
     gap: 2rem;
     font-size: 1.6rem;
-    color: #666;
+    color: #626675;
     flex-wrap: wrap;
 }
 
@@ -291,19 +308,23 @@ body.light-mode .divider {
 
 /* ABOUT PAGE STYLES */
 .about {
+    display: flex;
+    align-items: flex-start;
     width: 90vw;
-    max-width: 1220px;
+    max-width: 60ch;
     min-height: 40vh;
     max-height: 992px;
     flex-shrink: 0;
+    flex: 1 1 auto;
     color: #C0CBD8;
     font-size: 1.618rem;
     line-height: normal;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 6rem;
     margin-top: 4rem;
     margin-bottom: 5rem;
+    padding-right: 14rem;
+    align-content: center;
 }
 
 .about-image {
@@ -318,6 +339,7 @@ body.light-mode .divider {
     position: absolute;
     top: 20%;
     right: 2rem;
+    margin-left: 2rem;
     font-size: 2rem;
     letter-spacing: 22px;
     background: linear-gradient(270deg, #C0CBD8 33.34%, #1A1A1A 110.25%);
@@ -380,12 +402,20 @@ body.light-mode .submenu-button span {
 
 .back-to-top {
     position: fixed;
-    bottom: 8rem;
+    bottom: 6rem;
     right: 2rem;
     display: none;
     cursor: pointer;
     z-index: 999;
     width: 50px;
+    height: 50px;
+    background: #626675b0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border: 10px solid transparent;
 }
 
 .arrow-icon {
@@ -396,11 +426,22 @@ main {
     flex: 1 0 auto;
 }
 
+.footer-divider {
+    width: 95%;
+    color: #C0CBD8;
+    margin-bottom: 3rem;
+}
+
+body.light-mode .footer-divider {
+    color: #1A1A1A;
+}
+
 footer {
     background-color: transparent;
     z-index: 999;
     display: flex;
     flex-direction: column;
+    margin-top: 6rem;
     margin-left: 2rem;
     margin-right: 2rem;
 }

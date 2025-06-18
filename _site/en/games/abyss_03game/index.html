@@ -58,8 +58,6 @@
     <p>Abyss_03 is a roguelike escort mission game where you protect your spaceship from asteroids and gather biomass in order to fly home again.<br><br>
 The game is being developed in Unreal Engine 5 by a student team of one programmer, me and one other designer. We started developing the game in our fourth semester with the mission, not to  create a complete, playable game but to experiment and try out new things as much as we could. And we did just that. The game is in a very early stage and the development will be continued at a later point in time.</p>
   </div>
-
-  <hr class="divider">
 </main>
 
 <section class="contribution">
@@ -388,9 +386,10 @@ the spaceship in 3D using Blender. The details like the label "03" were added in
     <div class="threejs-container" data-model="https://insomnea.art/assets/3D/abyss_03/spaceship.glb"></div>
 </div>
 
-<p class="threejs-instructions">Rotate the model by dragging it with the left mouse button. By dragging it with the right mouse button you move the model around.</p>
+<p class="threejs-instructions-desktop">Rotate the model by dragging it with the left mouse button. By dragging it with the right mouse button you move the model around.</p>
+<p class="threejs-instructions-touch">With one finger you can turn the model and with two fingers you can move it around and zoom.</p>
 
-<p class="page-text">For the thruster of the spaceship, I experimented with different methods. On one hand, I tested the Niagara particle systems, and on the other hand, I created a simple
+<p class="page-text">For the thruster of the spaceship, I experimented with different methods. First I tested the Niagara particle systems and then I tried out solution with a simple
 cylinder with a blue fire texture mapped around it. In the end, we decided to go with the latter method, as it better matched our vision for the game.</p>
 
 
@@ -658,7 +657,9 @@ of the shaders made it into the current version of the game.</p>
 
         <footer>
             
-                <div class="footer-navigation">
+                <hr class="footer-divider">
+
+<div class="footer-navigation">
     <nav>
         <a href="/en/concept-art/" class="">concept art</a>
         <a href="/en/games/" class="active">games</a>

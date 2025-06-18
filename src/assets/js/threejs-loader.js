@@ -47,7 +47,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
         clearTimeout(rotateTimeout);
         rotateTimeout = setTimeout(() => {
             autoRotate = true;
-        }, 3000);
+        }, 5000);
     }
 
     controls.addEventListener('start', stopAutoRotateTemporarily);
