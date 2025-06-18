@@ -1,3 +1,11 @@
+/* Deactivation of highlight first */
+@media screen and (max-width: 979px) {
+    .gallery__wrapper {
+        display: grid;
+        grid-template-columns: 1fr !important;
+    }
+}
+
 /*MOBILE*/
 @media screen and (max-width: 500px) {
 
