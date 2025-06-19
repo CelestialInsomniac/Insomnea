@@ -134,6 +134,10 @@
         line-height: 1.2;
     }
 
+    .project-mosaic__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     /* FINE ART PAGE STYLES */
     .artwork-gallery {
         margin-top: 3rem;
