@@ -1,0 +1,24 @@
+{% set language = lang %}
+{% set currentProjects = projectMap[currentCategory] | dictsort(true) %}
+
+<div class="project-mosaic">
+    <h2 class="project-mosaic__heading">
+        {% if lang == "de" %}Weitere Projekte{% else %}More Projects{% endif %}
+    </h2>
+    <div class="project-mosaic__grid">
+        {% for key, project in currentProjects %}
+            {% if key != pageKey %}
+                <a href="{{ project.url[language] }}" class="project-mosaic__item">
+                    <div class="project-mosaic__thumb-wrapper">
+                        <img
+                            src="https://res.cloudinary.com/insomneaart/image/upload/w_400,h_400,c_fill,f_auto,q_auto/{{ project.thumb }}"
+                            alt="{{ project.title[language] }}"
+                            class="project-mosaic__thumb"
+                        >
+                    </div>
+                    <div class="project-mosaic__title">{{ project.title[language] }}</div>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

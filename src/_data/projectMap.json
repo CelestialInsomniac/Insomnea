@@ -1,0 +1,61 @@
+{
+    "concept-art": {
+        "abyss_03_concept": {
+            "title": {
+                "de": "Abyss_03",
+                "en": "Abyss_03"
+            },
+            "thumb": "v1748084290/Abyss_03_character_conceptcharacter_concept_e7n3wn.png",
+            "url": {
+                "de": "/concept-art/abyss_03_concept//",
+                "en": "/en/concept-art/abyss_03_concept/"
+            }
+        },
+        "artyail": {
+            "title": {
+                "de": "Artya'il",
+                "en": "Artya'il"
+            },
+            "thumb": "v1748085942/cover_asbzmu.png",
+            "url": {
+                "de": "/concept-art/artyail/",
+                "en": "/en/concept-art/artyail/"
+            }
+        }
+    },
+    "games": {
+        "abyss_03": {
+            "title": {
+                "de": "Abyss_03 WIP",
+                "en": "Abyss_03 WIP"
+            },
+            "thumb": "v1748094449/Abyss_03_portfolio_title_freedg.png",
+            "url": {
+                "de": "/games/abyss_03game/",
+                "en": "/en/games/abyss_03game/"
+            }
+        },
+        "patched-up": {
+            "title": {
+                "de": "Patched Up",
+                "en": "Patched Up"
+            },
+            "thumb": "v1748175880/Screenshot_1_Patched_Up_qr2hjn.png",
+            "url": {
+                "de": "/games/patched-up/",
+                "en": "/en/games/patched-up/"
+            }
+        },
+        "bedtime-story": {
+            "title": {
+                "de": "Bedtime Story",
+                "en": "Bedtime Story"
+            },
+            "thumb": "v1747297420/Bedtime_Story_Screenshot2_aoprqs.png",
+            "url": {
+                "de": "/games/bedtime-story/",
+                "en": "/en/games/bedtime-story/"
+            }
+        }
+    }
+}

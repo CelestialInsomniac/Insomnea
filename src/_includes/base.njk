@@ -39,6 +39,17 @@
             {{ content | safe }}
         </main>
 
+        {% set currentCategory = null %}
+        {% if (page.url or '') .startsWith('/games')or(page.url or '').startsWith('/en/games') %}
+            {% set currentCategory = 'games' %}
+        {% elif (page.url or '').startsWith('/concept-art') or (page.url or '').startsWith('/en/concept-art') %}
+            {% set currentCategory = 'concept-art' %}
+        {% endif %}
+
+        {% if projectMap and currentCategory and projectMap[currentCategory][pageKey] %}
+            {% include "partials/project-mosaic.njk" %}
+        {% endif %}
+
         <footer>
             {% if lang == "de" %}
                 {% include "DEfooter.njk" %}
