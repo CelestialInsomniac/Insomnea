@@ -307,10 +307,15 @@ body.light-mode .divider {
 }
 
 /* ABOUT PAGE STYLES */
+.about-wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
 .about {
     display: flex;
     align-items: flex-start;
-    width: 90vw;
     max-width: 60ch;
     min-height: 40vh;
     max-height: 992px;
@@ -319,25 +324,15 @@ body.light-mode .divider {
     color: #C0CBD8;
     font-size: 1.618rem;
     line-height: normal;
-    display: block;
-    margin-left: 6rem;
+    margin-left: 18rem;
     margin-top: 4rem;
     margin-bottom: 5rem;
-    padding-right: 14rem;
-    align-content: center;
-}
-
-.about-image {
-    width: 20%;
-    height: auto;
-    border-radius: 0.5rem;
-    display: block;
-    margin: auto auto 4rem auto;
+    padding-right: 10rem;
 }
 
 .adastra {
     position: absolute;
-    top: 20%;
+    top: 8%;
     right: 2rem;
     margin-left: 2rem;
     font-size: 2rem;
@@ -351,6 +346,13 @@ body.light-mode .divider {
     white-space: nowrap;
 }
 
+.about-image {
+    width: 20%;
+    height: auto;
+    border-radius: 0.5rem;
+    display: block;
+    margin: auto auto 4rem auto;
+}
 
 body.light-mode .adastra {
     position: absolute;

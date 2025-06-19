@@ -152,12 +152,12 @@
 
     /* ABOUT PAGE STYLES */
     .about {
-        width: 80vw;
+        max-width: 80vw;
         font-size: 1rem;
-    }
-
-    .about-image {
-        width: 45%;
+        margin-left: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding-right: 3.5rem;
     }
 
     .adastra {
@@ -165,6 +165,9 @@
         font-size: 0.8rem;
     }
 
+    .about-image {
+        width: 45%;
+    }
 
     body.light-mode .adastra {
         right: 0.8rem;
@@ -378,12 +381,12 @@
 
     /* ABOUT PAGE STYLES */
     .about {
-        width: 80vw;
+        max-width: 80vw;
         font-size: 1.2rem;
-    }
-
-    .about-image {
-        width: 45%;
+        margin-left: 4rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding-right: 4rem;
     }
 
     .adastra {
@@ -391,6 +394,9 @@
         font-size: 1rem;
     }
 
+    .about-image {
+        width: 30%;
+    }
 
     body.light-mode .adastra {
         right: 1rem;
@@ -606,12 +612,12 @@
 
     /* ABOUT PAGE STYLES */
     .about {
-        width: 80vw;
+        max-width: 80vw;
         font-size: 1.2rem;
-    }
-
-    .about-image {
-        width: 45%;
+        margin-left: 4rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding-right: 4rem;
     }
 
     .adastra {
@@ -619,6 +625,9 @@
         font-size: 1rem;
     }
 
+    .about-image {
+        width: 30%;
+    }
 
     body.light-mode .adastra {
         right: 1.5rem;
@@ -700,5 +709,20 @@
 
     footer {
         margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .about {
+        max-width: 80vw;
+        font-size: 1.2rem;
+        margin-left: 6rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding-right: 4rem;
+    }
+
+    .about-image {
+        width: 20%;
     }
 }
