@@ -442,6 +442,15 @@ Der Suit ist für Agilität entwickelt und das Jetpack dient der Fortbewegung.</
     <div class="footer-center">
         <p>Danke für Deinen Besuch!</p>
         <p>Alle Werke sind gegen Scraping-Diebstahl geschützt</p>
+        <p id="email"></p>
+
+        <script>
+            const user = "insomnea";
+            const domain = "outlook.com";
+            const email = `${user}@${domain}`;
+            const el = document.getElementById("email");
+            el.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+        </script>
     </div>
 
     <div class="footer-right">

@@ -471,7 +471,7 @@ auch meinen Linien und Formen wurde. Ich eignete mir an, Dinge und ihren Aufbau 
     <div class="project-mosaic__grid">
         
             
-                <a href="/concept-art/abyss_03_concept//" class="project-mosaic__item">
+                <a href="/concept-art/abyss_03_concept/" class="project-mosaic__item">
                     <div class="project-mosaic__thumb-wrapper">
                         <img
                             src="https://res.cloudinary.com/insomneaart/image/upload/w_400,h_400,c_fill,f_auto,q_auto/v1748084290/Abyss_03_character_conceptcharacter_concept_e7n3wn.png"
@@ -520,6 +520,15 @@ auch meinen Linien und Formen wurde. Ich eignete mir an, Dinge und ihren Aufbau 
     <div class="footer-center">
         <p>Danke für Deinen Besuch!</p>
         <p>Alle Werke sind gegen Scraping-Diebstahl geschützt</p>
+        <p id="email"></p>
+
+        <script>
+            const user = "insomnea";
+            const domain = "outlook.com";
+            const email = `${user}@${domain}`;
+            const el = document.getElementById("email");
+            el.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+        </script>
     </div>
 
     <div class="footer-right">

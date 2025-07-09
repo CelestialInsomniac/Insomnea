@@ -442,6 +442,15 @@ wings are used to control the direction of the ship. There are two pairs of retr
     <div class="footer-center">
         <p>Thank you for your visit!</p>
         <p>All works are protected against scraping theft</p>
+        <p id="email"></p>
+
+        <script>
+            const user = "insomnea";
+            const domain = "outlook.com";
+            const email = `${user}@${domain}`;
+            const el = document.getElementById("email");
+            el.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+        </script>
     </div>
 
     <div class="footer-right">
