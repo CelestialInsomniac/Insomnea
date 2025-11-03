@@ -29,14 +29,31 @@
         <p>All works are protected against scraping theft</p>
         <p id="email"></p>
 
-        <script>
-            const user = "insomnea";
-            const domain = "outlook.com";
-            const email = `${user}@${domain}`;
-            const el = document.getElementById("email");
-            el.innerHTML = `<a href="mailto:${email}">${email}</a>`;
-        </script>
-    </div>
+<p id="email"><a id="emailLink" href="#" rel="nofollow">contact</a></p>
+
+<script>
+    // assemble only on user interaction
+    (function(){
+        const link = document.getElementById('emailLink');
+        if(!link) return;
+        // store pieces in data attributes (not visible combined)
+        link.dataset.user = "insomnea";
+        link.dataset.domain = "outlook.com";
+        function reveal(){
+            const u = link.dataset.user, d = link.dataset.domain;
+            const addr = u + '@' + d;
+            // create safe anchor without using innerHTML
+            const a = document.createElement('a');
+            a.href = 'mailto:' + addr;
+            a.textContent = addr;
+            a.rel = 'noopener noreferrer';
+            link.replaceWith(a);
+        }
+        link.addEventListener('click', function(e){ e.preventDefault(); reveal(); });
+        link.addEventListener('focus', reveal);
+        link.addEventListener('mouseover', reveal);
+    })();
+</script>
 
     <div class="footer-right">
         <nav class="language-selector">

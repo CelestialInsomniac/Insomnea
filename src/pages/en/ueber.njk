@@ -25,8 +25,35 @@ I work digitally with Krita or Rebelle and Blender. Analogously, I mainly work w
 
 Thank you for visiting my little corner of the internet.<br><br>
 
-For business inquiries, please send me an e-mail to insomnea@outlook.com.</p>
+For business inquiries, please send me an e-mail to  <a id="aboutEmailLink" href="#" rel="nofollow">MAIL</a>.</p>
     </div>
+
+    <script>
+        // assemble only on user interaction (about page)
+        (function () {
+            const link = document.getElementById('aboutEmailLink');
+            if (!link) 
+                return;
+            link.dataset.user = "insomnea";
+            link.dataset.domain = "outlook.com";
+            function reveal() {
+                const u = link.dataset.user,
+                    d = link.dataset.domain;
+                const addr = u + '@' + d;
+                const a = document.createElement('a');
+                a.href = 'mailto:' + addr;
+                a.textContent = addr;
+                a.rel = 'noopener noreferrer';
+                link.replaceWith(a);
+            }
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                reveal();
+            });
+            link.addEventListener('focus', reveal);
+            link.addEventListener('mouseover', reveal);
+        })();
+    </script>
 
     <div class="adastra">Non est ad astra mollis e terris via</div>
 </div>
