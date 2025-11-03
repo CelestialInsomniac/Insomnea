@@ -339,6 +339,28 @@ body.light-mode .project-mosaic__heading {
 }
 
 /* FINE ART PAGE STYLES */
+.commissions-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 4rem
+}
+
+.commissions-year {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-left: 16rem;
+    padding-right: 16rem;
+}
+
+.commissions-text {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-left: 16rem;
+    padding-right: 16rem;
+    padding-bottom: 5rem
+}
+
 .artwork-gallery {
     display: flex;
     flex-direction: column;
