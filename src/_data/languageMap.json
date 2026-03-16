@@ -1,42 +1,42 @@
 {
     "ueber": {
-        "de": "/ueber/",
-        "en": "/en/about/"
+        "de": "/de/ueber/",
+        "en": "/about/"
     },
     "kunst": {
-        "de": "/kunst/",
-        "en": "/en/fineart/"
+        "de": "/de/kunst/",
+        "en": "/fineart/"
     },
     "concept-art": {
-        "de": "/concept-art/",
-        "en": "/en/concept-art/"
+        "de": "/de/concept-art/",
+        "en": "/concept-art/"
     },
     "games": {
-        "de": "/games/",
-        "en": "/en/games/"
+        "de": "/de/games/",
+        "en": "/games/"
     },
     "abyss_03": {
-        "en": "/en/games/abyss_03game/",
-        "de": "/games/abyss_03game/"
+        "en": "/games/abyss_03game/",
+        "de": "/de/games/abyss_03game/"
     },
     "patched-up": {
-        "en": "/en/games/patched-up/",
-        "de": "/games/patched-up/"
+        "en": "/games/patched-up/",
+        "de": "/de/games/patched-up/"
     },
     "bedtime-story": {
-        "en": "/en/games/bedtime-story/",
-        "de": "/games/bedtime-story/"
+        "en": "/games/bedtime-story/",
+        "de": "/de/games/bedtime-story/"
     },
     "abyss_03_concept": {
-        "en": "/en/concept-art/abyss_03_concept/",
-        "de": "/concept-art/abyss_03_concept/",
+        "en": "/concept-art/abyss_03_concept/",
+        "de": "/de/concept-art/abyss_03_concept/",
         "title": {
             "en": "Abyss_03 Concept",
             "de": "Abyss_03 Konzept"
         }
     },
     "artyail": {
-        "de": "/concept-art/artyail/",
-        "en": "/en/concept-art/artyail/"
+        "de": "/de/concept-art/artyail/",
+        "en": "/concept-art/artyail/"
     }
 }

@@ -1,7 +1,7 @@
 ---
 title: "INSOMNEA art"
-permalink: "index.html"
-lang: "de"
+permalink: "en/index.html"
+lang: "en"
 ---
 
 <!DOCTYPE html>
@@ -27,26 +27,26 @@ lang: "de"
 
     <main class="menu-buttons">
         {% set path = "v1748079551/concept_ship_final_ssmg9q.png" %}
-        {% set href = "/concept-art/" %}
+        {% set href = "/en/concept-art/" %}
         {% set text = "concept art" %}
         {% set class = "menu-button" %}
         {% include "partials/cloudinary_button.njk" %}
 
         {% set path = "v1748175880/Screenshot_1_Patched_Up_qr2hjn.png" %}
-        {% set href = "/games/" %}
+        {% set href = "/en/games/" %}
         {% set text = "games" %}
         {% set class = "menu-button" %}
         {% include "partials/cloudinary_button.njk" %}
 
         {% set path = "v1746177971/tabby_cat_lnm7kz.jpg" %}
-        {% set href = "/kunst/" %}
-        {% set text = "kunst" %}
+        {% set href = "/en/fineart/" %}
+        {% set text = "fine art" %}
         {% set class = "menu-button" %}
         {% include "partials/cloudinary_button.njk" %}
 
         {% set path = "v1747295573/me_tqkpwt.jpg" %}
-        {% set href = "/ueber/" %}
-        {% set text = "über mich" %}
+        {% set href = "/en/about/" %}
+        {% set text = "about me" %}
         {% set class = "menu-button" %}
         {% include "partials/cloudinary_button.njk" %}
     </main>
@@ -68,8 +68,8 @@ lang: "de"
             </div>
 
             <div class="footer-center">
-                <p>Danke für Deinen Besuch!</p>
-                <p>Alle Werke sind gegen Scraping-Diebstahl geschützt</p>
+                <p>Thank you for your visit!</p>
+                <p>All works are protected against scraping theft</p>
                 <p id="email"></p>
 
                 <script>
@@ -82,20 +82,26 @@ lang: "de"
             </div>
 
             <div class="footer-right">
+                {% set pageKey = page.fileSlug %}
+                {% set langMap = languageMap[pageKey] or {} %}
+
                 <nav class="language-selector">
+                    <!-- Wenn die aktuelle Seite Deutsch ist, zeige DE als Text (kein Link) -->
                     {% if lang == 'de' %}
                         <span>DE</span>
                     {% else %}
-                        <a href="/de/" class="{% if lang == 'de' %}active{% endif %}">DE</a>
+                        <!-- Link zur deutschen Seite, die im Root-Verzeichnis liegt (ohne /de/) -->
+                        <a href="/" class="{% if lang == 'de' %}active{% endif %}">DE</a>
                     {% endif %}
         /
-            {% if lang == 'en' %}
+        <!-- Wenn die aktuelle Seite Englisch ist, zeige EN als Text (kein Link) -->
+                    {% if lang == 'en' %}
                         <span>EN</span>
                     {% else %}
-                        <a href="/en/" class="{% if lang == 'en' %}active{% endif %}">EN</a>
+                        <!-- Link zur englischen Seite im /en/-Verzeichnis -->
+                        <a href="/en" class="{% if lang == 'en' %}active{% endif %}">EN</a>
                     {% endif %}
                 </nav>
-
                 <button id="theme-toggle">
                     <img id="theme-icon" src="/assets/icons/icon_sun_b.svg" alt="Theme Toggle">
                 </button>
