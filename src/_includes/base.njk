@@ -33,16 +33,16 @@
                 {% include "ENmenu.njk" %}
             {% endif %}
 
-            <a href="{% if lang == 'de' %}/{% else %}/en/{% endif %}" class="home">INSOMNEA art</a>
+            <a href="{% if lang == 'en' %}/{% else %}/de/{% endif %}" class="home">INSOMNEA art</a>
         </header>
         <main>
             {{ content | safe }}
         </main>
 
         {% set currentCategory = null %}
-        {% if (page.url or '') .startsWith('/games')or(page.url or '').startsWith('/en/games') %}
+        {% if (page.url or '') .startsWith('/games')or(page.url or '').startsWith('/de/games') %}
             {% set currentCategory = 'games' %}
-        {% elif (page.url or '').startsWith('/concept-art') or (page.url or '').startsWith('/en/concept-art') %}
+        {% elif (page.url or '').startsWith('/concept-art') or (page.url or '').startsWith('/de/concept-art') %}
             {% set currentCategory = 'concept-art' %}
         {% endif %}
 

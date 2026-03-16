@@ -10,7 +10,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="/assets/icons/favicon.png" sizes="32x32">
-        <title>About Me</title>
+        <title>Fine art</title>
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="/css/menu.css">
         <link rel="stylesheet" href="/css/media-queries.css">
@@ -36,7 +36,7 @@
     <nav id="burger-menu">
         <a href="/concept-art/" class="">concept art</a>
         <a href="/games/" class="">games</a>
-        <a href="/fineart/" class="">fine art</a>
+        <a href="/fineart/" class="active">fine art</a>
         <a href="/about/" class="">about me</a>
     </nav>
 
@@ -44,63 +44,160 @@
 </div>
             
 
-            <a href="/en/" class="home">INSOMNEA art</a>
+            <a href="/" class="home">INSOMNEA art</a>
         </header>
         <main>
             
-<div class="about-wrapper">
-    <div class="about">
-        <p>Hi, nice to meet you! I'm Annie<br><br>
-
-I've been drawing for as long as I can remember (and hold a pencil). I started drawing digitally when I was 16 years old and painting only a few years later. Being creative is my outlet 
-for my energy and whatever is on my mind.<br><br>
-
-For a long time I wanted to become a painter or a concept artist for video games. Now I do both! I love creating character concepts but I also still enjoy analogue work. That's why 
-you'll find both here on my website. I am continuing my education in character concept art and still work with a brush in front of the canvas. At the moment I'm studying Digital 
-Ideation at Hochschule Luzern to pursue my dream of becoming a concept artist.<br><br>
-
-Whether your beloved furry friend has passed away or you would just like to show them how much you love them, I would love to be the artist of your artwork. Bringing joy to others 
-through my work makes me happier than anything else. I'm an animal lover myself and have had many different pets throughout my life. From cats and dogs to guinea pigs and geckos to 
-mantises and even a tarantula.<br><br>
-
-I work digitally with Krita or Rebelle and Blender. Analogously, I mainly work with acrylic paints but occasionally also with oil.<br><br>
-
-Thank you for visiting my little corner of the internet.<br><br>
-
-For business inquiries, please send me an e-mail to  <a id="aboutEmailLink" href="#" rel="nofollow">MAIL</a>.</p>
-    </div>
-
-    <script>
-        // assemble only on user interaction (about page)
-        (function () {
-            const link = document.getElementById('aboutEmailLink');
-            if (!link) 
-                return;
-            link.dataset.user = "insomnea";
-            link.dataset.domain = "outlook.com";
-            function reveal() {
-                const u = link.dataset.user,
-                    d = link.dataset.domain;
-                const addr = u + '@' + d;
-                const a = document.createElement('a');
-                a.href = 'mailto:' + addr;
-                a.textContent = addr;
-                a.rel = 'noopener noreferrer';
-                link.replaceWith(a);
-            }
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                reveal();
-            });
-            link.addEventListener('focus', reveal);
-            link.addEventListener('mouseover', reveal);
-        })();
-    </script>
-
-    <div class="adastra">Non est ad astra mollis e terris via</div>
+<div class="commissions">
+  <p class="commissions-title">Commissions - coming soon!</p><br>
+  <p class="commissions-year">I will be officially opening new commissions in the summer of 2026!</p>
+  <p class="commissions-text">Due to current orders and other projects, I am unable to accept any further orders. However, I do keep a waiting list, so please feel free to send me an email if you would like to 
+  be added to it. I look forward to hearing from you!</p>
 </div>
 
-<img src="https://res.cloudinary.com/insomneaart/image/upload/w_500,f_auto,q_auto/v1749304796/mewithpet_b63mkc.png" alt="Annie" class="about-image"/>
+
+
+<div class="artwork-gallery lightgallery">
+  
+    <div class="artwork-item">
+  <h2 class="artwork-title">Great dane</h2>
+  <div class="artwork-meta">
+    <span>2025</span>
+    <span>40 x 60 cm</span>
+    <span>Acrylics on canvas</span>
+  </div>
+  <div class="artwork-image-container">
+    <a
+    class="gallery__item"
+    data-src="https://res.cloudinary.com/insomneaart/image/upload/w_1600,h_1200,c_fit,f_auto,q_auto/v1770727724/great_dane_nuuby_2025_anva20.jpg"
+    data-lg-size="1600-1200"
+    data-type="image"
+    data-sub-html="<h4>Great dane</h4><p>2025 – 40 x 60 cm – Acrylics on canvas</p>"
+  >
+      <img
+      src="https://res.cloudinary.com/insomneaart/image/upload/w_800,h_600,c_fit,f_auto,q_auto/v1770727724/great_dane_nuuby_2025_anva20.jpg"
+      alt="Great dane"
+  ></a>
+    </div>
+
+  </div>
+  
+    <div class="artwork-item">
+  <h2 class="artwork-title">Tabby cat</h2>
+  <div class="artwork-meta">
+    <span>2025</span>
+    <span>30 x 40 cm</span>
+    <span>Acrylics on canvas</span>
+  </div>
+  <div class="artwork-image-container">
+    <a
+    class="gallery__item"
+    data-src="https://res.cloudinary.com/insomneaart/image/upload/w_1600,h_1200,c_fit,f_auto,q_auto/v1746177971/tabby_cat_lnm7kz.jpg"
+    data-lg-size="1600-1200"
+    data-type="image"
+    data-sub-html="<h4>Tabby cat</h4><p>2025 – 30 x 40 cm – Acrylics on canvas</p>"
+  >
+      <img
+      src="https://res.cloudinary.com/insomneaart/image/upload/w_800,h_600,c_fit,f_auto,q_auto/v1746177971/tabby_cat_lnm7kz.jpg"
+      alt="Tabby cat"
+  ></a>
+    </div>
+
+  </div>
+  
+    <div class="artwork-item">
+  <h2 class="artwork-title">Prohierodula mantis</h2>
+  <div class="artwork-meta">
+    <span>2024</span>
+    <span>100 x 70 cm</span>
+    <span>Oil on canvas</span>
+  </div>
+  <div class="artwork-image-container">
+    <a
+    class="gallery__item"
+    data-src="https://res.cloudinary.com/insomneaart/image/upload/w_1600,h_1200,c_fit,f_auto,q_auto/v1748093331/Prohierodula_fczgz0.png"
+    data-lg-size="1600-1200"
+    data-type="image"
+    data-sub-html="<h4>Prohierodula mantis</h4><p>2024 – 100 x 70 cm – Oil on canvas</p>"
+  >
+      <img
+      src="https://res.cloudinary.com/insomneaart/image/upload/w_800,h_600,c_fit,f_auto,q_auto/v1748093331/Prohierodula_fczgz0.png"
+      alt="Mantis Prohierodula"
+  ></a>
+    </div>
+
+  </div>
+  
+    <div class="artwork-item">
+  <h2 class="artwork-title">Red tabby cat</h2>
+  <div class="artwork-meta">
+    <span>2024</span>
+    <span>60 x 40 cm</span>
+    <span>Acrylics on canvas</span>
+  </div>
+  <div class="artwork-image-container">
+    <a
+    class="gallery__item"
+    data-src="https://res.cloudinary.com/insomneaart/image/upload/w_1600,h_1200,c_fit,f_auto,q_auto/v1746177991/Red_tabby_cat_ndbuni.png"
+    data-lg-size="1600-1200"
+    data-type="image"
+    data-sub-html="<h4>Red tabby cat</h4><p>2024 – 60 x 40 cm – Acrylics on canvas</p>"
+  >
+      <img
+      src="https://res.cloudinary.com/insomneaart/image/upload/w_800,h_600,c_fit,f_auto,q_auto/v1746177991/Red_tabby_cat_ndbuni.png"
+      alt="Red tabby cat"
+  ></a>
+    </div>
+
+  </div>
+  
+    <div class="artwork-item">
+  <h2 class="artwork-title">Gouldian finch</h2>
+  <div class="artwork-meta">
+    <span>2024</span>
+    <span>30 x 40 cm</span>
+    <span>Acrylics on canvas</span>
+  </div>
+  <div class="artwork-image-container">
+    <a
+    class="gallery__item"
+    data-src="https://res.cloudinary.com/insomneaart/image/upload/w_1600,h_1200,c_fit,f_auto,q_auto/v1746177979/Gouldian_finch_midtmn.png"
+    data-lg-size="1600-1200"
+    data-type="image"
+    data-sub-html="<h4>Gouldian finch</h4><p>2024 – 30 x 40 cm – Acrylics on canvas</p>"
+  >
+      <img
+      src="https://res.cloudinary.com/insomneaart/image/upload/w_800,h_600,c_fit,f_auto,q_auto/v1746177979/Gouldian_finch_midtmn.png"
+      alt="Gouldian Finch"
+  ></a>
+    </div>
+
+  </div>
+  
+    <div class="artwork-item">
+  <h2 class="artwork-title">Red fox</h2>
+  <div class="artwork-meta">
+    <span>2022</span>
+    <span>30 x 40 cm</span>
+    <span>Acrylics on canvas</span>
+  </div>
+  <div class="artwork-image-container">
+    <a
+    class="gallery__item"
+    data-src="https://res.cloudinary.com/insomneaart/image/upload/w_1600,h_1200,c_fit,f_auto,q_auto/v1746787122/redfox_og9pcu.png"
+    data-lg-size="1600-1200"
+    data-type="image"
+    data-sub-html="<h4>Red fox</h4><p>2022 – 30 x 40 cm – Acrylics on canvas</p>"
+  >
+      <img
+      src="https://res.cloudinary.com/insomneaart/image/upload/w_800,h_600,c_fit,f_auto,q_auto/v1746787122/redfox_og9pcu.png"
+      alt="Red Fox"
+  ></a>
+    </div>
+
+  </div>
+  
+</div>
         </main>
 
         
@@ -116,7 +213,7 @@ For business inquiries, please send me an e-mail to  <a id="aboutEmailLink" href
     <nav>
         <a href="/concept-art/" class="">concept art</a>
         <a href="/games/" class="">games</a>
-        <a href="/fineart/" class="">fine art</a>
+        <a href="/fineart/" class="active">fine art</a>
         <a href="/about/" class="">about me</a>
     </nav>
 </div>
@@ -170,7 +267,7 @@ For business inquiries, please send me an e-mail to  <a id="aboutEmailLink" href
     <div class="footer-right">
         <nav class="language-selector">
             
-                <a href="/de/ueber/">DE</a>
+                <a href="/de/kunst/">DE</a>
             
         /
         
