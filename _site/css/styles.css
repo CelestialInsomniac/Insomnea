@@ -576,19 +576,31 @@ footer {
 }
 
 .footer-center {
+    position: relative;
     display: flex;
-    color: #626675;
-    font-size: 1.4rem;
+    flex: 1;
+    justify-content: center;
+    color: #C0CBD8;
+    font-size: 1.3rem;
+    margin: 0;
     gap: 6rem;
 }
 
+body.light-mode .footer-center {
+    color: #1A1A1A;
+}
+
 .footer-right {
+    position: absolute;
+    right: 0;
     display: flex;
+    margin-left: auto;
     gap: 1.5rem;
 }
 
 .language-selector {
     display: flex;
+    margin-left: auto;
     gap: 0.3rem;
     font-size: 1.5rem;
 }
