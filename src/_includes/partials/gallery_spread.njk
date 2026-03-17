@@ -1,0 +1,64 @@
+{# components/gallery.njk #}
+<div class="gallery{% if highlightFirst %} gallery--highlight-first{% endif %}">
+    <div class="gallery__wrapper lightgallery">
+        {% for item in images %}
+            {% if item.iframe %}
+                <a
+      href="{{ item.iframe }}"
+      class="gallery_spread__item"
+      data-lg-size="1280-720"
+      data-sub-html="{{ item.alt | default('') }}"
+      data-iframe='{"source": [{"src":"{{ item.iframe }}","type":"iframe"}], "attributes": {"preload": false, "controls": true}'
+    >
+                    <img src="{{ item.thumb }}" alt="{{ item.alt | default('Video thumbnail') }}">
+                </a>
+
+            {% elif item.threejs %}
+                <a
+      href=""
+      class="gallery_spread__item"
+      data-lg-size="1280-720"
+      data-sub-html="{{ item.alt | default('') }}"
+      data-html="#{{ item.id }}"
+    >
+                    <img src="{{ item.thumb }}" alt="{{ item.alt | default('3D thumbnail') }}">
+                </a>
+                <div style="display: none;">
+                    <div id="{{ item.id }}">
+                        <div class="threejs-container" data-model-url="{{ item.model }}"></div>
+                    </div>
+                </div>
+
+            {% elif item.gif %}
+                <a
+        href="{{ item.large }}"
+        class="gallery_spread__item"
+        data-sub-html="{{ item.alt | default('GIF') }}"
+        data-type="image"
+    >
+                    <img src="{{ item.thumb }}" alt="{{ item.alt | default('GIF') }}">
+                </a>
+
+            {% else %}
+                {% if item.large %}
+                    {% set transformedThumb = item.thumb %}
+                    {% if item.thumb | slice(-4) != '.gif' %}
+                        {% set transformedThumb = item.thumb | replace('/upload/', '/upload/w_900,h_700,c_fit,f_auto,q_auto/') %}
+                    {% endif %}
+                    <a
+        data-src="{{ item.large }}"
+        class="gallery_spread__item{% if loop.first and highlightFirst %} gallery_spread__item--highlight{% endif %}"
+        data-lg-size="1600-1060"
+        data-sub-html="{{ item.alt | default('') }}"
+    >
+                        <img
+            src="{{ transformedThumb }}"
+            alt="{{ item.alt | default('Gallery image') }}"
+        >
+                    </a>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+</div>

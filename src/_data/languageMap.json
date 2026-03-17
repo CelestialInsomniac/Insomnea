@@ -3,6 +3,10 @@
         "de": "/de/ueber/",
         "en": "/about/"
     },
+    "anderes": {
+        "de": "/de/anderes/",
+        "en": "/other/"
+    },
     "kunst": {
         "de": "/de/kunst/",
         "en": "/fineart/"
