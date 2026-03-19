@@ -22,8 +22,8 @@ body {
 .home {
     font-family: 'Annie Use Your Telescope';
     font-size: 6.854rem;
-    padding-left: 2rem;
-    padding-top: 2rem;
+    padding: 0 0 0 2rem;
+    order: -1;
 }
 
 a.home {
@@ -604,6 +604,29 @@ body.light-mode .submenu-button span {
 
 main {
     flex: 1 0 auto;
+}
+
+/* Header layout */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2rem 0 2rem;
+}
+
+.home {
+    order: -1;
+}
+
+.header-navigation {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-navigation nav {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
 }
 
 .footer-divider {
