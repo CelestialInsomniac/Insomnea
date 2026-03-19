@@ -621,12 +621,14 @@ header {
 .header-navigation {
     display: flex;
     justify-content: flex-end;
+    margin-right: 10rem;
 }
 
 .header-navigation nav {
     display: flex;
-    gap: 2.5rem;
+    gap: 3rem;
     align-items: center;
+    font-size: 1.4rem;
 }
 
 .footer-divider {
