@@ -80,14 +80,33 @@
             <div class="footer-center">
                 <p>Danke für Deinen Besuch!</p>
                 <p>Alle Werke sind gegen Scraping-Diebstahl geschützt</p>
-                <p id="email"></p>
+                <a id="aboutEmailLink" href="#" rel="nofollow">Kontakt</a>
 
                 <script>
-                    const user = "insomnea";
-                    const domain = "outlook.com";
-                    const email = `${user}@${domain}`;
-                    const el = document.getElementById("email");
-                    el.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+                    // assemble only on user interaction (about page)
+                    (function () {
+                        const link = document.getElementById('aboutEmailLink');
+                        if (!link) 
+                            return;
+                        link.dataset.user = "insomnea";
+                        link.dataset.domain = "outlook.com";
+                        function reveal() {
+                            const u = link.dataset.user,
+                                d = link.dataset.domain;
+                            const addr = u + '@' + d;
+                            const a = document.createElement('a');
+                            a.href = 'mailto:' + addr;
+                            a.textContent = addr;
+                            a.rel = 'noopener noreferrer';
+                            link.replaceWith(a);
+                        }
+                        link.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            reveal();
+                        });
+                        link.addEventListener('focus', reveal);
+                        link.addEventListener('mouseover', reveal);
+                    })();
                 </script>
             </div>
 
