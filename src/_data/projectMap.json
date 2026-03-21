@@ -1,5 +1,16 @@
 {
     "concept-art": {
+        "lonàn_concept": {
+            "title": {
+                "de": "Lonàn die Vogelscheuche",
+                "en": "Lonàn the Scarecrow"
+            },
+            "thumb": "v1774115058/concept art/Lonàn/menx_lonan_verorange_cropped_qgwuiu_b8973d.jpg",
+            "url": {
+                "de": "/de/concept-art/lonàn/",
+                "en": "/concept-art/lonàn/"
+            }
+        },
         "abyss_03_concept": {
             "title": {
                 "de": "Abyss_03",
