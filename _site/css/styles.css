@@ -154,7 +154,7 @@ a:hover {
 
 .hero-text {
     max-width: 60ch;
-    margin: 2rem auto 3rem auto;
+    margin: 4rem auto 4rem auto;
     text-align: left;
     font-size: 1.4rem;
     line-height: 1.6;
@@ -213,7 +213,7 @@ body.light-mode .CV {
 
 .page-text {
     max-width: 60ch;
-    margin: 8rem auto 3rem auto;
+    margin: 4rem auto 4rem auto;
     text-align: left;
     font-size: 1.4rem;
     line-height: 1.6;
